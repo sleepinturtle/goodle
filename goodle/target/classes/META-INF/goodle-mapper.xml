@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="GoodleMapper">
+
+	<insert id="join" parameterType="kr.co.goodle.util.dto.MemberDTO">
+	INSERT INTO member ( mem_name, mem_id, mem_pwd, mem_tel, mem_email, mem_date
+		, mem_cert1, mem_cert2
+		, mem_post, mem_addr1, mem_addr2 )
+	VALUES ( #{mem_name}, #{mem_id}, #{mem_pwd}, #{mem_tel}, #{mem_email}, now()
+		,#{mem_cert1}, #{mem_cert2}
+		,#{mem_post}, #{mem_addr1}, #{mem_addr2} )
+	</insert>
+	
+	<select id="dupcheck" parameterType="java.lang.String" resultType="int">
+	select count(mem_id) cnt
+	from member
+	where mem_id = #{mem_id}
+	</select>
+
+</mapper>
