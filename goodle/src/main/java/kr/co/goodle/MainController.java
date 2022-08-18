@@ -11,7 +11,7 @@ import kr.co.goodle.util.dto.MemberDTO;
 
 @Controller
 public class MainController {
-
+ 
 	@Autowired
 	private MainService service;
 	

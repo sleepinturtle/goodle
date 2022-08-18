@@ -48,7 +48,7 @@ public class MemberDTO {
 				+ " : " + mem_addr1
 				+ " : " + mem_addr2;
 	}
-	
+	 
 	public String getCard_cvc() {
 		return card_cvc;
 	}
