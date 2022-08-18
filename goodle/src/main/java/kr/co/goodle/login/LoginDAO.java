@@ -16,9 +16,7 @@ public class LoginDAO {
 	
 	public MemberDTO login(MemberDTO dto) {
 		MemberDTO dtoFromDB = null;
-		System.out.println(dto);
 		dtoFromDB = sqlSession.selectOne("LoginMapper.login", dto);
-		System.out.println(dtoFromDB.getMem_no());
 		return dtoFromDB;
 	}//login
 

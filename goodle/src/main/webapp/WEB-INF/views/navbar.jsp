@@ -12,7 +12,7 @@
             <!-- Navbar-->
             <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
+                    <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
                     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                         <li><a class="dropdown-item" href="${pageContext.request.contextPath}/login/logout">Logout</a></li>
                     </ul>
@@ -35,6 +35,7 @@
                                     <a class="nav-link" href="${pageContext.request.contextPath}/mypage/meminfo/#info">기본정보 수정</a>
                                     <a class="nav-link" href="${pageContext.request.contextPath}/mypage/meminfo/#custom">선호도 수정</a>
                                     <a class="nav-link" href="${pageContext.request.contextPath}/mypage/meminfo/#payinfo">결제정보 수정</a>
+                                    <a class="nav-link" href="${pageContext.request.contextPath}/mypage/meminfo/#deactivate">회원탈퇴</a>
                                 </nav>
                             </div>
 							<a class="nav-link" href="${pageContext.request.contextPath}/mypage/order">
@@ -48,10 +49,6 @@
                             <a class="nav-link" href="${pageContext.request.contextPath}/mypage/payhistory">
                                 <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
                                                                              결제내역
-                            </a>
-                            <a class="nav-link" href="${pageContext.request.contextPath}/mypage/deactivate">
-                                <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
-                               	 회원탈퇴
                             </a>
                             <a class="nav-link" href="${pageContext.request.contextPath}/qna/list">
                                 <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>

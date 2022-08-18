@@ -29,13 +29,15 @@ public class LoginController {
 		if(dtoFromDB == null) {
 			//아이디 없는 사용자 또는 패스워드가 오류 사용자.
 			out.print(0);
+		}else if( dtoFromDB.getMem_delyn() == 1) {
+			out.print(3);
 		}else if(dtoFromDB !=null && dtoFromDB.getMem_no() !=null && dtoFromDB.getMem_no() !="" && dtoFromDB.getMgr_yn() ==1) {//아이디, 패스워드 모두 ok
 			//아이디, 패스워드 모두 ok
 			out.print(1);
 			session.setAttribute("login_info", dtoFromDB);
 		}else if(dtoFromDB !=null && dtoFromDB.getMem_no() !=null && dtoFromDB.getMem_no() !="" && dtoFromDB.getMgr_yn() ==0) {//아이디, 패스워드 모두 ok
 			//아이디, 패스워드 모두 ok
-		out.print(2);
+			out.print(2);
 			session.setAttribute("login_info", dtoFromDB);
 		}
 		

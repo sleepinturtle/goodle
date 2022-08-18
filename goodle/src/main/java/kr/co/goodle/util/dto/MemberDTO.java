@@ -11,6 +11,7 @@ public class MemberDTO {
 	private String mem_tel;
 	private String mem_email;
 	private String mem_date;
+	private int mem_delyn;
 	private int mgr_yn;
 	
 	private String mem_cert1;
@@ -32,11 +33,18 @@ public class MemberDTO {
 	public String toString() {
 		return mem_no + " : " + mem_id;
 	}
-	
+
+	public int getMem_delyn() {
+		return mem_delyn;
+	}
+
+	public void setMem_delyn(int mem_delyn) {
+		this.mem_delyn = mem_delyn;
+	}
+
 	public String getTel() {
 		return tel;
 	}
-
 
 
 	public void setTel(String tel) {

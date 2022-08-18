@@ -8,6 +8,7 @@
 	<mappers>
 <!-- 		<mapper resource="META-INF/freeboard-mapper.xml" /> -->
 		<mapper resource="META-INF/login-mapper.xml" />
+		<mapper resource="META-INF/mypage-mapper.xml" />
 		<mapper resource="META-INF/goodle-mapper.xml" />
 		<mapper resource="META-INF/qnaboard-mapper.xml" />
 <!-- 		<mapper resource="META-INF/join-mapper.xml" /> -->

@@ -135,6 +135,9 @@
 							location.href ="${pageContext.request.contextPath}/mgrpage/mgrpage"
 						}else if(data == 2){
 							location.href ="${pageContext.request.contextPath}/mypage/mypage"
+						}else if(data == 3){
+							alert("탈퇴 처리된 회원입니다. 고객센터에 문의하세요.")
+							location.href ="${pageContext.request.contextPath}/main"
 						}else{
 							alert("잠시 후 다시 시도해 주세요");
 						}
