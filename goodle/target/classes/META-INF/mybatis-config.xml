@@ -11,6 +11,8 @@
 		<mapper resource="META-INF/mypage-mapper.xml" />
 		<mapper resource="META-INF/goodle-mapper.xml" />
 		<mapper resource="META-INF/qnaboard-mapper.xml" />
+		<mapper resource="META-INF/manage_member-mapper.xml" />
+		<mapper resource="META-INF/manage_recipe-mapper.xml" />
 <!-- 		<mapper resource="META-INF/join-mapper.xml" /> -->
 <!-- 		<mapper resource="META-INF/dongcode-mapper.xml" /> -->
 <!-- 		<mapper resource="META-INF/product-mapper.xml" /> -->

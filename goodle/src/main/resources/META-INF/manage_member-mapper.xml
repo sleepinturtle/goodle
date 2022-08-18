@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="ManageMemberMapper">
+
+
+	
+	
+	
+	
+	<select id="detail" parameterType="java.lang.String" resultType="kr.co.goodle.manager.member.MemberDTO">
+	select m.mem_no, m.mem_name, m.mem_tel, m.mem_email, m.mem_date, m.mem_post, m.mem_comp
+	from member m
+	where m.mem_no = #{mem_no}
+	</select>
+
+	<select id="selectList" parameterType="kr.co.goodle.util.dto.SearchDTO"
+			resultType="kr.co.goodle.manager.member.MemberDTO">
+		select m.mem_no, m.mem_name, m.mem_tel, m.mem_email, m.mem_date, m.mem_post, m.mem_comp
+		from member m
+		where 1 = 1
+		<if test="searchOption != null and searchOption != ''
+					and searchWord != null and searchWord != ''">
+			<choose>
+				<when test="searchOption == 'mem_no'">
+					and mb.title like concat('%', #{searchWord}, '%')
+				</when>
+				<when test="searchOption == 'mem_name'">
+					and m.mid like concat('%', #{searchWord}, '%')
+				</when>
+			</choose>
+		</if>
+		order by m.mem_date desc
+		limit #{limitNum}, 10
+	</select>
+
+	<select id="searchListCount" parameterType="kr.co.goodle.util.dto.SearchDTO" resultType="int">
+		select count(m.mem_no) cnt
+		from member m
+		where 1 = 1
+		<if test="searchOption != null and searchOption != ''
+					and searchWord != null and searchWord !=''">
+			<choose>
+				<when test="searchOption == 'mem_no'">
+					and mb.title like concat('%', #{searchWord}, '%')
+				</when>
+				<when test="searchOption == 'mem_name'">
+					and m.mid like concat('%', #{searchWord}, '%')
+				</when>
+			</choose>
+		</if>
+	</select>
+
+</mapper>
