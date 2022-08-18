@@ -16,52 +16,106 @@ public class MemberDTO {
 	
 	private String mem_cert1;
 	private String mem_cert2;
-	private String tel;
-	private String email;
 	private String tel1;
 	private String tel2;
 	private String tel3;
 	private String email1;
 	private String email2;
+	private String card_name;
+	private String card_no;
+	private String card_exp;
+	private String card_exp1;
+	private String card_exp2;
+	private String card_cvc;
+	private String card_pwd;
 	
-	private String post_code;
-	private String addr1;
-	private String addr2;
-	
+	private String mem_post;
+	private String mem_addr1;
+	private String mem_addr2;
 	@Override
 	
 	public String toString() {
-		return mem_no + " : " + mem_id;
+		return mem_no
+				+ " : " + card_name
+				+ " : " + card_exp
+				+ " : " + card_cvc
+				+ " : " + card_pwd
+				+ " : " + card_no
+				+ " : " + mem_email
+				+ " : " + mem_cert1
+				+ " : " + mem_cert2
+				+ " : " + mem_post
+				+ " : " + mem_addr1
+				+ " : " + mem_addr2;
+	}
+	
+	public String getCard_cvc() {
+		return card_cvc;
 	}
 
-	public int getMem_delyn() {
-		return mem_delyn;
+	public void setCard_cvc(String card_cvc) {
+		this.card_cvc = card_cvc;
 	}
 
-	public void setMem_delyn(int mem_delyn) {
-		this.mem_delyn = mem_delyn;
+	public String getMem_post() {
+		return mem_post;
 	}
 
-	public String getTel() {
-		return tel;
+	public void setMem_post(String mem_post) {
+		this.mem_post = mem_post;
+	}
+
+	public String getCard_name() {
+		return card_name;
+	}
+
+	public void setCard_name(String card_name) {
+		this.card_name = card_name;
+	}
+
+	public String getCard_no() {
+		return card_no;
+	}
+
+	public void setCard_no(String card_no) {
+		this.card_no = card_no;
+	}
+
+	public String getCard_exp() {
+		return card_exp;
+	}
+
+	public void setCard_exp(String card_exp) {
+		this.card_exp = card_exp;
+	}
+
+	public String getCard_exp1() {
+		return card_exp1;
+	}
+
+	public void setCard_exp1(String card_exp1) {
+		this.card_exp1 = card_exp1;
+	}
+
+	public String getCard_exp2() {
+		return card_exp2;
+	}
+
+	public void setCard_exp2(String card_exp2) {
+		this.card_exp2 = card_exp2;
+	}
+
+	
+
+	public String getCard_pwd() {
+		return card_pwd;
+	}
+
+	public void setCard_pwd(String card_pwd) {
+		this.card_pwd = card_pwd;
 	}
 
 
-	public void setTel(String tel) {
-		this.tel = tel;
-	}
-
-
-
-	public String getEmail() {
-		return email;
-	}
-
-
-
-	public void setEmail(String email) {
-		this.email = email;
-	}
 
 
 	
@@ -210,34 +264,10 @@ public class MemberDTO {
 	}
 
 
-	public String getPost_code() {
-		return post_code;
-	}
+	
 
 
-	public void setPost_code(String post_code) {
-		this.post_code = post_code;
-	}
-
-
-	public String getAddr1() {
-		return addr1;
-	}
-
-
-	public void setAddr1(String addr1) {
-		this.addr1 = addr1;
-	}
-
-
-	public String getAddr2() {
-		return addr2;
-	}
-
-
-	public void setAddr2(String addr2) {
-		this.addr2 = addr2;
-	}
+	
 
 
 
@@ -256,6 +286,14 @@ public class MemberDTO {
 
 	public void setMem_name(String mem_name) {
 		this.mem_name = mem_name;
+	}
+
+	public int getMem_delyn() {
+		return mem_delyn;
+	}
+
+	public void setMem_delyn(int mem_delyn) {
+		this.mem_delyn = mem_delyn;
 	}
 	
 	

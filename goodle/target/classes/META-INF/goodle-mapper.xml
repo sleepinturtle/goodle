@@ -6,13 +6,21 @@
 <mapper namespace="GoodleMapper">
 
 	<insert id="join" parameterType="kr.co.goodle.util.dto.MemberDTO">
-	INSERT INTO member ( mem_name, mem_id, mem_pwd, mem_tel, mem_email, mem_date
+	insert into member ( mem_name, mem_id, mem_pwd, mem_tel, mem_email, mem_date
 		, mem_cert1, mem_cert2
 		, mem_post, mem_addr1, mem_addr2 )
-	VALUES ( #{mem_name}, #{mem_id}, #{mem_pwd}, #{mem_tel}, #{mem_email}, now()
+		values ( #{mem_name}, #{mem_id}, #{mem_pwd}, #{mem_tel}, #{mem_email}, now()
 		,#{mem_cert1}, #{mem_cert2}
 		,#{mem_post}, #{mem_addr1}, #{mem_addr2} )
+		<selectKey resultType="String" keyProperty="mem_no" order="AFTER">
+			select last_insert_id()
+		</selectKey>
 	</insert>
+	<insert id="paymentinfo" parameterType="kr.co.goodle.util.dto.MemberDTO">
+		insert into payment_info (card_name, card_exp, card_cvc, card_pwd, card_no)
+		values (#{card_name},#{card_exp},#{card_cvc},#{card_pwd},#{card_no})
+	</insert>
+	
 	
 	<select id="dupcheck" parameterType="java.lang.String" resultType="int">
 	select count(mem_id) cnt

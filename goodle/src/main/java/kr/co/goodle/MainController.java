@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import kr.co.goodle.util.dto.MemberDTO;
 
 @Controller
-
 public class MainController {
 
 	@Autowired
@@ -23,11 +22,15 @@ public class MainController {
 	
 	@RequestMapping(value = "/join", method = RequestMethod.POST)
 	public void join(MemberDTO dto, PrintWriter out) {
+		System.out.println("컨트롤러 돌아라1");
 		int successCount = 0;
 		successCount = service.join(dto);
+		System.out.println("컨트롤러 돌아라2");
 		out.print(successCount);
 		out.close();
+		
 	}
+	
 	
 	@RequestMapping(value = "/dupcheck", method = RequestMethod.GET)
 	public void dupCheck(String mem_id, PrintWriter out) {

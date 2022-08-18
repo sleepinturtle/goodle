@@ -13,8 +13,10 @@ public class MainDAO {
 	private SqlSession sqlSession;
 	
 	public int join(MemberDTO dto) {
+		System.out.println("DAO 돌아라1");
 		int successCount = 0;
 		successCount = sqlSession.insert("GoodleMapper.join",dto);
+		System.out.println("DAO 돌아라2");
 		return successCount;
 	}
 
@@ -22,6 +24,12 @@ public class MainDAO {
 		int isYn = 0;
 		isYn = sqlSession.selectOne("GoodleMapper.dupcheck",mem_id);
 		return isYn;
+	}
+
+	public int paymentInfo(MemberDTO dto) {
+		int successCount = 0;
+		successCount = sqlSession.insert("GoodleMapper.paymentinfo", dto);
+		return successCount;
 	}
 
 }
