@@ -22,6 +22,8 @@
          <!-- Core theme JS-->
 <%--        	<script src="${pageContext.request.contextPath}/resources/dashboard/js/scripts.js"></script> --%>
 		<script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+    	<script src="https://cdn.jsdelivr.net/npm/swiffy-slider@1.5.3/dist/js/swiffy-slider.min.js" crossorigin="anonymous" defer></script>
+<link href="https://cdn.jsdelivr.net/npm/swiffy-slider@1.5.3/dist/css/swiffy-slider.min.css" rel="stylesheet" crossorigin="anonymous">
     	<style type="text/css">
     		#recipe {
     			text-align: center;
@@ -29,6 +31,7 @@
     		th {
 				width: 300px;	
 			}
+			
     		
     	</style>
     </head>
@@ -48,7 +51,7 @@
 	<nav class="navbar navbar-expand-lg navbar-dark" id="sideNav" style="background-color: #DC3534">
             <a class="navbar-brand js-scroll-trigger" href="#page-top">
                 <span class="d-block d-lg-none">구들구들</span>
-                <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="${pageContext.request.contextPath}/resources/dashboard/assets/img/logo.jfif" alt="..." />
+                <img class="img-fluid img-profile mx-auto mb-2" src="${pageContext.request.contextPath}/resources/dashboard/assets/img/구들구들로고.png" alt="..." />
             </a>
             
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>	
@@ -124,27 +127,43 @@
             <section class="resume-section" id="service">
                 <div class="resume-section-content">
                     <h2 class="mb-5">서비스</h2>
-						<div class="card">
-							<img alt="사진" src="">
-							<div class="card-body">
-							<h4>제목입니다</h4>
-							<p>내용입니다.</p>
-							</div>
-						</div>
-						<div class="card">
-							<img alt="사진" src="">
-							<div class="card-body">
-							<h4>제목입니다</h4>
-							<p>내용입니다.</p>
-							</div>
-						</div>
-						<div class="card">
-							<img alt="사진" src="">
-							<div class="card-body">
-							<h4>제목입니다</h4>
-							<p>내용입니다.</p>
-							</div>
-						</div>
+                    <div class="container">
+				      <div class="row">
+				        <div class="col-md-4">
+				          <div><img alt="..." src="${pageContext.request.contextPath}/resources/dashboard/assets/img/joinred.png" class="img-fluid"></div>
+				          <div class="card text-black" style="border: 2px solid #DC3534;">
+				            <div class="card-header" style="font-size: 60px;">
+				              	가입하기
+				            </div>
+				            <div class="card-body">
+				              <h4 class="card-title">구들구들의 서비스를 즐기기 위해 가입하세요.</h4>
+				            </div>
+				          </div>
+				        </div>
+				        <div class="col-md-4">
+				          <div><img alt="..." src="${pageContext.request.contextPath}/resources/dashboard/assets/img/order.png" class="img-fluid"></div>
+				          <div class="card text-black" style="border: 2px solid #DC3534;">
+				            <div class="card-header" style="font-size: 60px;">
+				              	주문하기
+				            </div>
+				            <div class="card-body">
+				              <h4 class="card-title">고객님의 선호도를 기반으로 추천된 레시피를 만나보세요.</h4>
+				            </div>
+				          </div>
+				        </div>
+				        <div class="col-md-4">
+				          <div><img alt="..." src="${pageContext.request.contextPath}/resources/dashboard/assets/img/eat.png" class="img-fluid"></div>
+				          <div class="card text-black" style="border: 2px solid #DC3534;">
+				            <div class="card-header" style="font-size: 60px;">
+				              	요리하기
+				            </div>
+				            <div class="card-body">
+				              <h4 class="card-title">재료와 레시피를 받으셨다면 요리할 시간입니다.</h4>
+				            </div>
+				          </div>
+				        </div>
+				      </div>
+				    </div>
 	      
 				</div>
 				
@@ -154,8 +173,7 @@
             <!-- RECIPE-->
             <section class="resume-section" id="recipe">
                 <div class="resume-section-content">
-                    
-	                <div id="carousel-1" class="carousel slide" data-bs-ride="carousel">
+                   <div id="carousel-1" class="carousel slide" data-bs-ride="carousel">
 	                	<div class="carousel-inner">
 	                		<div class="carousel-item active">
 	                			<div>
@@ -242,6 +260,7 @@
 	                	<li data-bs-target="#carousel-1" data-bs-slide-to="9"></li>
 	                	<li data-bs-target="#carousel-1" data-bs-slide-to="10"></li>
 	                </ol>
+	                
                 </div>
             </section>
             <hr class="m-0" />
@@ -262,7 +281,7 @@
 					            </div>
 				            
 				            <div class="col">
-				                <div class="card" id="pig" onclick="select()">
+				                <div class="card" id="pig">
 				                    <div class="card-body p-4">
 				                    	<div><img src="${pageContext.request.contextPath}/resources/dashboard/assets/img/pig.png" /></div>
 				                        <h4 class="card-title">돼지고기</h4>
@@ -270,7 +289,7 @@
 				                </div>
 				            </div>
 				            <div class="col">
-				                <div class="card" id="chicken" onclick="select()">
+				                <div class="card" id="chicken">
 				                    <div class="card-body p-4">
 				                    	<div><img src="${pageContext.request.contextPath}/resources/dashboard/assets/img/hen.png" /></div>
 				                        <h4 class="card-title">닭고기</h4>
@@ -280,7 +299,7 @@
 				        </div>
 				        <div class="row gy-4 row-cols-1 row-cols-md-2 row-cols-xl-3">
 				            <div class="col">
-				                <div class="card" id="sheep" onclick="select()">
+				                <div class="card" id="sheep">
 				                    <div class="card-body p-4">
 				                    	<div><img src="${pageContext.request.contextPath}/resources/dashboard/assets/img/sheep.png" /></div>
 				                        <h4 class="card-title">양고기</h4>
@@ -288,7 +307,7 @@
 				                </div>
 				            </div>
 				            <div class="col">
-				                <div class="card" id="shirimp" onclick="select()">
+				                <div class="card" id="shirimp">
 				                    <div class="card-body p-4">
 				                    	<div><img src="${pageContext.request.contextPath}/resources/dashboard/assets/img/shrimp.png" /></div>
 				                        <h4 class="card-title">해산물</h4>
@@ -296,7 +315,7 @@
 				                </div>
 				            </div>
 				            <div class="col">
-				                <div class="card" id="broccoli" onclick="select()">
+				                <div class="card" id="broccoli">
 				                    <div class="card-body p-4">
 				                    	<div><img src="${pageContext.request.contextPath}/resources/dashboard/assets/img/broccoli.png" /></div>
 				                        <h4 class="card-title">베지테리언</h4>
@@ -352,8 +371,7 @@
 								
 								※ 본 '개인정보 수집 및 이용 동의'에 명시되지 않은 사항에 대해서는 '회사'의 '개인정보처리방침'의 규정에 따릅니다. 
 		                		</textarea>
-		                		<input type="checkbox" checked="checked" id="mem_cert1" name="mem_cert1">위 약관에 동의합니다.
-		                		<label for="mem_cert1" id="mem_cert1_label"></label>
+		                		<input type="checkbox" checked="checked" id="mem_cert1" name="mem_cert1" disabled="disabled">위 약관에 동의합니다.
 		                	</td>
 	                	</tr>
 	                	<tr>
@@ -601,28 +619,25 @@
  				if($.trim( $("#mem_name").val() )== "" || $.trim( $("#mem_name").val() ) == null){
  					$("#mem_name_label").text("필수 입력 사항입니다.");
  					$("#mem_name_label").css("color", "red");
+ 					alert("이름을 적어주세요");
  					return;
  				}else {
  					$("#mem_name_label").text("");
  				}
  				
  				
- 				if( $("#mem_cert1").prop("checked") == false ){
- 					$("#mem_cert1_label").text("필수 선택 사항 입니다.");
- 					return;
- 				}else { $("#mem_cert1_label").text(""); }
-
- 				
  				if($.trim($("#mem_id").val()) == null || $.trim($("#mem_id").val()) == ""){
  					$("#dupcheck_label").text("필수 입력사항입니다.");
  					$("#dupcheck_label").css("color", "red");
+ 					alert("아이디를 입력해주세요.");
  					return;
  				} else{ $("#dupcheck_label").text("");}
  				
 
  				if( checkedID == "" || checkedID != $("#mem_id").val() ){
- 					$("#dupcheck_label").text("아이디 중복 체크를 해 주세요.");
+ 					$("#dupcheck_label").text("아이디 중복확인 해주세요.");
  					$("#dupcheck_label").css("color", "red");
+ 					alert("아이디 중복확인 해주세요");
  					return;
  				} else { $("#dupcheck_label").text(""); }
 
@@ -630,18 +645,21 @@
  				if( $.trim($("#mem_pwd").val()) == null || $.trim($("#mem_pwd").val()) == "" ){//허용되지 않은 글자는 null.
  					$("#mem_pwd_label").text("필수 입력 사항입니다.");
  					$("#mem_pwd_label").css("color", "red");
+ 					alert("비밀번호를 입력해주세요");
  					return;
  				} else { $("#mem_pwd_label").text(""); }
  				
  				
  				if( $("#mem_pwd").val().match(onlyPwd) == null ){//허용되지 않은 글자는 null.
  					$("#mem_pwd_label").text("영문 소문자, 숫자, 특수 문자만 허용 됩니다.");
+ 					alert("비밀번호 조건에 맞지 않습니다.");
  					return;
  				} else { $("#mem_pwd_label").text(""); }
 
  				if( $("#mem_pwd").val() != $("#pwdcheck").val() ){
  					$("#pwdchk_label").text("비밀번호가 불일치 합니다.");
  					$("#pwdchk_label").css("color", "red");
+ 					alert("비밀번호를 다시 확인해주세요.");
  					return;
  				} else { $("#pwdchk_label").text(""); }
  				
@@ -649,6 +667,7 @@
  				if($.trim( $("#mem_addr1").val() ) == "" || $.trim( $("#mem_addr1").val() ) == null){
  					$("#mem_addr1_label").text("필수 입력 사항입니다.");
  					$("#mem_addr1_label").css("color", "red");
+ 					alert("우편번호 찾기를 이용하여 주소를 입력해주세요.");
  					return;
  				}else {
  					$("#mem_addr1_label").text("");
@@ -657,6 +676,7 @@
  				if($.trim( $("#mem_addr2").val() ) == "" || $.trim( $("#mem_addr2").val() ) == null){
  					$("#mem_addr2_label").text("필수 입력 사항입니다.");
  					$("#mem_addr2_label").css("color", "red");
+ 					alert("상세주소를 입력해주세요.");
  					return;
  				}else {
  					$("#mem_addr2_label").text("");
@@ -671,6 +691,7 @@
  					|| ( tmpTel2 != "" && tmpTel2.match(onlyNum) == null )
  					|| ( tmpTel3 != "" && tmpTel3.match(onlyNum) == null ) ){
  					$("#tel1_label").text("숫자만 허용 됩니다.");
+ 					alert("전화번호는 숫자만 허용됩니다.");
  					return;
  				} else { $("#tel1_label").text(""); }
  				
@@ -678,6 +699,7 @@
  				if($.trim( $("#tel1").val() ) == "" || $.trim( $("#tel1").val() ) == null){
  					$("#tel1_label").text("필수 입력 사항입니다.");
  					$("#tel1_label").css("color", "red");
+ 					alert("전화번호를 입력해주세요.");
  					return;
  				}else{
  					$("#tel1_label").text("");
@@ -685,6 +707,7 @@
  				if($.trim( $("#tel2").val() ) == "" || $.trim( $("#tel2").val() ) == null){
  					$("#tel1_label").text("필수 입력 사항입니다.");
  					$("#tel1_label").css("color", "red");
+ 					alert("전화번호를 입력해주세요.");
  					return;
  				}else{
  					$("#tel1_label").text("");
@@ -692,6 +715,7 @@
  				if($.trim( $("#tel3").val() ) == "" || $.trim( $("#tel3").val() ) == null){
  					$("#tel1_label").text("필수 입력 사항입니다.");
  					$("#tel1_label").css("color", "red");
+ 					alert("전화번호를 입력해주세요.");
  					return;
  				}else{
  					$("#tel1_label").text("");
@@ -704,19 +728,22 @@
  				if( ( tmpEmail1 != "" && tmpEmail1.match(onlyEmail) == null )
  					|| ( tmpEmail2 != "" && tmpEmail2.match(onlyEmail) == null ) ){
  					$("#email1_label").text("영문 대소문자와 숫자만 허용 됩니다.");
+ 					alert("이메일 확인해주세요.");
  					return;
  				} else { $("#email1_label").text(""); }
  				
  				if($.trim( $("#email1").val() ) == "" || $.trim( $("#email1").val() ) == null){
  					$("#email1_label").text("필수 입력 사항입니다.");
  					$("#email1_label").css("color", "red");
+ 					alert("이메일 입력해주세요.");
  					return;
  				}else{
  					$("#email1_label").text("");
  				}
  				if($.trim( $("#email2").val() ) == "" || $.trim( $("#email2").val() ) == null){
- 					$("#email2_label").text("필수 입력 사항입니다.");
+ 					$("#email2_label").text("필수 사항입니다.");
  					$("#email2_label").css("color", "red");
+ 					alert("이메일 선택해주세요.");
  					return;
  				}else{
  					$("#email2_label").text("");
@@ -729,6 +756,7 @@
  				if($.trim( $("#card_name").val() ) == "" || $.trim( $("card_name").val() ) == null){
  					$("#card_name_label").text("필수 입력 사항입니다.");
  					$("#card_name_label").css("color", "red");
+ 					alert("카드 사용자명을 입력해주세요.");
  					return;
  				}else {
  					$("#card_name_label").text("");
@@ -739,6 +767,7 @@
  				if($.trim( $("#card_no").val() ) == "" || $.trim( $("card_no").val() ) == null){
  					$("#card_no_label").text("필수 입력 사항입니다.");
  					$("#card_no_label").css("color", "red");
+ 					alert("카드번호를 입력해주세요.");
  					return;
  				}else {
  					$("#card_no_label").text("");
@@ -748,6 +777,7 @@
  				if( tmpCardNo.match(onlyNum) == null){
  					$("#card_no_label").text("숫자만 입력하세요");
  					$("#card_no_label").css("color", "red");
+ 					alert("카드번호는 숫자만 허용됩니다..");
  					return;
  				}else {
  					$("#card_no_label").text("");
@@ -757,10 +787,12 @@
  				if($.trim($("#card_no").val().length) < 15){
  					$("#card_no_label").text("카드번호는 15,16자리입니다.");
  					$("#card_no_label").css("color", "red");
+ 					alert("카드번호는 15,16자리입니다.");
  					return;
  				}else if($.trim($("#card_no").val().length) > 16){
  					$("#card_no_label").text("카드번호는 15,16자리입니다.");
  					$("#card_no_label").css("color", "red");
+ 					alert("카드번호는 15,16자리입니다.");
  					return;
  				}else if($.trim($("#card_no").val().length) == 15 || $.trim($("#card_no").val().length) == 16){
  					$("#card_no_label").text("");
@@ -772,14 +804,16 @@
  				
  				if(tmpCard_Exp1 == null || tmpCard_Exp1 == ""
  					|| tmpCard_Exp2 == null || tmpCard_Exp2 == ""){
- 					$("#card_exp1_label").text("필수 선택 사항입니다.");
+ 					$("#card_exp1_label").text("필수 사항입니다.");
  					$("#card_exp1_label").css("color", "red");
+ 					alert("카드 유효기간을 선택해주세요.");
  					return;
  				} else {$("#card_exp1_label").text("");}
  				
  				if($.trim( $("#card_cvc").val()) == null || $.trim( $("#card_cvc").val()) == ""){
  					$("#card_cvc_label").text("필수 입력 사항입니다.");
  					$("#card_cvc_label").css("color", "red");
+ 					alert("CVC 번호를 입력해주세요.");
  					return;
  				}else {
  					$("#card_cvc_label").text("");
@@ -788,6 +822,7 @@
  				if($.trim($("#card_cvc").val().length) != 3){
  					$("#card_cvc_label").text("CVC는 3자리입니다.");
  					$("#card_cvc_label").css("color", "red");
+ 					alert("CVC는 3자리입니다.");
  					return;
  				}else {
  					$("#card_cvc_label").text("");
@@ -796,6 +831,7 @@
  				if($("#card_cvc").val().match(onlyNum) == null){
  					$("#card_cvc_label").text("숫자만 입력하세요");
  					$("#card_cvc_label").css("color", "red");
+ 					alert("CVC 숫자만 입력해주세요.");
  					return;
  				}else {
  					$("#card_cvc_label").text("");
@@ -806,6 +842,7 @@
  				if($.trim($("#card_pwd").val().length) > 2 || $.trim($("#card_pwd").val().length) < 2){
  					$("#card_pwd_label").text("비밀번호 앞 2자리 입력해주세요");
  					$("#card_pwd_label").css("color", "red");
+ 					alert("카드 결제비밀번호 앞 2자리를 입력해주세요");
  					return;
  				}else if($.trim($("#card_pwd").val().length) == 2) {
  					$("#card_pwd_label").text("");
@@ -815,6 +852,7 @@
  				if($("#card_pwd").val().match(onlyNum) == null){
  					$("#card_pwd_label").text("숫자만 입력하세요");
  					$("#card_pwd_label").css("color", "red");
+ 					alert("카드 결제비밀번호 앞 2자리 숫자를 입력해주세요.");
  					return;
  				}else {
  					$("#card_pwd_label").text("");
@@ -822,6 +860,7 @@
  				if($.trim( $("#card_pwd").val()) == null || $.trim( $("#card_pwd").val()) == ""){
  					$("#card_pwd_label").text("필수 입력 사항입니다.");
  					$("#card_pwd_label").css("color", "red");
+ 					alert("카드 결제비밀번호는 필수입력 사항입니다.");
  					return;
  				}else {
  					$("#card_pwd_label").text("");
@@ -896,6 +935,8 @@
 
  			});//click
  		});//ready
+
+	 
  //=================================================
  var scrollElement = document.querySelector('#scroll');
 
