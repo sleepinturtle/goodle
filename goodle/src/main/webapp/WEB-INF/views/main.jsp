@@ -26,28 +26,31 @@
     		#recipe {
     			text-align: center;
     		}
+    		th {
+				width: 300px;	
+			}
+    		
     	</style>
     </head>
     <body class="sb-nav-fixed">
     <%@ include file="/WEB-INF/views/var_header.jsp"%>
-        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: #DC3534;">
-		<div class="collapse navbar-collapse" id="navbarResponsive">
-			<ul class="navbar-nav">
-				<li class="nav-item float-right">
-					<a href="${pageContext.request.contextPath}/login/login_form">
+    <nav class="navbar navbar-light navbar-expand-md py-3 fixed-top" style="background: #DC3534;">
+        <div class="container"><a class="navbar-brand d-flex align-items-center" href="#"><span style="color: rgba(255,255,255,0.9); margin-left: -600px; font-size: 25px;">구들구들</span></a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navcol-1" style="margin-right: -600px;">
+                <ul class="navbar-nav me-auto"></ul>
+                <a href="${pageContext.request.contextPath}/login/login_form">
 						<button id="login" name="login" class="btn btn-success">로그인</button>
-					</a>
-				</li>
-			</ul>
-				
-		</div>
-	</nav>
+		    	</a>
+            </div>
+        </div>
+    </nav>    
 	
 	<nav class="navbar navbar-expand-lg navbar-dark" id="sideNav" style="background-color: #DC3534">
             <a class="navbar-brand js-scroll-trigger" href="#page-top">
                 <span class="d-block d-lg-none">구들구들</span>
                 <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="${pageContext.request.contextPath}/resources/dashboard/assets/img/logo.jfif" alt="..." />
             </a>
+            
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>	
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav">
@@ -246,82 +249,62 @@
             <!-- custom-->
             <section class="resume-section" id="custom">
                 <div class="resume-section-content">
-                    <h2 class="mb-5">Customize</h2>
-			        <div class="container py-4 py-xl-5">
-			        
-			        <div class="row gy-4 row-cols-1 row-cols-md-2 row-cols-xl-3">
-			            <div class="col">
-			                <div class="card">
-			                    <div class="card-body p-4">
-			                        <div class="bs-icon-md bs-icon-rounded bs-icon-primary d-flex justify-content-center align-items-center d-inline-block mb-3 bs-icon"><svg class="bi bi-bell" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16">
-			                                <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zM8 1.918l-.797.161A4.002 4.002 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4.002 4.002 0 0 0-3.203-3.92L8 1.917zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5.002 5.002 0 0 1 13 6c0 .88.32 4.2 1.22 6z"></path>
-			                            </svg></div>
-			                        <h4 class="card-title">Title</h4>
-			                        <p class="card-text">Erat netus est hendrerit, nullam et quis ad cras porttitor iaculis. Bibendum vulputate cras aenean.</p>
-			                    </div>
-			                </div>
-			            </div>
-			            <div class="col">
-			                <div class="card">
-			                    <div class="card-body p-4">
-			                        <div class="bs-icon-md bs-icon-rounded bs-icon-primary d-flex justify-content-center align-items-center d-inline-block mb-3 bs-icon"><svg class="bi bi-bezier" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16">
-			                                <path fill-rule="evenodd" d="M0 10.5A1.5 1.5 0 0 1 1.5 9h1A1.5 1.5 0 0 1 4 10.5v1A1.5 1.5 0 0 1 2.5 13h-1A1.5 1.5 0 0 1 0 11.5v-1zm1.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1zm10.5.5A1.5 1.5 0 0 1 13.5 9h1a1.5 1.5 0 0 1 1.5 1.5v1a1.5 1.5 0 0 1-1.5 1.5h-1a1.5 1.5 0 0 1-1.5-1.5v-1zm1.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1zM6 4.5A1.5 1.5 0 0 1 7.5 3h1A1.5 1.5 0 0 1 10 4.5v1A1.5 1.5 0 0 1 8.5 7h-1A1.5 1.5 0 0 1 6 5.5v-1zM7.5 4a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1z"></path>
-			                                <path d="M6 4.5H1.866a1 1 0 1 0 0 1h2.668A6.517 6.517 0 0 0 1.814 9H2.5c.123 0 .244.015.358.043a5.517 5.517 0 0 1 3.185-3.185A1.503 1.503 0 0 1 6 5.5v-1zm3.957 1.358A1.5 1.5 0 0 0 10 5.5v-1h4.134a1 1 0 1 1 0 1h-2.668a6.517 6.517 0 0 1 2.72 3.5H13.5c-.123 0-.243.015-.358.043a5.517 5.517 0 0 0-3.185-3.185z"></path>
-			                            </svg></div>
-			                        <h4 class="card-title">Title</h4>
-			                        <p class="card-text">Erat netus est hendrerit, nullam et quis ad cras porttitor iaculis. Bibendum vulputate cras aenean.</p>
-			                    </div>
-			                </div>
-			            </div>
-			            <div class="col">
-			                <div class="card">
-			                    <div class="card-body p-4">
-			                        <div class="bs-icon-md bs-icon-rounded bs-icon-primary d-flex justify-content-center align-items-center d-inline-block mb-3 bs-icon"><svg class="bi bi-flag" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16">
-			                                <path d="M14.778.085A.5.5 0 0 1 15 .5V8a.5.5 0 0 1-.314.464L14.5 8l.186.464-.003.001-.006.003-.023.009a12.435 12.435 0 0 1-.397.15c-.264.095-.631.223-1.047.35-.816.252-1.879.523-2.71.523-.847 0-1.548-.28-2.158-.525l-.028-.01C7.68 8.71 7.14 8.5 6.5 8.5c-.7 0-1.638.23-2.437.477A19.626 19.626 0 0 0 3 9.342V15.5a.5.5 0 0 1-1 0V.5a.5.5 0 0 1 1 0v.282c.226-.079.496-.17.79-.26C4.606.272 5.67 0 6.5 0c.84 0 1.524.277 2.121.519l.043.018C9.286.788 9.828 1 10.5 1c.7 0 1.638-.23 2.437-.477a19.587 19.587 0 0 0 1.349-.476l.019-.007.004-.002h.001M14 1.221c-.22.078-.48.167-.766.255-.81.252-1.872.523-2.734.523-.886 0-1.592-.286-2.203-.534l-.008-.003C7.662 1.21 7.139 1 6.5 1c-.669 0-1.606.229-2.415.478A21.294 21.294 0 0 0 3 1.845v6.433c.22-.078.48-.167.766-.255C4.576 7.77 5.638 7.5 6.5 7.5c.847 0 1.548.28 2.158.525l.028.01C9.32 8.29 9.86 8.5 10.5 8.5c.668 0 1.606-.229 2.415-.478A21.317 21.317 0 0 0 14 7.655V1.222z"></path>
-			                            </svg></div>
-			                        <h4 class="card-title">Title</h4>
-			                        <p class="card-text">Erat netus est hendrerit, nullam et quis ad cras porttitor iaculis. Bibendum vulputate cras aenean.</p>
-			                    </div>
-			                </div>
-			            </div>
-			        </div>
-			        <div class="row gy-4 row-cols-1 row-cols-md-2 row-cols-xl-3">
-			            <div class="col">
-			                <div class="card">
-			                    <div class="card-body p-4">
-			                        <div class="bs-icon-md bs-icon-rounded bs-icon-primary d-flex justify-content-center align-items-center d-inline-block mb-3 bs-icon"><svg class="bi bi-bell" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16">
-			                                <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zM8 1.918l-.797.161A4.002 4.002 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4.002 4.002 0 0 0-3.203-3.92L8 1.917zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5.002 5.002 0 0 1 13 6c0 .88.32 4.2 1.22 6z"></path>
-			                            </svg></div>
-			                        <h4 class="card-title">Title</h4>
-			                        <p class="card-text">Erat netus est hendrerit, nullam et quis ad cras porttitor iaculis. Bibendum vulputate cras aenean.</p>
-			                    </div>
-			                </div>
-			            </div>
-			            <div class="col">
-			                <div class="card">
-			                    <div class="card-body p-4">
-			                        <div class="bs-icon-md bs-icon-rounded bs-icon-primary d-flex justify-content-center align-items-center d-inline-block mb-3 bs-icon"><svg class="bi bi-bezier" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16">
-			                                <path fill-rule="evenodd" d="M0 10.5A1.5 1.5 0 0 1 1.5 9h1A1.5 1.5 0 0 1 4 10.5v1A1.5 1.5 0 0 1 2.5 13h-1A1.5 1.5 0 0 1 0 11.5v-1zm1.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1zm10.5.5A1.5 1.5 0 0 1 13.5 9h1a1.5 1.5 0 0 1 1.5 1.5v1a1.5 1.5 0 0 1-1.5 1.5h-1a1.5 1.5 0 0 1-1.5-1.5v-1zm1.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1zM6 4.5A1.5 1.5 0 0 1 7.5 3h1A1.5 1.5 0 0 1 10 4.5v1A1.5 1.5 0 0 1 8.5 7h-1A1.5 1.5 0 0 1 6 5.5v-1zM7.5 4a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1z"></path>
-			                                <path d="M6 4.5H1.866a1 1 0 1 0 0 1h2.668A6.517 6.517 0 0 0 1.814 9H2.5c.123 0 .244.015.358.043a5.517 5.517 0 0 1 3.185-3.185A1.503 1.503 0 0 1 6 5.5v-1zm3.957 1.358A1.5 1.5 0 0 0 10 5.5v-1h4.134a1 1 0 1 1 0 1h-2.668a6.517 6.517 0 0 1 2.72 3.5H13.5c-.123 0-.243.015-.358.043a5.517 5.517 0 0 0-3.185-3.185z"></path>
-			                            </svg></div>
-			                        <h4 class="card-title">Title</h4>
-			                        <p class="card-text">Erat netus est hendrerit, nullam et quis ad cras porttitor iaculis. Bibendum vulputate cras aenean.</p>
-			                    </div>
-			                </div>
-			            </div>
-			            <div class="col">
-			                <div class="card">
-			                    <div class="card-body p-4">
-			                        <div class="bs-icon-md bs-icon-rounded bs-icon-primary d-flex justify-content-center align-items-center d-inline-block mb-3 bs-icon"><svg class="bi bi-flag" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16">
-			                                <path d="M14.778.085A.5.5 0 0 1 15 .5V8a.5.5 0 0 1-.314.464L14.5 8l.186.464-.003.001-.006.003-.023.009a12.435 12.435 0 0 1-.397.15c-.264.095-.631.223-1.047.35-.816.252-1.879.523-2.71.523-.847 0-1.548-.28-2.158-.525l-.028-.01C7.68 8.71 7.14 8.5 6.5 8.5c-.7 0-1.638.23-2.437.477A19.626 19.626 0 0 0 3 9.342V15.5a.5.5 0 0 1-1 0V.5a.5.5 0 0 1 1 0v.282c.226-.079.496-.17.79-.26C4.606.272 5.67 0 6.5 0c.84 0 1.524.277 2.121.519l.043.018C9.286.788 9.828 1 10.5 1c.7 0 1.638-.23 2.437-.477a19.587 19.587 0 0 0 1.349-.476l.019-.007.004-.002h.001M14 1.221c-.22.078-.48.167-.766.255-.81.252-1.872.523-2.734.523-.886 0-1.592-.286-2.203-.534l-.008-.003C7.662 1.21 7.139 1 6.5 1c-.669 0-1.606.229-2.415.478A21.294 21.294 0 0 0 3 1.845v6.433c.22-.078.48-.167.766-.255C4.576 7.77 5.638 7.5 6.5 7.5c.847 0 1.548.28 2.158.525l.028.01C9.32 8.29 9.86 8.5 10.5 8.5c.668 0 1.606-.229 2.415-.478A21.317 21.317 0 0 0 14 7.655V1.222z"></path>
-			                            </svg></div>
-			                        <h4 class="card-title">Title</h4>
-			                        <p class="card-text">Erat netus est hendrerit, nullam et quis ad cras porttitor iaculis. Bibendum vulputate cras aenean.</p>
-			                    </div>
-			                </div>
-			            </div>
-			        </div>
-			    </div>
+                    <h2>Customize</h2>
+					<div class="container py-4 py-xl-5" id="custom_div">
+				        <div class="row gy-4 row-cols-1 row-cols-md-2 row-cols-xl-3">
+					            <div class="col">
+					                <div class="card" id="cow">
+					                    <div class="card-body p-4">
+					                            <img src="${pageContext.request.contextPath}/resources/dashboard/assets/img/cow.png" />
+					                        	<h4 class="card-title">소고기</h4>
+					                    </div>
+					                </div>
+					            </div>
+				            
+				            <div class="col">
+				                <div class="card" id="pig" onclick="select()">
+				                    <div class="card-body p-4">
+				                    	<div><img src="${pageContext.request.contextPath}/resources/dashboard/assets/img/pig.png" /></div>
+				                        <h4 class="card-title">돼지고기</h4>
+				                    </div>
+				                </div>
+				            </div>
+				            <div class="col">
+				                <div class="card" id="chicken" onclick="select()">
+				                    <div class="card-body p-4">
+				                    	<div><img src="${pageContext.request.contextPath}/resources/dashboard/assets/img/hen.png" /></div>
+				                        <h4 class="card-title">닭고기</h4>
+				                    </div>
+				                </div>
+				            </div>
+				        </div>
+				        <div class="row gy-4 row-cols-1 row-cols-md-2 row-cols-xl-3">
+				            <div class="col">
+				                <div class="card" id="sheep" onclick="select()">
+				                    <div class="card-body p-4">
+				                    	<div><img src="${pageContext.request.contextPath}/resources/dashboard/assets/img/sheep.png" /></div>
+				                        <h4 class="card-title">양고기</h4>
+				                    </div>
+				                </div>
+				            </div>
+				            <div class="col">
+				                <div class="card" id="shirimp" onclick="select()">
+				                    <div class="card-body p-4">
+				                    	<div><img src="${pageContext.request.contextPath}/resources/dashboard/assets/img/shrimp.png" /></div>
+				                        <h4 class="card-title">해산물</h4>
+				                    </div>
+				                </div>
+				            </div>
+				            <div class="col">
+				                <div class="card" id="broccoli" onclick="select()">
+				                    <div class="card-body p-4">
+				                    	<div><img src="${pageContext.request.contextPath}/resources/dashboard/assets/img/broccoli.png" /></div>
+				                        <h4 class="card-title">베지테리언</h4>
+				                    </div>
+				                </div>
+				            </div>
+				        </div>
+				    </div>    
 			   
                 </div>
             </section>
@@ -333,6 +316,7 @@
                 	<div>
                 	<table class="table table-hover">
 	                	<tr>
+	                		<th style="font-weight: bold;">개인정보 수집 동의</th>
 		                	<td>
 				                <textarea readonly="readonly" class="form-control mr-5">
 		                			개인정보보호법 규정에 따라 회원가입을 신청하시는 분께 (주)구들구들(이하 '회사')이 수집하는 개인정보의 항목, 개인정보의 수집 및 이용 목적, 개인정보의 보유 및 이용기간을 안내 드리니 자세히 읽은 후 동의하여 주시기 바랍니다. 
@@ -373,6 +357,7 @@
 		                	</td>
 	                	</tr>
 	                	<tr>
+	                		<th style="font-weight: bold;">SMS 수신동의</th>
 		                	<td>
 				                <textarea readonly="readonly" class="form-control">
 		                			구들구들 서비스에 관한 새로운 소식, 특별한 혜택 및 추천정보 등 광고성 정보를 귀하에게 제공할 수 있습니다. 
@@ -383,18 +368,18 @@
 	                	</tr>
                 		<tr>
                 			
-							
-							<td style="font-weight: bold;">
-							이름
+							<th style="font-weight: bold;">이름</th>
+							<td>
                 			<input type="text" id="mem_name" name="mem_name" placeholder="홍길동">
                 			<label for="mem_name" id="mem_name_label"></label>
                 			</td>
                 		</tr>
                 		<tr>
+                			<th style="font-weight: bold;">아이디</th>
                 			<td style="font-weight: bold;">
                 				<div class="input-group">
                 					
-	                			 	아 이 디<input type="text" id="mem_id" name="mem_id" placeholder="아이디 입력">
+	                			 	<input type="text" id="mem_id" name="mem_id" placeholder="아이디 입력">
                 					<div class="input-group-append">
 		                				<button type="button" id="dupcheck" name="dupcheck" class="btn btn-success">아이디 중복확인</button>
                 						<label for="dupcheck" id="dupcheck_label"></label>
@@ -404,24 +389,24 @@
                 			</td>	
                 		</tr>
                 		<tr>
-                			
+                			<th style="font-weight: bold;">비 밀 번 호</th>
                 			<td style="font-weight: bold;">
                 			
-                			비 밀 번 호<input type="password" id="mem_pwd" name="mem_pwd" placeholder="비밀번호 입력">
+                			<input type="password" id="mem_pwd" name="mem_pwd" placeholder="비밀번호 입력">
                 			<label for="mem_pwd" id="mem_pwd_label"></label>
                 			</td>
                 		</tr>
                 		<tr>
+                			<th style="font-weight: bold;">비 밀 번 호 확인</th>
                 			<td style="font-weight: bold;">
                 			
-                			비 밀 번 호 확인<input type="password" id="pwdcheck" name="pwdcheck" placeholder="비밀번호 재입력">
+                			<input type="password" id="pwdcheck" name="pwdcheck" placeholder="비밀번호 재입력">
                 			<label for="pwdcheck" id="pwdchk_label"></label>
                 			</td>
                 		</tr>
                 		<tr>
-                			
+                			<th style="font-weight: bold;">주소/배송지</th>
                 			<td style="font-weight: bold;">
-                			기본 배송지/주소
                 			<div class="input-group">
                 				<input type="text" id="mem_post" name="mem_post" placeholder="우편번호" readonly="readonly">
                 			    <input type="text" id="mem_addr1" name="mem_addr1" placeholder="도로명 주소" readonly="readonly">
@@ -436,10 +421,10 @@
                 			</td>
                 		</tr>
                 		<tr>
-                			
+                			<th style="font-weight: bold;">전화번호</th>
                 			<td style="font-weight: bold;">
                 			
-	                			전 화 번 호<input type="text" id="tel1" name="tel1" placeholder="010">
+	                			<input type="text" id="tel1" name="tel1" placeholder="010">
 	                			
 	                			-<input type="text" id="tel2" name="tel2" placeholder="1234">
 	                			
@@ -449,9 +434,10 @@
                 			</td>
                 		</tr>
                 		<tr>
+                			<th style="font-weight: bold;">이메일</th>
                 			<td style="font-weight: bold;">
                 				
-                				이 메 일<input type="email" id="email1" name="email1" placeholder="이메일 입력">
+                				<input type="email" id="email1" name="email1" placeholder="이메일 입력">
                 						@<select id="email2" name="email2">
                 							<option value="naver.com">naver.com</option>
                 							<option value="gmail.com">gmail.com</option>
@@ -463,19 +449,14 @@
                 			
                 			</td>
                 		</tr>
-                		<tr>
-                			<td>
-                				<a href="#custom">
-	                				<button type="button" class="btn btn-success" id="back" name="back">뒤로 가기</button>
-                				</a>
-                			</td>
-                			<td>
-                				<a href="#payinfo">
- 		               				<button type="button" class="btn btn-success" id="next" name="next">다음</button>
-                				</a>
-                			</td>
-                		</tr>
+                		
                 	</table>
+                	<a href="#custom">
+	                				<button type="button" class="btn btn-success" id="back" name="back">뒤로 가기</button>
+                	</a>
+                	<a href="#payinfo" style="float: right;">
+ 		               				<button type="button" class="btn btn-success" id="next" name="next">다음</button>
+                	</a>
                 	</div>
                 	
                 </div>
@@ -486,20 +467,23 @@
                     <h2 class="mb-5">결제 정보</h2>
                      <table class="table table-hover">
                    		<tr>
+                   			<th style="font-weight: bold;">사용자 이름</th>
                    			<td style="font-weight: bold;">
-                   				사용자 이름  <input type="text" id="card_name" name="card_name" placeholder="이름 입력">
+                   				  <input type="text" id="card_name" name="card_name" placeholder="이름 입력">
                    						<label for="card_name" id="card_name_label"></label>
                    			</td>
                    		</tr>
                    		<tr>
+                   			<th style="font-weight: bold;">카드 번호</th>
                    			<td style="font-weight: bold;">
-                   				카드 번호  <input type="text" id="card_no" name="card_no" placeholder="'-'없이 카드 번호 입력">
+                   				 <input type="text" id="card_no" name="card_no" placeholder="'-'없이 카드 번호 입력">
                    						<label for="card_no" id="card_no_label"></label>
                    			</td>
                    		</tr>
                    		<tr>
+                   			<th style="font-weight: bold;">카드 유효 기간</th>
                    			<td style="font-weight: bold;">
-                   				유효 기간  <select class="form-control" id="card_exp1" name="card_exp1">
+                   				  <select class="form-control" id="card_exp1" name="card_exp1">
                    							<option value="" selected="selected"></option>
                    							<option value="1">1월</option>
                    							<option value="2">2월</option>
@@ -534,28 +518,25 @@
                    			</td>
                    		</tr>
                    		<tr>
+                   			<th style="font-weight: bold;">CVC</th>
                    			<td style="font-weight: bold;">
-                   				CVC<input type="text" id="card_cvc" name="card_cvc"> 
+                   				<input type="text" id="card_cvc" name="card_cvc"> 
                    					<label for="card_cvc" id="card_cvc_label"></label>
                    			</td>
                    		</tr>
                    		<tr>
+                   			<th style="font-weight: bold;">카드 결제비밀번호 앞 2자리</th>
                    			<td style="font-weight: bold;">
-                   				카드 결제비밀번호 앞 2자리<input type="text" id="card_pwd" name="card_pwd"> 
+                   				<input type="text" id="card_pwd" name="card_pwd"> 
                    									<label for="card_pwd" id="card_pwd_label"></label>
                    			</td>
                    		</tr>
-                   		<tr>
-                			<td>
-                				<a href="#info">
-                					<button type="button" class="btn btn-success" id="back" name="back">뒤로 가기</button>
-                				</a>
-                			</td>
-                			<td>
-                				<button type="button" class="btn btn-success" id="join">회원 가입</button>
-                			</td>
-                		</tr>
+                   		
                    </table>
+                   <a href="#info">
+                					<button type="button" class="btn btn-success" id="back" name="back">뒤로 가기</button>
+                   </a>
+                   <button type="button" class="btn btn-success" id="join" style="float: right;">회원 가입</button>
                 </div>
             </section>
             <!-- complain -->
@@ -574,7 +555,7 @@
 	                			<td><h2>goodle@gmail.com</h2></td>
 	                		</tr>
 	                		<tr>
-	                			<td><h2>도로명 : 서울 마포구 백범로 23 3층</h2></td>
+	                			<td><h2>도로명 : 서울 마포구 백범로 23   3층</h2></td>
 	                		</tr>
 	                		<tr>
 	                			<td><h2>지번 : 신수동 63-14 3층 </h2></td>
@@ -600,10 +581,7 @@
  		let onlyPwd = /^[a-z0-9~!@#$%^&*().]+$/;
  		let onlyEmail = /^[a-zA-Z@.0-9]+$/;
  		
- 		
- 		
- 		
- 		
+ 	
  		
  		$(document).ready(function() {
  			$("#codefinder").click(function() {
@@ -848,7 +826,7 @@
  				}else {
  					$("#card_pwd_label").text("");
  				}
- 				
+
  				//정보 전송
  				$.post(
  						"${pageContext.request.contextPath}/join"
@@ -877,8 +855,8 @@
  							if(data == 1){
  								alert("회원 가입에 성공하셨습니다. 로그인 해주세요");
  								location.href="${pageContext.request.contextPath}/login/login_form";
- 							}else{
- 								alert("잠시 후 다시 시도해 주세요.");
+ 							}else if(data == 0){
+ 								alert("잠시 후 다시 시도해주세요.");
  							}
  						}//call back function
  				);//post

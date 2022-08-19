@@ -17,8 +17,8 @@
 		</selectKey>
 	</insert>
 	<insert id="paymentinfo" parameterType="kr.co.goodle.util.dto.MemberDTO">
-		insert into payment_info (card_name, card_exp, card_cvc, card_pwd, card_no)
-		values (#{card_name},#{card_exp},#{card_cvc},#{card_pwd},#{card_no})
+		insert into payment_info (mem_no, card_name, card_exp, card_cvc, card_pwd, card_no)
+		values (#{mem_no},#{card_name},#{card_exp},#{card_cvc},#{card_pwd},#{card_no})
 	</insert>
 	
 	

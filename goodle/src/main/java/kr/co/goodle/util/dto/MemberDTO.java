@@ -32,6 +32,22 @@ public class MemberDTO {
 	private String mem_post;
 	private String mem_addr1;
 	private String mem_addr2;
+	public String getMem_addr1() {
+		return mem_addr1;
+	}
+
+	public void setMem_addr1(String mem_addr1) {
+		this.mem_addr1 = mem_addr1;
+	}
+
+	public String getMem_addr2() {
+		return mem_addr2;
+	}
+
+	public void setMem_addr2(String mem_addr2) {
+		this.mem_addr2 = mem_addr2;
+	}
+
 	@Override
 	
 	public String toString() {
@@ -265,10 +281,6 @@ public class MemberDTO {
 
 
 	
-
-
-	
-
 
 
 	public String toString(String mang_yn) {

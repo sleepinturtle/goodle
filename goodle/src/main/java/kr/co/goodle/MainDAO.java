@@ -13,7 +13,7 @@ public class MainDAO {
 	private SqlSession sqlSession;
 	 
 	public int join(MemberDTO dto) {
-		System.out.println("DAO 돌아라1");
+		System.out.println("DAO 돌아라1 : " + dto);
 		int successCount = 0;
 		successCount = sqlSession.insert("GoodleMapper.join",dto);
 		System.out.println("DAO 돌아라2");
