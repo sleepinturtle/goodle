@@ -57,7 +57,7 @@
                                                 <label class="form-check-label" for="inputRememberPassword">비밀번호 저장</label>
                                             </div>
                                             <div class="d-flex align-items-center justify-content-between mt-4 mb-0">
-                                                <a class="small" href="join_form">회원가입</a>
+                                                <a class="small" href="${pageContext.request.contextPath}/main#start">회원가입</a>
                                                 <button id="login_btn" type="button" class="btn btn-primary float-right">로그인</button>
 <!--                                                 <a class="btn btn-primary" href="index.html">Login</a> -->
                                             </div>

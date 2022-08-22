@@ -20,10 +20,11 @@
          <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
          <!-- Core theme JS-->
-<%--        	<script src="${pageContext.request.contextPath}/resources/dashboard/js/scripts.js"></script> --%>
+<%--        	<script src="${pageContext.request.contextPath}/resources/dashboard/assets/js/scripts.js"></script> --%>
 		<script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
     	<script src="https://cdn.jsdelivr.net/npm/swiffy-slider@1.5.3/dist/js/swiffy-slider.min.js" crossorigin="anonymous" defer></script>
-<link href="https://cdn.jsdelivr.net/npm/swiffy-slider@1.5.3/dist/css/swiffy-slider.min.css" rel="stylesheet" crossorigin="anonymous">
+		<link href="https://cdn.jsdelivr.net/npm/swiffy-slider@1.5.3/dist/css/swiffy-slider.min.css" rel="stylesheet" crossorigin="anonymous">
+		<link href="${pageContext.request.contextPath}/resources/dashboard/assets/fonts/a음악시간.woff"/>
     	<style type="text/css">
     		#recipe {
     			text-align: center;
@@ -38,7 +39,7 @@
     <body class="sb-nav-fixed">
     <%@ include file="/WEB-INF/views/var_header.jsp"%>
     <nav class="navbar navbar-light navbar-expand-md py-3 fixed-top" style="background: #DC3534;">
-        <div class="container"><a class="navbar-brand d-flex align-items-center" href="#"><span style="color: rgba(255,255,255,0.9); margin-left: -600px; font-size: 25px;">구들구들</span></a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+        <div class="container"><a class="navbar-brand d-flex align-items-center" href="#"><span style="color: rgba(255,255,255,0.9); margin-left: -600px; font-size: 25px; border: 2px solid white;">구들구들</span></a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navcol-1" style="margin-right: -600px;">
                 <ul class="navbar-nav me-auto"></ul>
                 <a href="${pageContext.request.contextPath}/login/login_form">
@@ -49,9 +50,9 @@
     </nav>    
 	
 	<nav class="navbar navbar-expand-lg navbar-dark" id="sideNav" style="background-color: #DC3534">
-            <a class="navbar-brand js-scroll-trigger" href="#page-top">
+            <a class="navbar-brand js-scroll-trigger" href="">
                 <span class="d-block d-lg-none">구들구들</span>
-                <img class="img-fluid img-profile mx-auto mb-2" src="${pageContext.request.contextPath}/resources/dashboard/assets/img/구들구들로고.png" alt="..." />
+                <span style="font-size: 60px; border: 2px solid white;">구들구들</span>
             </a>
             
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>	
@@ -61,7 +62,7 @@
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#motive">중요가치</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#service">서비스 설명</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#recipe">RECIPE</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#custom">CUSTOMIZE</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#start">시작하기</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#info">기본 정보</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#payinfo">결제 정보</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#company">COMPANY</a></li>
@@ -83,7 +84,7 @@
                     
                     <p class="lead mb-5" style="background-color: white; width: 100%; font-weight: bold;">건강한 식단의 시작</p>
         
-                      <a href="#custom">
+                      <a href="#start">
 		                 <button type="button" class="btn btn-success btn-lg mt-5">시작하기</button>
 	                  </a>
                 </div>
@@ -136,10 +137,11 @@
 				              	가입하기
 				            </div>
 				            <div class="card-body">
-				              <h4 class="card-title">구들구들의 서비스를 즐기기 위해 가입하세요.</h4>
+				              <h4 class="card-title">구들구들의 서비스를 즐기기 위해 &nbsp; 가입하세요.</h4>
 				            </div>
 				          </div>
 				        </div>
+				        
 				        <div class="col-md-4">
 				          <div><img alt="..." src="${pageContext.request.contextPath}/resources/dashboard/assets/img/order.png" class="img-fluid"></div>
 				          <div class="card text-black" style="border: 2px solid #DC3534;">
@@ -147,10 +149,11 @@
 				              	주문하기
 				            </div>
 				            <div class="card-body">
-				              <h4 class="card-title">고객님의 선호도를 기반으로 추천된 레시피를 만나보세요.</h4>
+				              <h4 class="card-title">고객님의 선호도를 기반으로 &nbsp; <br> 추천된 레시피를 만나보세요.</h4>
 				            </div>
 				          </div>
 				        </div>
+				        
 				        <div class="col-md-4">
 				          <div><img alt="..." src="${pageContext.request.contextPath}/resources/dashboard/assets/img/eat.png" class="img-fluid"></div>
 				          <div class="card text-black" style="border: 2px solid #DC3534;">
@@ -158,7 +161,7 @@
 				              	요리하기
 				            </div>
 				            <div class="card-body">
-				              <h4 class="card-title">재료와 레시피를 받으셨다면 요리할 시간입니다.</h4>
+				              <h4 class="card-title">재료와 레시피를 받으셨다면 &nbsp; <br> 요리할 시간입니다.</h4>
 				            </div>
 				          </div>
 				        </div>
@@ -179,61 +182,61 @@
 	                			<div>
 	                			<img src="${pageContext.request.contextPath}/resources/dashboard/assets/img/닭볶음탕.png"/>
 	                			</div>
-	                			<div style="background-color: #d9534f; color: white; font-weight: bold; font-size: 6em;">닭볶음탕</div>
+	                			<div style="background-color: #DC3534; color: white; font-weight: bold; font-size: 6em;">닭볶음탕</div>
 	                		</div>
 	                		<div class="carousel-item">
 	                			<div>
 	                			<img src="${pageContext.request.contextPath}/resources/dashboard/assets/img/바지락 클램 차우더.jpg" alt="slide" />
 	                			</div>
-	                			<div style="background-color: #d9534f; color: white; font-weight: bold; font-size: 6em;">바지락 클램 차우더</div>
+	                			<div style="background-color: #DC3534; color: white; font-weight: bold; font-size: 6em;">바지락 클램 차우더</div>
 	                		</div>
 	                		<div class="carousel-item">
 	                			<div>
 	                			<img src="${pageContext.request.contextPath}/resources/dashboard/assets/img/사천식 마파두부.jpg" alt="slide"/>
 	                			</div>
-	                			<div style="background-color: #d9534f; color: white; font-weight: bold; font-size: 6em;">사천식 마파두부</div>
+	                			<div style="background-color: #DC3534; color: white; font-weight: bold; font-size: 6em;">사천식 마파두부</div>
 	                		</div>
 	                		<div class="carousel-item">
 	                			<div>
 	                			<img src="${pageContext.request.contextPath}/resources/dashboard/assets/img/칼바사 투움바 파스타.jpg"/>
 	                			</div>
-	                			<div style="background-color: #d9534f; color: white; font-weight: bold; font-size: 6em;">칼바사 투움바 파스타</div>
+	                			<div style="background-color: #DC3534; color: white; font-weight: bold; font-size: 6em;">칼바사 투움바 파스타</div>
 	                		</div>
 	                		<div class="carousel-item">
 	                			<div>
 	                			<img src="${pageContext.request.contextPath}/resources/dashboard/assets/img/만두전골.jpg"/>
 	                			</div>
-	                			<div style="background-color: #d9534f; color: white; font-weight: bold; font-size: 6em;">만두전골</div>
+	                			<div style="background-color: #DC3534; color: white; font-weight: bold; font-size: 6em;">만두전골</div>
 	                		</div>
 	                		<div class="carousel-item">
 	                			<div>
 	                			<img  src="${pageContext.request.contextPath}/resources/dashboard/assets/img/밀푀유나베.jpg" alt="slide"/>
 	                			</div>
-	                			<div style="background-color: #d9534f; color: white; font-weight: bold; font-size: 6em;">밀푀유나베</div>
+	                			<div style="background-color:#DC3534; color: white; font-weight: bold; font-size: 6em;">밀푀유나베</div>
 	                		</div>
 	                		<div class="carousel-item">
 	                			<div>
 	                			<img src="${pageContext.request.contextPath}/resources/dashboard/assets/img/마라 양고기 볶음.png"/>
 	                			</div>
-	                			<div style="background-color: #d9534f; color: white; font-weight: bold; font-size: 6em;">마라 양고기 볶음</div>
+	                			<div style="background-color: #DC3534; color: white; font-weight: bold; font-size: 6em;">마라 양고기 볶음</div>
 	                		</div>
 	                		<div class="carousel-item">
 	                			<div>
 	                			<img src="${pageContext.request.contextPath}/resources/dashboard/assets/img/양고기찹스테이크.png"/>
 	                			</div>
-	                			<div style="background-color: #d9534f; color: white; font-weight: bold; font-size: 6em;">양고기찹스테이크</div>
+	                			<div style="background-color: #DC3534; color: white; font-weight: bold; font-size: 6em;">양고기찹스테이크</div>
 	                		</div>
 	                		<div class="carousel-item">
 	                			<div>
 	                			<img src="${pageContext.request.contextPath}/resources/dashboard/assets/img/닭고기 치킨카레.png"/>
 	                			</div>
-	                			<div style="background-color: #d9534f; color: white; font-weight: bold; font-size: 6em;">닭고기 치킨카레</div>
+	                			<div style="background-color: #DC3534; color: white; font-weight: bold; font-size: 6em;">닭고기 치킨카레</div>
 	                		</div>
 	                		<div class="carousel-item">
 	                			<div>
-	                			<img src="${pageContext.request.contextPath}/resources/dashboard/assets/img/소고기무국.png"/>
+	                			<img src="${pageContext.request.contextPath}/resources/dashboard/assets/img/연근리조토.png"/>
 	                			</div>
-	                			<div style="background-color: #d9534f; color: white; font-weight: bold; font-size: 6em;">소고기무국</div>
+	                			<div style="background-color: #DC3534; color: white; font-weight: bold; font-size: 6em;">연근 리조토</div>
 	                		</div>
 	                	</div>
 	                	<div>
@@ -246,84 +249,30 @@
 	                			<span class="visually-hidden">Next</span>
 	                		</a>
 	                	</div>
+	                	<ol class="carousel-indicators" style="margin-bottom: 0px;">
+		                	<li class="active" data-bs-target="#carousel-1" data-bs-slide-to="0"></li>
+		                	<li data-bs-target="#carousel-1" data-bs-slide-to="1"></li>
+		                	<li data-bs-target="#carousel-1" data-bs-slide-to="2"></li>
+		                	<li data-bs-target="#carousel-1" data-bs-slide-to="3"></li>
+		                	<li data-bs-target="#carousel-1" data-bs-slide-to="4"></li>
+		                	<li data-bs-target="#carousel-1" data-bs-slide-to="5"></li>
+		                	<li data-bs-target="#carousel-1" data-bs-slide-to="6"></li>
+		                	<li data-bs-target="#carousel-1" data-bs-slide-to="7"></li>
+		                	<li data-bs-target="#carousel-1" data-bs-slide-to="8"></li>
+		                	<li data-bs-target="#carousel-1" data-bs-slide-to="9"></li>
+		                </ol>
 	                </div>
-	                <ol class="carousel-indicators">
-	                	<li class="active" data-bs-target="#carousel-1" data-bs-slide-to="0"></li>
-	                	<li data-bs-target="#carousel-1" data-bs-slide-to="1"></li>
-	                	<li data-bs-target="#carousel-1" data-bs-slide-to="2"></li>
-	                	<li data-bs-target="#carousel-1" data-bs-slide-to="3"></li>
-	                	<li data-bs-target="#carousel-1" data-bs-slide-to="4"></li>
-	                	<li data-bs-target="#carousel-1" data-bs-slide-to="5"></li>
-	                	<li data-bs-target="#carousel-1" data-bs-slide-to="6"></li>
-	                	<li data-bs-target="#carousel-1" data-bs-slide-to="7"></li>
-	                	<li data-bs-target="#carousel-1" data-bs-slide-to="8"></li>
-	                	<li data-bs-target="#carousel-1" data-bs-slide-to="9"></li>
-	                	<li data-bs-target="#carousel-1" data-bs-slide-to="10"></li>
-	                </ol>
+	                
 	                
                 </div>
             </section>
             <hr class="m-0" />
             
             <!-- custom-->
-            <section class="resume-section" id="custom">
+            <section class="resume-section" id="start">
                 <div class="resume-section-content">
-                    <h2>Customize</h2>
-					<div class="container py-4 py-xl-5" id="custom_div">
-				        <div class="row gy-4 row-cols-1 row-cols-md-2 row-cols-xl-3">
-					            <div class="col">
-					                <div class="card" id="cow">
-					                    <div class="card-body p-4">
-					                            <img src="${pageContext.request.contextPath}/resources/dashboard/assets/img/cow.png" />
-					                        	<h4 class="card-title">소고기</h4>
-					                    </div>
-					                </div>
-					            </div>
-				            
-				            <div class="col">
-				                <div class="card" id="pig">
-				                    <div class="card-body p-4">
-				                    	<div><img src="${pageContext.request.contextPath}/resources/dashboard/assets/img/pig.png" /></div>
-				                        <h4 class="card-title">돼지고기</h4>
-				                    </div>
-				                </div>
-				            </div>
-				            <div class="col">
-				                <div class="card" id="chicken">
-				                    <div class="card-body p-4">
-				                    	<div><img src="${pageContext.request.contextPath}/resources/dashboard/assets/img/hen.png" /></div>
-				                        <h4 class="card-title">닭고기</h4>
-				                    </div>
-				                </div>
-				            </div>
-				        </div>
-				        <div class="row gy-4 row-cols-1 row-cols-md-2 row-cols-xl-3">
-				            <div class="col">
-				                <div class="card" id="sheep">
-				                    <div class="card-body p-4">
-				                    	<div><img src="${pageContext.request.contextPath}/resources/dashboard/assets/img/sheep.png" /></div>
-				                        <h4 class="card-title">양고기</h4>
-				                    </div>
-				                </div>
-				            </div>
-				            <div class="col">
-				                <div class="card" id="shirimp">
-				                    <div class="card-body p-4">
-				                    	<div><img src="${pageContext.request.contextPath}/resources/dashboard/assets/img/shrimp.png" /></div>
-				                        <h4 class="card-title">해산물</h4>
-				                    </div>
-				                </div>
-				            </div>
-				            <div class="col">
-				                <div class="card" id="broccoli">
-				                    <div class="card-body p-4">
-				                    	<div><img src="${pageContext.request.contextPath}/resources/dashboard/assets/img/broccoli.png" /></div>
-				                        <h4 class="card-title">베지테리언</h4>
-				                    </div>
-				                </div>
-				            </div>
-				        </div>
-				    </div>    
+                    <h2>시작하기</h2>
+					
 			   
                 </div>
             </section>
@@ -588,7 +537,7 @@
         </main>
         </div>
 <!--         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script> -->
-<%--         <script src="${pageContext.request.contextPath}/resources/dashboard/js/scripts.js"></script> --%>
+<%--         <script src="${pageContext.request.contextPath}/resources/dashboard/assets/js/scripts.js"></script> --%>
 <!--         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script> -->
 <%--         <script src="${pageContext.request.contextPath}/resources/dashboard/assets/demo/chart-area-demo.js"></script> --%>
 <%--         <script src="${pageContext.request.contextPath}/resources/dashboard/assets/demo/chart-bar-demo.js"></script> --%>
@@ -616,6 +565,8 @@
  		$(document).ready(function() {
  			$("#join").click(function() {
  				//기본 정보 validation check
+ 				
+ 				
  				if($.trim( $("#mem_name").val() )== "" || $.trim( $("#mem_name").val() ) == null){
  					$("#mem_name_label").text("필수 입력 사항입니다.");
  					$("#mem_name_label").css("color", "red");
