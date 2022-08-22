@@ -28,6 +28,18 @@ public class MyPageController {
 	public String meminfo() {
 		return"/mypage/mem_info";
 	}
+	@RequestMapping(value="/profile_man", method=RequestMethod.GET)
+	public String profileMan() {
+		return"/mypage/profile_man";
+	}
+	@RequestMapping(value="/preference_man", method=RequestMethod.GET)
+	public String preferenceMan() {
+		return"/mypage/plan_man";
+	}
+	@RequestMapping(value="/payment_man", method=RequestMethod.GET)
+	public String paymentMan() {
+		return"/mypage/payment_man";
+	}
 	
 	@RequestMapping(value="/payhistory", method=RequestMethod.GET)
 	public String payhistory() {

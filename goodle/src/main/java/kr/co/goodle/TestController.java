@@ -10,4 +10,12 @@ public class TestController {
 	public String test() {
 		return "/test";
 	}
+	@RequestMapping(value="/test2")
+	public String test2() {
+		return "/test2";
+	}
+	@RequestMapping(value="/divtest")
+	public String divtest() {
+		return "/divtest";
+	}
 }

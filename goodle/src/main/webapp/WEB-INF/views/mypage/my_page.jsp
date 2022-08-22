@@ -1,86 +1,94 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-<%@ include file="/WEB-INF/views/header.jsp" %>
-    </head>
-	<style> 
+<!-- saved from url=(0053)file:///C:/Users/kyleb/Desktop/testing/untitled.html# -->
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>마이페이지</title>
+    <%@ include file="/WEB-INF/views/links_head.jsp" %>
+</head>
 
-    .card-body{
-    	text-align: center;
-    }
-     </style> 
-<%@ include file="/WEB-INF/views/navbar.jsp" %>
-<%@ include file="/WEB-INF/views/var_header.jsp" %>
-                <main>
-            	<div id="layoutSidenav_content">
-                	<c:forEach var="dto" items="${dtoFromDB}"/>
-                    <div class="container-fluid px-4">
-<!--                         <h1 class="mt-4">마이페이지</h1> -->
-                        <ol class="breadcrumb mb-4">
-                            <li class="breadcrumb-item active">@${login_info.mem_id}</li>
-                        </ol>
-                        <div class="row">
-                            <div class="col-xl-3 col-md-6">
-                                <div class="card bg-light grey text-black mb-4" >
-                                    <div class="card-body">
-                                    	<img class="card-img-top" src="${img_src}/profile.png"  alt="Card img">
-                                    	<h5 class="card_title">프로필 관리</h5>
-                                    	<p class="card_text">간단히 넣어보는 프로필 관리 페이지 설명글</p>
-                                    </div>
-                                        <a class="small text-black stretched-link" href="${pageContext.request.contextPath}/mypage/meminfo"></a>
-<!--                                     <div class="card-footer d-flex align-items-center justify-content-between"> -->
-<!--                                         <div class="small text-white"><i class="fas fa-angle-right"></i></div> -->
-<!--                                     </div> -->
-                                </div>
-                            </div>
-                            <div class="col-xl-3 col-md-6">
-                                <div class="card bg-light grey text-black mb-4">
-                                    <div class="card-body">
-	                                    <img class="card-img-top" src="${img_src}/apple.png"  alt="Card img">
-	                                    <h5 class="card_title">레시피 예약/확인</h5>
-	                                    <p class="card_text">간단히 넣어보는 프로필 관리 페이지 설명글</p>
-                                    </div>
-                                        <a class="small text-black stretched-link" href="${pageContext.request.contextPath}/mypage/order"></a>
-<!--                                     <div class="card-footer d-flex align-items-center justify-content-between"> -->
-<!--                                         <div class="small text-black"><i class="fas fa-angle-right"></i></div> -->
-<!--                                     </div> -->
-                                </div>
-                            </div>
-                            <div class="col-xl-3 col-md-6">
-                                <div class="card bg-light grey text-black mb-4">
-                                    <div class="card-body">
-                                    	 <img class="card-img-top" src="${img_src}/receipt.png"  alt="Card img">
-	                                    <h5 class="card_title">결제 내역</h5>
-	                                    <p class="card_text">간단히 넣어보는 프로필 관리 페이지 설명글</p>
-                                    </div>
-                                        <a class="small text-black stretched-link" href="${pageContext.request.contextPath}/mypage/payhistory"></a>
-<!--                                     <div class="card-footer d-flex align-items-center justify-content-between"> -->
-<!--                                         <div class="small text-black"><i class="fas fa-angle-right"></i></div> -->
-<!--                                     </div> -->
-                                </div>
-                            </div>
-                            <div class="col-xl-3 col-md-6">
-                                <div class="card bg-light grey text-black mb-4">
-                                    <div class="card-body">
-                                    	 <img class="card-img-top" src="${img_src}/saved.png"  alt="Card img">
-	                                    <h5 class="card_title">저장된 레시피</h5>
-	                                    <p class="card_text">간단히 넣어보는 프로필 관리 페이지 설명글</p>
-                                    </div>
-                                        <a class="small text-black stretched-link" href="${pageContext.request.contextPath}/mypage/favrecipe"></a>
-<!--                                     <div class="card-footer d-flex align-items-center justify-content-between"> -->
-<!--                                         <div class="small text-white"><i class="fas fa-angle-right"></i></div> -->
-<!--                                     </div> -->
-                                </div>
-                            </div>
-                        </div>
-                        	</div>
+<body>
+<%@ include file="/WEB-INF/views/navbar2.jsp" %>
+	
+    
+    <!-- card -->
+    <div class="container py-4 py-xl-5">
+        <div class="row mb-5">
+            <div class="col-md-8 col-xl-6 text-center mx-auto">
+                <h2 class="font-weight-bold">Mypage</h2>
+            </div>
+        </div>
+        <div class="row row-cols-1 row-cols-md-2 row-cols-xl-5">
+        
+        	<!-- 프로필 관리 -->
+            <div class="col mb-4">
+                <div class="card"><img class="card-img-top w-100 d-block fit-cover" src="${pageContext.request.contextPath}/resources/dashboard/assets/img/profile.png">
+                    <div class="card-body p-4">
+                        <p class="text-primary mb-0">Profile</p>
+                        <h4 class="font-weight-bold card-title">프로필 관리</h4>
+<!--                         <p class="card-text">간편하고 안정하게 개인정보를 수정해보세요. 배송지와 선호도까지 수정할 수 있습니다</p> -->
+                        <a class="small text-black stretched-link" href="${pageContext.request.contextPath}/mypage/meminfo"></a>
+                    </div>
                 </div>
-                </main> 
-<%@ include file="/WEB-INF/views/footer.jsp" %>
+            </div>
+            
+            <!-- 레시피 예약 -->
+            <div class="col mb-4">
+                <div class="card"><img class="card-img-top w-100 d-block fit-cover" src="${pageContext.request.contextPath}/resources/dashboard/assets/img/apple.png">
+                    <div class="card-body p-4">
+                        <p class="text-primary mb-0">Order Recipe</p>
+                        <h4 class="font-weight-bold card-title">레시피 예약</h4>
+<!--                         <p class="card-text">맞춤 설정된 레시피들이 추천 됩니다. </p> -->
+                        <a class="small text-black stretched-link" href="${pageContext.request.contextPath}/mypage/order"></a>
 
-  </body>
-</html>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 레시피 관리 -->
+            <div class="col mb-4">
+                <div class="card"><img class="card-img-top w-100 d-block fit-cover" src="${img_src}/receipt.png">
+                    <div class="card-body p-4">
+                        <p class="text-primary mb-0">Favorite Recipe</p>
+                        <h4 class="font-weight-bold card-title">레시피 관리</h4>
+<!--                         <p class="card-text">Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.</p> -->
+                        <a class="small text-black stretched-link" href="${pageContext.request.contextPath}/mypage/favrecipe"></a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 결제내역 -->
+            <div class="col mb-4">
+                <div class="card"><img class="card-img-top w-100 d-block fit-cover" src="${img_src}/saved.png">
+                    <div class="card-body p-4">
+                        <p class="text-primary mb-0">Payment History</p>
+                        <h4 class="font-weight-bold card-title">결제내역</h4>
+<!--                         <p class="card-text">Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.</p> -->
+                        <a class="small text-black stretched-link" href="${pageContext.request.contextPath}/mypage/payhistory"></a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 문의사항 -->
+            <div class="col mb-4">
+                <div class="card"><img class="card-img-top w-100 d-block fit-cover" src="${img_src}/bell.png">
+                    <div class="card-body p-4">
+                        <p class="text-primary mb-0">Customer Service</p>
+                        <h4 class="font-weight-bold card-title">문의사항</h4>
+<!--                         <p class="card-text">Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.</p> -->
+                        <a class="small text-black stretched-link" href="${pageContext.request.contextPath}/qna/list"></a>
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  <!-- /card -->
+   <%@ include file="/WEB-INF/views/links_foot.jsp" %>
+
+
+</body></html>

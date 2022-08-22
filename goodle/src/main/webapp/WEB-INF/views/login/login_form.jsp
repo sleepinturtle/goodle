@@ -4,39 +4,24 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="utf-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
-        <title>goodle login</title>
-        <link href="${pageContext.request.contextPath}/resources/dashboard/css/styles.css" rel="stylesheet" />
-        <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<!--         <meta charset="utf-8" /> -->
+<!--         <meta http-equiv="X-UA-Compatible" content="IE=edge" /> -->
+<!--         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" /> -->
+<!--         <meta name="description" content="" /> -->
+<!--         <meta name="author" content="" /> -->
+<!--         <title>goodle login</title> -->
+<%--         <link href="${pageContext.request.contextPath}/resources/dashboard/css/styles.css" rel="stylesheet" /> --%>
+<!--         <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script> -->
+<!--         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> -->
+	<%@ include file="/WEB-INF/views/links_head.jsp" %>
     </head>
-    <style>
-    .card{
-    	height: 25rem;
-    	margin-top : 10rem;
-    	border: none;
-    }
-    .card-login{
-    	height: 25rem;
-    	margin-top : 15rem;
-    	border: none;
-    }
-    .card-header{
-    	background-color : #dc3545;
-    }
-   	.sb-nav-fixed{
-   		overflow-y : hidden;
-   	}
-    </style>
     
-    
-    <body class="bg-white sb-nav-fixed">
-    	 <div id="layoutAuthentication" class="card mx-auto">
-                <main>
+    <body>
+    	 
+                    
+		<%@ include file="/WEB-INF/views/navbar.jsp" %>
+		
+		<div id="layoutAuthentication" class="card mx-auto border-0">
                     <div class="container">
                         <div class="row justify-content-center">
                             <div class="col-lg-5">
@@ -57,7 +42,7 @@
                                                 <label class="form-check-label" for="inputRememberPassword">비밀번호 저장</label>
                                             </div>
                                             <div class="d-flex align-items-center justify-content-between mt-4 mb-0">
-                                                <a class="small" href="join_form">회원가입</a>
+                                                <a class="small" href="${pageContext.request.contextPath}/main#info">회원가입</a>
                                                 <button id="login_btn" type="button" class="btn btn-primary float-right">로그인</button>
 <!--                                                 <a class="btn btn-primary" href="index.html">Login</a> -->
                                             </div>
@@ -71,52 +56,7 @@
                             </div>
                         </div>
                     </div>
-                </main>
-<!--             <div id="layoutAuthentication_footer"> -->
-<!--                 <footer class="py-4 bg-light mt-auto"> include로 메인페이지 회사정보 footer를 여기에 적용 -->
-<!--                     <div class="container-fluid px-4"> -->
-<!--                         <div class="d-flex align-items-center justify-content-between small"> -->
-<!--                             <div class="text-muted">Copyright &copy; Your Website 2022</div> -->
-<!--                             <div> -->
-<!--                                 <a href="#">Privacy Policy</a> -->
-<!--                                 &middot; -->
-<!--                                 <a href="#">Terms &amp; Conditions</a> -->
-<!--                             </div> -->
-<!--                         </div> -->
-<!--                     </div> -->
-<!--                 </footer> -->
-<!--             </div> -->
-        </div>
-    	 <nav class="sb-topnav navbar navbar-expand navbar-dark bg-danger">
-            <!-- Navbar Brand-->
-            <a class="navbar-brand ps-3" href="${pageContext.request.contextPath}/main">구들구들</a>
-            <!-- Sidebar Toggle-->
-<!--             <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button> -->
-            <!-- Navbar Search-->
-            <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
-<!--                 <div class="input-group"> -->
-<!--                     <input class="form-control" type="text" placeholder="Search for..." aria-label="Search for..." aria-describedby="btnNavbarSearch" /> -->
-<!--                     <button class="btn btn-primary" id="btnNavbarSearch" type="button"><i class="fas fa-search"></i></button> -->
-<!--                 </div> -->
-            </form>
-           
-        </nav>
-        <div id="layoutSidenav">
-            <div id="layoutSidenav_nav">
-                <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
-                    <div class="sb-sidenav-menu">
-                        
-                    </div>
-<!--                     <div class="sb-sidenav-footer"> -->
-<!--                         <div class="small">Logged in as:</div> -->
-<!--                         Start Bootstrap -->
-<!--                     </div> -->
-                </nav>
-            </div>
-        </div>
-       
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
-        <script src="${pageContext.request.contextPath}/resources/dashboard/js/scripts.js"></script>
+         <%@ include file="/WEB-INF/views/links_foot.jsp" %>
     </body>
     <script type="text/javascript">
 		$(document).ready(function() {

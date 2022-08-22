@@ -28,9 +28,4 @@
       
         
     </head>
-	<style> 
-
-    .card-body{
-    	text-align: center;
-    }
-     </style> 
+	

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>sidebar (1)</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,900">
+    <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/fonts/simple-line-icons.min.css">
+    <link rel="stylesheet" href="assets/fonts/fontawesome5-overrides.min.css">
+    <link rel="stylesheet" href="assets/css/-Filterable-Cards--Filterable-Cards.css">
+    <link rel="stylesheet" href="assets/css/Advanced-Pricing-Cards.css">
+    <link rel="stylesheet" href="assets/css/Article-Clean.css">
+    <link rel="stylesheet" href="assets/css/Articles-Cards-images.css">
+    <link rel="stylesheet" href="assets/css/Bootstrap-Calendar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/css/swiper.min.css">
+    <link rel="stylesheet" href="assets/css/Navbar-Right-Links-icons.css">
+    <link rel="stylesheet" href="assets/css/sidebar.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/Toggle-Switches.css">
+</head>
+
+<body>
+    <ul class="nav flex-column shadow d-flex sidebar mobile-hid">
+        <li class="nav-item logo-holder">
+            <div class="text-center text-white logo py-4 mx-4"><a class="text-white text-decoration-none" id="title" href="#"><strong>Sidebar</strong></a><a class="text-white float-right" id="sidebarToggleHolder" href="#"><i class="fas fa-bars" id="sidebarToggle"></i></a></div>
+        </li>
+        <li class="nav-item"><a class="nav-link active text-left text-white py-1 px-0" href="#"><i class="fas fa-tachometer-alt mx-3"></i><span class="text-nowrap mx-2">Dashboard</span></a></li>
+        <li class="nav-item"><a class="nav-link text-left text-white py-1 px-0" href="#"><i class="fas fa-user mx-3"></i><span class="text-nowrap mx-2">User profile</span></a></li>
+        <li class="nav-item"><a class="nav-link text-left text-white py-1 px-0" href="#"><i class="far fa-life-ring mx-3"></i><span class="text-nowrap mx-2">Support tickets</span></a></li>
+        <li class="nav-item"><a class="nav-link text-left text-white py-1 px-0" href="#"><i class="fas fa-archive mx-3"></i><span class="text-nowrap mx-2">Archive</span></a></li>
+        <li class="nav-item"><a class="nav-link text-left text-white py-1 px-0" href="#"><i class="fas fa-chart-bar mx-3"></i><span class="text-nowrap mx-2">Statistics</span></a></li>
+        <li class="nav-item dropdown"><a class="dropdown-toggle nav-link text-left text-white py-1 px-0 position-relative" aria-expanded="false" data-toggle="dropdown" href="#"><i class="fas fa-sliders-h mx-3"></i><span class="text-nowrap mx-2">Settings</span><i class="fas fa-caret-down float-none float-lg-right fa-sm"></i></a>
+            <div class="dropdown-menu border-0 animated fadeIn"><a class="dropdown-item text-white" href="#"><span>Change password</span></a><a class="dropdown-item text-white" href="#"><span>Change email</span></a><a class="dropdown-item text-white" href="#"><span>More</span></a></div>
+        </li>
+        <li class="nav-item"><a class="nav-link text-left text-white py-1 px-0" href="#"><i class="fas fa-sign-out-alt mx-3"></i><i class="fa fa-caret-right d-none position-absolute"></i><span class="text-nowrap mx-2">Log out</span></a></li>
+    </ul>
+    <nav class="navbar navbar-light navbar-expand-md py-3" style="color: var(--red);">
+        <div class="container"><a class="navbar-brand d-flex align-items-center" href="#"><span class="bs-icon-sm bs-icon-rounded bs-icon-primary d-flex justify-content-center align-items-center mr-2 bs-icon"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-bezier">
+                        <path fill-rule="evenodd" d="M0 10.5A1.5 1.5 0 0 1 1.5 9h1A1.5 1.5 0 0 1 4 10.5v1A1.5 1.5 0 0 1 2.5 13h-1A1.5 1.5 0 0 1 0 11.5v-1zm1.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1zm10.5.5A1.5 1.5 0 0 1 13.5 9h1a1.5 1.5 0 0 1 1.5 1.5v1a1.5 1.5 0 0 1-1.5 1.5h-1a1.5 1.5 0 0 1-1.5-1.5v-1zm1.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1zM6 4.5A1.5 1.5 0 0 1 7.5 3h1A1.5 1.5 0 0 1 10 4.5v1A1.5 1.5 0 0 1 8.5 7h-1A1.5 1.5 0 0 1 6 5.5v-1zM7.5 4a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1z"></path>
+                        <path d="M6 4.5H1.866a1 1 0 1 0 0 1h2.668A6.517 6.517 0 0 0 1.814 9H2.5c.123 0 .244.015.358.043a5.517 5.517 0 0 1 3.185-3.185A1.503 1.503 0 0 1 6 5.5v-1zm3.957 1.358A1.5 1.5 0 0 0 10 5.5v-1h4.134a1 1 0 1 1 0 1h-2.668a6.517 6.517 0 0 1 2.72 3.5H13.5c-.123 0-.243.015-.358.043a5.517 5.517 0 0 0-3.185-3.185z"></path>
+                    </svg></span><span>구들구들</span></a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-3"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navcol-3">
+                <ul class="navbar-nav mx-auto"></ul><a class="btn btn-primary" role="button" href="#">Logout</a>
+            </div>
+        </div>
+    </nav>
+    <div class="card">
+        <div class="card-header">
+            <ul class="nav nav-tabs card-header-tabs">
+                <li class="nav-item"><a class="nav-link active" href="#">week 1</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Week 2</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Week 3</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Week 4</a></li>
+            </ul>
+        </div>
+        <div class="card-body"><select>
+                <option value="1" selected="">01 - January</option>
+                <option value="2">02 - February</option>
+                <option value="3">03 - March</option>
+                <option value="4">04 - April</option>
+                <option value="5">05 - May</option>
+                <option value="6">06 - June</option>
+                <option value="7">07 - July</option>
+                <option value="8">08 - August</option>
+                <option value="9">09 - September</option>
+                <option value="10">10 - October</option>
+                <option value="11">11 - November</option>
+                <option value="12">12 - December</option>
+            </select>
+            <fieldset>
+                <legend>Bike Condition</legend>
+                <div class="toggle"><input type="radio" id="cond_new" name="bike_cond" checked="checked"><label for="cond_new">Brand New</label><input type="radio" id="cond_used" name="bike_cond"><label for="cond_used">Used</label></div>
+            </fieldset>
+            <section class="py-5">
+                <div class="container">
+                    <div class="row filtr-container">
+                        <div class="col-md-6 col-lg-4 filtr-item" data-category="2,3">
+                            <div class="card border-dark">
+                                <div class="card-header bg-dark text-light">
+                                    <h5 class="m-0">Lorem Ipsum</h5>
+                                </div><img class="img-fluid card-img w-100 d-block rounded-0" src="assets/img/th-01.jpg">
+                                <div class="card-body">
+                                    <p class="card-text">Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                                </div>
+                                <div class="d-flex card-footer"><button class="btn btn-dark btn-sm" type="button"><i class="fa fa-eye"></i>&nbsp;Button 1</button><button class="btn btn-outline-dark btn-sm ml-auto" type="button"><i class="fa fa-plus"></i>&nbsp;Button 2</button></div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 filtr-item" data-category="1,3">
+                            <div class="card border-dark">
+                                <div class="card-header bg-dark text-light">
+                                    <h5 class="m-0">Lorem Ipsum</h5>
+                                </div><img class="img-fluid card-img w-100 d-block rounded-0" src="assets/img/th-02.jpg">
+                                <div class="card-body">
+                                    <p class="card-text">Nullam id dolor id nibh ultricies vehicula ut id elit.&nbsp;Peiores principem Constantium cautela sed cetera et nimia graves cetera modi in titulo causarum infudisset plagas apud sed ut siquid. Invadere tabescebat egressus ullo flagitii per parans per egressus edictus.<br></p>
+                                </div>
+                                <div class="d-flex card-footer"><button class="btn btn-dark btn-sm" type="button"><i class="fa fa-eye"></i>&nbsp;Button 1</button><button class="btn btn-outline-dark btn-sm ml-auto" type="button"><i class="fa fa-plus"></i>&nbsp;Button 2</button></div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 filtr-item" data-category="2,3">
+                            <div class="card border-dark">
+                                <div class="card-header bg-dark text-light">
+                                    <h5 class="m-0">Lorem Ipsum</h5>
+                                </div><img class="img-fluid card-img w-100 d-block rounded-0" src="assets/img/th-03.jpg">
+                                <div class="card-body">
+                                    <p class="card-text">Nullam id dolor id nibh ultricies vehicula ut id elit. Observantes habitu ignoti conspiratione poterant homines formido cognita malorum conpluribus peragranter divites fingerent poterant peragranter.<br></p>
+                                </div>
+                                <div class="d-flex card-footer"><button class="btn btn-dark btn-sm" type="button"><i class="fa fa-eye"></i>&nbsp;Button 1</button><button class="btn btn-outline-dark btn-sm ml-auto" type="button"><i class="fa fa-plus"></i>&nbsp;Button 2</button></div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 filtr-item" data-category="3">
+                            <div class="card border-dark">
+                                <div class="card-header bg-dark text-light">
+                                    <h5 class="m-0">Lorem Ipsum</h5>
+                                </div><img class="img-fluid card-img w-100 d-block rounded-0" src="assets/img/th-06.jpg">
+                                <div class="card-body">
+                                    <p class="card-text">Nullam id dolor id nibh ultricies vehicula ut id elit.&nbsp;Populique et auctoritate cum sint partes regina canities et circumspectum certamina suffragiorum reverenda et set circumspectum temporis auctoritate certamina verecundum quotquot domina per et sint auctoritate sunt omnes ubique redierit.<br></p>
+                                </div>
+                                <div class="d-flex card-footer"><button class="btn btn-dark btn-sm" type="button"><i class="fa fa-eye"></i>&nbsp;Button 1</button><button class="btn btn-outline-dark btn-sm ml-auto" type="button"><i class="fa fa-plus"></i>&nbsp;Button 2</button></div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 filtr-item" data-category="1,2">
+                            <div class="card border-dark">
+                                <div class="card-header bg-dark text-light">
+                                    <h5 class="m-0">Lorem Ipsum</h5>
+                                </div><img class="img-fluid card-img w-100 d-block rounded-0" src="assets/img/th-07.jpg">
+                                <div class="card-body">
+                                    <p class="card-text">Nullam id dolor id nibh ultricies vehicula ut id elit. Vocis indigna adlocutus prodesse custodiam ut adlocutus commune vita commune.<br></p>
+                                </div>
+                                <div class="d-flex card-footer"><button class="btn btn-dark btn-sm" type="button"><i class="fa fa-eye"></i>&nbsp;Button 1</button><button class="btn btn-outline-dark btn-sm ml-auto" type="button"><i class="fa fa-plus"></i>&nbsp;Button 2</button></div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 filtr-item" data-category="1,3">
+                            <div class="card border-dark">
+                                <div class="card-header bg-dark text-light">
+                                    <h5 class="m-0">Lorem Ipsum</h5>
+                                </div><img class="img-fluid card-img w-100 d-block rounded-0" src="assets/img/th-08.jpg">
+                                <div class="card-body">
+                                    <p class="card-text">Nullam id dolor id nibh ultricies vehicula ut id elit.&nbsp;Et admiratio incidere magis eo incidere et forte pauci una admiratio eum Pompeio Q tum dissideret querella et forte una hemicyclio ore illum admiratio hominum is saepe tum magis tum. Et admiratio incidere magis eo incidere et forte pauci una admiratio eum Pompeio Q tum dissideret querella et forte una hemicyclio ore illum admiratio hominum is saepe tum magis tum.<br></p>
+                                </div>
+                                <div class="d-flex card-footer"><button class="btn btn-dark btn-sm" type="button"><i class="fa fa-eye"></i>&nbsp;Button 1</button><button class="btn btn-outline-dark btn-sm ml-auto" type="button"><i class="fa fa-plus"></i>&nbsp;Button 2</button></div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 filtr-item" data-category="1,3">
+                            <div class="card border-dark">
+                                <div class="card-header bg-dark text-light">
+                                    <h5 class="m-0">Lorem Ipsum</h5>
+                                </div><img class="img-fluid card-img w-100 d-block rounded-0" src="assets/img/th-09.jpg">
+                                <div class="card-body">
+                                    <p class="card-text">Nullam id dolor id nibh ultricies vehicula ut id elit.&nbsp;Peiores principem Constantium cautela sed cetera et nimia graves cetera modi in titulo causarum infudisset plagas apud sed ut siquid. Invadere tabescebat egressus ullo flagitii per parans per egressus edictus.<br></p>
+                                </div>
+                                <div class="d-flex card-footer"><button class="btn btn-dark btn-sm" type="button"><i class="fa fa-eye"></i>&nbsp;Button 1</button><button class="btn btn-outline-dark btn-sm ml-auto" type="button"><i class="fa fa-plus"></i>&nbsp;Button 2</button></div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 filtr-item" data-category="3">
+                            <div class="card border-dark">
+                                <div class="card-header bg-dark text-light">
+                                    <h5 class="m-0">Lorem Ipsum</h5>
+                                </div><img class="img-fluid card-img w-100 d-block rounded-0" src="assets/img/th-11.jpg">
+                                <div class="card-body">
+                                    <p class="card-text">Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                                </div>
+                                <div class="d-flex card-footer"><button class="btn btn-dark btn-sm" type="button"><i class="fa fa-eye"></i>&nbsp;Button 1</button><button class="btn btn-outline-dark btn-sm ml-auto" type="button"><i class="fa fa-plus"></i>&nbsp;Button 2</button></div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 filtr-item" data-category="1">
+                            <div class="card border-dark">
+                                <div class="card-header bg-dark text-light">
+                                    <h5 class="m-0">Lorem Ipsum</h5>
+                                </div><img class="img-fluid card-img w-100 d-block rounded-0" src="assets/img/th-12.jpg">
+                                <div class="card-body">
+                                    <p class="card-text">Nullam id dolor id nibh ultricies vehicula ut id elit. Vocabulis pollicitos statuuntur nominum appellatos statuuntur adminicula omnium ob pollicitos tribunos Eusebius pollicitos sub statuuntur.<br></p>
+                                </div>
+                                <div class="d-flex card-footer"><button class="btn btn-dark btn-sm" type="button"><i class="fa fa-eye"></i>&nbsp;Button 1</button><button class="btn btn-outline-dark btn-sm ml-auto" type="button"><i class="fa fa-plus"></i>&nbsp;Button 2</button></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <button class="btn btn-primary" type="button">Button</button>
+            </section>
+        </div>
+    </div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/bs-init.js"></script>
+    <script src="assets/js/-Filterable-Cards-.js"></script>
+    <script src="assets/js/Advanced-Pricing-Cards.js"></script>
+</body>
+
+</html>
