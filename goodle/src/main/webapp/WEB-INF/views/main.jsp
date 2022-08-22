@@ -20,34 +20,41 @@
          <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
          <!-- Core theme JS-->
-<%--        	<script src="${pageContext.request.contextPath}/resources/dashboard/js/scripts.js"></script> --%>
+<%--        	<script src="${pageContext.request.contextPath}/resources/dashboard/assets/js/scripts.js"></script> --%>
 		<script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+    	<script src="https://cdn.jsdelivr.net/npm/swiffy-slider@1.5.3/dist/js/swiffy-slider.min.js" crossorigin="anonymous" defer></script>
+		<link href="https://cdn.jsdelivr.net/npm/swiffy-slider@1.5.3/dist/css/swiffy-slider.min.css" rel="stylesheet" crossorigin="anonymous">
+		<link href="${pageContext.request.contextPath}/resources/dashboard/assets/fonts/a음악시간.woff"/>
     	<style type="text/css">
     		#recipe {
     			text-align: center;
     		}
+    		th {
+				width: 300px;	
+			}
+			
+    		
     	</style>
     </head>
     <body class="sb-nav-fixed">
     <%@ include file="/WEB-INF/views/var_header.jsp"%>
-        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: #DC3534;">
-		<div class="collapse navbar-collapse" id="navbarResponsive">
-			<ul class="navbar-nav">
-				<li class="nav-item float-right">
-					<a href="${pageContext.request.contextPath}/login/login_form">
+    <nav class="navbar navbar-light navbar-expand-md py-3 fixed-top" style="background: #DC3534;">
+        <div class="container"><a class="navbar-brand d-flex align-items-center" href="#"><span style="color: rgba(255,255,255,0.9); margin-left: -600px; font-size: 25px; border: 2px solid white;">구들구들</span></a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navcol-1" style="margin-right: -600px;">
+                <ul class="navbar-nav me-auto"></ul>
+                <a href="${pageContext.request.contextPath}/login/login_form">
 						<button id="login" name="login" class="btn btn-success">로그인</button>
-					</a>
-				</li>
-			</ul>
-				
-		</div>
-	</nav>
+		    	</a>
+            </div>
+        </div>
+    </nav>    
 	
 	<nav class="navbar navbar-expand-lg navbar-dark" id="sideNav" style="background-color: #DC3534">
-            <a class="navbar-brand js-scroll-trigger" href="#page-top">
+            <a class="navbar-brand js-scroll-trigger" href="">
                 <span class="d-block d-lg-none">구들구들</span>
-                <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="${pageContext.request.contextPath}/resources/dashboard/assets/img/logo.jfif" alt="..." />
+                <span style="font-size: 60px; border: 2px solid white;">구들구들</span>
             </a>
+            
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>	
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav">
@@ -55,7 +62,7 @@
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#motive">중요가치</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#service">서비스 설명</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#recipe">RECIPE</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#custom">CUSTOMIZE</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#start">시작하기</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#info">기본 정보</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#payinfo">결제 정보</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#company">COMPANY</a></li>
@@ -77,7 +84,7 @@
                     
                     <p class="lead mb-5" style="background-color: white; width: 100%; font-weight: bold;">건강한 식단의 시작</p>
         
-                      <a href="#custom">
+                      <a href="#start">
 		                 <button type="button" class="btn btn-success btn-lg mt-5">시작하기</button>
 	                  </a>
                 </div>
@@ -88,6 +95,7 @@
             
             <section class="resume-section" id="motive">
                 <div class="resume-section-content">
+                	<br><br>
                     <h2 class="mb-5">중요 가치</h2>
                     <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                         <div class="flex-grow-1">
@@ -120,27 +128,45 @@
             <section class="resume-section" id="service">
                 <div class="resume-section-content">
                     <h2 class="mb-5">서비스</h2>
-						<div class="card">
-							<img alt="사진" src="">
-							<div class="card-body">
-							<h4>제목입니다</h4>
-							<p>내용입니다.</p>
-							</div>
-						</div>
-						<div class="card">
-							<img alt="사진" src="">
-							<div class="card-body">
-							<h4>제목입니다</h4>
-							<p>내용입니다.</p>
-							</div>
-						</div>
-						<div class="card">
-							<img alt="사진" src="">
-							<div class="card-body">
-							<h4>제목입니다</h4>
-							<p>내용입니다.</p>
-							</div>
-						</div>
+                    <div class="container">
+				      <div class="row">
+				        <div class="col-md-4">
+				          <div><img alt="..." src="${pageContext.request.contextPath}/resources/dashboard/assets/img/joinred.png" class="img-fluid"></div>
+				          <div class="card text-black" style="border: 2px solid #DC3534;">
+				            <div class="card-header" style="font-size: 60px;">
+				              	가입하기
+				            </div>
+				            <div class="card-body">
+				              <h4 class="card-title">구들구들의 서비스를 즐기기 위해 &nbsp; 가입하세요.</h4>
+				            </div>
+				          </div>
+				        </div>
+				        
+				        <div class="col-md-4">
+				          <div><img alt="..." src="${pageContext.request.contextPath}/resources/dashboard/assets/img/order.png" class="img-fluid"></div>
+				          <div class="card text-black" style="border: 2px solid #DC3534;">
+				            <div class="card-header" style="font-size: 60px;">
+				              	주문하기
+				            </div>
+				            <div class="card-body">
+				              <h4 class="card-title">고객님의 선호도를 기반으로 &nbsp; <br> 추천된 레시피를 만나보세요.</h4>
+				            </div>
+				          </div>
+				        </div>
+				        
+				        <div class="col-md-4">
+				          <div><img alt="..." src="${pageContext.request.contextPath}/resources/dashboard/assets/img/eat.png" class="img-fluid"></div>
+				          <div class="card text-black" style="border: 2px solid #DC3534;">
+				            <div class="card-header" style="font-size: 60px;">
+				              	요리하기
+				            </div>
+				            <div class="card-body">
+				              <h4 class="card-title">재료와 레시피를 받으셨다면 &nbsp; <br> 요리할 시간입니다.</h4>
+				            </div>
+				          </div>
+				        </div>
+				      </div>
+				    </div>
 	      
 				</div>
 				
@@ -150,68 +176,67 @@
             <!-- RECIPE-->
             <section class="resume-section" id="recipe">
                 <div class="resume-section-content">
-                    
-	                <div id="carousel-1" class="carousel slide" data-bs-ride="carousel">
+                   <div id="carousel-1" class="carousel slide" data-bs-ride="carousel">
 	                	<div class="carousel-inner">
 	                		<div class="carousel-item active">
 	                			<div>
 	                			<img src="${pageContext.request.contextPath}/resources/dashboard/assets/img/닭볶음탕.png"/>
 	                			</div>
-	                			<div style="background-color: #d9534f; color: white; font-weight: bold; font-size: 6em;">닭볶음탕</div>
+	                			<div style="background-color: #DC3534; color: white; font-weight: bold; font-size: 6em;">닭볶음탕</div>
 	                		</div>
 	                		<div class="carousel-item">
 	                			<div>
 	                			<img src="${pageContext.request.contextPath}/resources/dashboard/assets/img/바지락 클램 차우더.jpg" alt="slide" />
 	                			</div>
-	                			<div style="background-color: #d9534f; color: white; font-weight: bold; font-size: 6em;">바지락 클램 차우더</div>
+	                			<div style="background-color: #DC3534; color: white; font-weight: bold; font-size: 6em;">바지락 클램 차우더</div>
 	                		</div>
 	                		<div class="carousel-item">
 	                			<div>
 	                			<img src="${pageContext.request.contextPath}/resources/dashboard/assets/img/사천식 마파두부.jpg" alt="slide"/>
 	                			</div>
-	                			<div style="background-color: #d9534f; color: white; font-weight: bold; font-size: 6em;">사천식 마파두부</div>
+	                			<div style="background-color: #DC3534; color: white; font-weight: bold; font-size: 6em;">사천식 마파두부</div>
 	                		</div>
 	                		<div class="carousel-item">
 	                			<div>
 	                			<img src="${pageContext.request.contextPath}/resources/dashboard/assets/img/칼바사 투움바 파스타.jpg"/>
 	                			</div>
-	                			<div style="background-color: #d9534f; color: white; font-weight: bold; font-size: 6em;">칼바사 투움바 파스타</div>
+	                			<div style="background-color: #DC3534; color: white; font-weight: bold; font-size: 6em;">칼바사 투움바 파스타</div>
 	                		</div>
 	                		<div class="carousel-item">
 	                			<div>
 	                			<img src="${pageContext.request.contextPath}/resources/dashboard/assets/img/만두전골.jpg"/>
 	                			</div>
-	                			<div style="background-color: #d9534f; color: white; font-weight: bold; font-size: 6em;">만두전골</div>
+	                			<div style="background-color: #DC3534; color: white; font-weight: bold; font-size: 6em;">만두전골</div>
 	                		</div>
 	                		<div class="carousel-item">
 	                			<div>
 	                			<img  src="${pageContext.request.contextPath}/resources/dashboard/assets/img/밀푀유나베.jpg" alt="slide"/>
 	                			</div>
-	                			<div style="background-color: #d9534f; color: white; font-weight: bold; font-size: 6em;">밀푀유나베</div>
+	                			<div style="background-color:#DC3534; color: white; font-weight: bold; font-size: 6em;">밀푀유나베</div>
 	                		</div>
 	                		<div class="carousel-item">
 	                			<div>
 	                			<img src="${pageContext.request.contextPath}/resources/dashboard/assets/img/마라 양고기 볶음.png"/>
 	                			</div>
-	                			<div style="background-color: #d9534f; color: white; font-weight: bold; font-size: 6em;">마라 양고기 볶음</div>
+	                			<div style="background-color: #DC3534; color: white; font-weight: bold; font-size: 6em;">마라 양고기 볶음</div>
 	                		</div>
 	                		<div class="carousel-item">
 	                			<div>
 	                			<img src="${pageContext.request.contextPath}/resources/dashboard/assets/img/양고기찹스테이크.png"/>
 	                			</div>
-	                			<div style="background-color: #d9534f; color: white; font-weight: bold; font-size: 6em;">양고기찹스테이크</div>
+	                			<div style="background-color: #DC3534; color: white; font-weight: bold; font-size: 6em;">양고기찹스테이크</div>
 	                		</div>
 	                		<div class="carousel-item">
 	                			<div>
 	                			<img src="${pageContext.request.contextPath}/resources/dashboard/assets/img/닭고기 치킨카레.png"/>
 	                			</div>
-	                			<div style="background-color: #d9534f; color: white; font-weight: bold; font-size: 6em;">닭고기 치킨카레</div>
+	                			<div style="background-color: #DC3534; color: white; font-weight: bold; font-size: 6em;">닭고기 치킨카레</div>
 	                		</div>
 	                		<div class="carousel-item">
 	                			<div>
-	                			<img src="${pageContext.request.contextPath}/resources/dashboard/assets/img/해파리 닭고기 냉채.png"/>
+	                			<img src="${pageContext.request.contextPath}/resources/dashboard/assets/img/연근리조토.png"/>
 	                			</div>
-	                			<div style="background-color: #d9534f; color: white; font-weight: bold; font-size: 6em;">해파리 닭고기 냉채</div>
+	                			<div style="background-color: #DC3534; color: white; font-weight: bold; font-size: 6em;">연근 리조토</div>
 	                		</div>
 	                	</div>
 	                	<div>
@@ -224,42 +249,31 @@
 	                			<span class="visually-hidden">Next</span>
 	                		</a>
 	                	</div>
+	                	<ol class="carousel-indicators" style="margin-bottom: 0px;">
+		                	<li class="active" data-bs-target="#carousel-1" data-bs-slide-to="0"></li>
+		                	<li data-bs-target="#carousel-1" data-bs-slide-to="1"></li>
+		                	<li data-bs-target="#carousel-1" data-bs-slide-to="2"></li>
+		                	<li data-bs-target="#carousel-1" data-bs-slide-to="3"></li>
+		                	<li data-bs-target="#carousel-1" data-bs-slide-to="4"></li>
+		                	<li data-bs-target="#carousel-1" data-bs-slide-to="5"></li>
+		                	<li data-bs-target="#carousel-1" data-bs-slide-to="6"></li>
+		                	<li data-bs-target="#carousel-1" data-bs-slide-to="7"></li>
+		                	<li data-bs-target="#carousel-1" data-bs-slide-to="8"></li>
+		                	<li data-bs-target="#carousel-1" data-bs-slide-to="9"></li>
+		                </ol>
 	                </div>
-	                <ol class="carousel-indicators">
-	                	<li class="active" data-bs-target="#carousel-1" data-bs-slide-to="0"></li>
-	                	<li data-bs-target="#carousel-1" data-bs-slide-to="1"></li>
-	                	<li data-bs-target="#carousel-1" data-bs-slide-to="2"></li>
-	                	<li data-bs-target="#carousel-1" data-bs-slide-to="3"></li>
-	                	<li data-bs-target="#carousel-1" data-bs-slide-to="4"></li>
-	                	<li data-bs-target="#carousel-1" data-bs-slide-to="5"></li>
-	                	<li data-bs-target="#carousel-1" data-bs-slide-to="6"></li>
-	                	<li data-bs-target="#carousel-1" data-bs-slide-to="7"></li>
-	                	<li data-bs-target="#carousel-1" data-bs-slide-to="8"></li>
-	                	<li data-bs-target="#carousel-1" data-bs-slide-to="9"></li>
-	                	<li data-bs-target="#carousel-1" data-bs-slide-to="10"></li>
-	                </ol>
+	                
+	                
                 </div>
             </section>
             <hr class="m-0" />
             
             <!-- custom-->
-            <section class="resume-section" id="custom">
+            <section class="resume-section" id="start">
                 <div class="resume-section-content">
-                    <h2 class="mb-5">Customize</h2>
-                    <table class="table table-hover">
-                    	<tr>
-                    		
-                    			<th>재료 선호 태그 선택</th>
-                    			<td>재료 태그</td>
-                    		
-                    	</tr>
-                    	<tr>
-                    			
-                    			<th>인원 수 선택</th>
-                    			<td>인원</td>
-                    			
-                    	</tr>
-                    </table>
+                    <h2>시작하기</h2>
+					
+			   
                 </div>
             </section>
             
@@ -270,6 +284,7 @@
                 	<div>
                 	<table class="table table-hover">
 	                	<tr>
+	                		<th style="font-weight: bold;">개인정보 수집 동의</th>
 		                	<td>
 				                <textarea readonly="readonly" class="form-control mr-5">
 		                			개인정보보호법 규정에 따라 회원가입을 신청하시는 분께 (주)구들구들(이하 '회사')이 수집하는 개인정보의 항목, 개인정보의 수집 및 이용 목적, 개인정보의 보유 및 이용기간을 안내 드리니 자세히 읽은 후 동의하여 주시기 바랍니다. 
@@ -305,11 +320,11 @@
 								
 								※ 본 '개인정보 수집 및 이용 동의'에 명시되지 않은 사항에 대해서는 '회사'의 '개인정보처리방침'의 규정에 따릅니다. 
 		                		</textarea>
-		                		<input type="checkbox" checked="checked" id="mem_cert1" name="mem_cert1">위 약관에 동의합니다.
-		                		<label for="mem_cert1" id="mem_cert1_label"></label>
+		                		<input type="checkbox" checked="checked" id="mem_cert1" name="mem_cert1" disabled="disabled">위 약관에 동의합니다.
 		                	</td>
 	                	</tr>
 	                	<tr>
+	                		<th style="font-weight: bold;">SMS 수신동의</th>
 		                	<td>
 				                <textarea readonly="readonly" class="form-control">
 		                			구들구들 서비스에 관한 새로운 소식, 특별한 혜택 및 추천정보 등 광고성 정보를 귀하에게 제공할 수 있습니다. 
@@ -320,18 +335,18 @@
 	                	</tr>
                 		<tr>
                 			
-							
-							<td style="font-weight: bold;">
-							이름
+							<th style="font-weight: bold;">이름</th>
+							<td>
                 			<input type="text" id="mem_name" name="mem_name" placeholder="홍길동">
                 			<label for="mem_name" id="mem_name_label"></label>
                 			</td>
                 		</tr>
                 		<tr>
+                			<th style="font-weight: bold;">아이디</th>
                 			<td style="font-weight: bold;">
                 				<div class="input-group">
                 					
-	                			 	아 이 디<input type="text" id="mem_id" name="mem_id" placeholder="아이디 입력">
+	                			 	<input type="text" id="mem_id" name="mem_id" placeholder="아이디 입력">
                 					<div class="input-group-append">
 		                				<button type="button" id="dupcheck" name="dupcheck" class="btn btn-success">아이디 중복확인</button>
                 						<label for="dupcheck" id="dupcheck_label"></label>
@@ -341,24 +356,24 @@
                 			</td>	
                 		</tr>
                 		<tr>
-                			
+                			<th style="font-weight: bold;">비 밀 번 호</th>
                 			<td style="font-weight: bold;">
                 			
-                			비 밀 번 호<input type="password" id="mem_pwd" name="mem_pwd" placeholder="비밀번호 입력">
+                			<input type="password" id="mem_pwd" name="mem_pwd" placeholder="비밀번호 입력">
                 			<label for="mem_pwd" id="mem_pwd_label"></label>
                 			</td>
                 		</tr>
                 		<tr>
+                			<th style="font-weight: bold;">비 밀 번 호 확인</th>
                 			<td style="font-weight: bold;">
                 			
-                			비 밀 번 호 확인<input type="password" id="pwdcheck" name="pwdcheck" placeholder="비밀번호 재입력">
+                			<input type="password" id="pwdcheck" name="pwdcheck" placeholder="비밀번호 재입력">
                 			<label for="pwdcheck" id="pwdchk_label"></label>
                 			</td>
                 		</tr>
                 		<tr>
-                			
+                			<th style="font-weight: bold;">주소/배송지</th>
                 			<td style="font-weight: bold;">
-                			기본 배송지/주소
                 			<div class="input-group">
                 				<input type="text" id="mem_post" name="mem_post" placeholder="우편번호" readonly="readonly">
                 			    <input type="text" id="mem_addr1" name="mem_addr1" placeholder="도로명 주소" readonly="readonly">
@@ -373,10 +388,10 @@
                 			</td>
                 		</tr>
                 		<tr>
-                			
+                			<th style="font-weight: bold;">전화번호</th>
                 			<td style="font-weight: bold;">
                 			
-	                			전 화 번 호<input type="text" id="tel1" name="tel1" placeholder="010">
+	                			<input type="text" id="tel1" name="tel1" placeholder="010">
 	                			
 	                			-<input type="text" id="tel2" name="tel2" placeholder="1234">
 	                			
@@ -386,9 +401,10 @@
                 			</td>
                 		</tr>
                 		<tr>
+                			<th style="font-weight: bold;">이메일</th>
                 			<td style="font-weight: bold;">
                 				
-                				이 메 일<input type="email" id="email1" name="email1" placeholder="이메일 입력">
+                				<input type="email" id="email1" name="email1" placeholder="이메일 입력">
                 						@<select id="email2" name="email2">
                 							<option value="naver.com">naver.com</option>
                 							<option value="gmail.com">gmail.com</option>
@@ -400,19 +416,14 @@
                 			
                 			</td>
                 		</tr>
-                		<tr>
-                			<td>
-                				<a href="#custom">
-	                				<button type="button" class="btn btn-success" id="back" name="back">뒤로 가기</button>
-                				</a>
-                			</td>
-                			<td>
-                				<a href="#payinfo">
- 		               				<button type="button" class="btn btn-success" id="next" name="next">다음</button>
-                				</a>
-                			</td>
-                		</tr>
+                		
                 	</table>
+                	<a href="#custom">
+	                				<button type="button" class="btn btn-success" id="back" name="back">뒤로 가기</button>
+                	</a>
+                	<a href="#payinfo" style="float: right;">
+ 		               				<button type="button" class="btn btn-success" id="next" name="next">다음</button>
+                	</a>
                 	</div>
                 	
                 </div>
@@ -423,20 +434,23 @@
                     <h2 class="mb-5">결제 정보</h2>
                      <table class="table table-hover">
                    		<tr>
+                   			<th style="font-weight: bold;">사용자 이름</th>
                    			<td style="font-weight: bold;">
-                   				사용자 이름  <input type="text" id="card_name" name="card_name" placeholder="이름 입력">
+                   				  <input type="text" id="card_name" name="card_name" placeholder="이름 입력">
                    						<label for="card_name" id="card_name_label"></label>
                    			</td>
                    		</tr>
                    		<tr>
+                   			<th style="font-weight: bold;">카드 번호</th>
                    			<td style="font-weight: bold;">
-                   				카드 번호  <input type="text" id="card_no" name="card_no" placeholder="'-'없이 카드 번호 입력">
+                   				 <input type="text" id="card_no" name="card_no" placeholder="'-'없이 카드 번호 입력">
                    						<label for="card_no" id="card_no_label"></label>
                    			</td>
                    		</tr>
                    		<tr>
+                   			<th style="font-weight: bold;">카드 유효 기간</th>
                    			<td style="font-weight: bold;">
-                   				유효 기간  <select class="form-control" id="card_exp1" name="card_exp1">
+                   				  <select class="form-control" id="card_exp1" name="card_exp1">
                    							<option value="" selected="selected"></option>
                    							<option value="1">1월</option>
                    							<option value="2">2월</option>
@@ -471,28 +485,25 @@
                    			</td>
                    		</tr>
                    		<tr>
+                   			<th style="font-weight: bold;">CVC</th>
                    			<td style="font-weight: bold;">
-                   				CVC<input type="text" id="card_cvc" name="card_cvc"> 
+                   				<input type="text" id="card_cvc" name="card_cvc"> 
                    					<label for="card_cvc" id="card_cvc_label"></label>
                    			</td>
                    		</tr>
                    		<tr>
+                   			<th style="font-weight: bold;">카드 결제비밀번호 앞 2자리</th>
                    			<td style="font-weight: bold;">
-                   				카드 결제비밀번호 앞 2자리<input type="text" id="card_pwd" name="card_pwd"> 
+                   				<input type="text" id="card_pwd" name="card_pwd"> 
                    									<label for="card_pwd" id="card_pwd_label"></label>
                    			</td>
                    		</tr>
-                   		<tr>
-                			<td>
-                				<a href="#info">
-                					<button type="button" class="btn btn-success" id="back" name="back">뒤로 가기</button>
-                				</a>
-                			</td>
-                			<td>
-                				<button type="button" class="btn btn-success" id="join">회원 가입</button>
-                			</td>
-                		</tr>
+                   		
                    </table>
+                   <a href="#info">
+                					<button type="button" class="btn btn-success" id="back" name="back">뒤로 가기</button>
+                   </a>
+                   <button type="button" class="btn btn-success" id="join" style="float: right;">회원 가입</button>
                 </div>
             </section>
             <!-- complain -->
@@ -511,7 +522,7 @@
 	                			<td><h2>goodle@gmail.com</h2></td>
 	                		</tr>
 	                		<tr>
-	                			<td><h2>도로명 : 서울 마포구 백범로 23 3층</h2></td>
+	                			<td><h2>도로명 : 서울 마포구 백범로 23   3층</h2></td>
 	                		</tr>
 	                		<tr>
 	                			<td><h2>지번 : 신수동 63-14 3층 </h2></td>
@@ -526,7 +537,7 @@
         </main>
         </div>
 <!--         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script> -->
-<%--         <script src="${pageContext.request.contextPath}/resources/dashboard/js/scripts.js"></script> --%>
+<%--         <script src="${pageContext.request.contextPath}/resources/dashboard/assets/js/scripts.js"></script> --%>
 <!--         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script> -->
 <%--         <script src="${pageContext.request.contextPath}/resources/dashboard/assets/demo/chart-area-demo.js"></script> --%>
 <%--         <script src="${pageContext.request.contextPath}/resources/dashboard/assets/demo/chart-bar-demo.js"></script> --%>
@@ -537,10 +548,7 @@
  		let onlyPwd = /^[a-z0-9~!@#$%^&*().]+$/;
  		let onlyEmail = /^[a-zA-Z@.0-9]+$/;
  		
- 		
- 		
- 		
- 		
+ 	
  		
  		$(document).ready(function() {
  			$("#codefinder").click(function() {
@@ -557,31 +565,30 @@
  		$(document).ready(function() {
  			$("#join").click(function() {
  				//기본 정보 validation check
+ 				
+ 				
  				if($.trim( $("#mem_name").val() )== "" || $.trim( $("#mem_name").val() ) == null){
  					$("#mem_name_label").text("필수 입력 사항입니다.");
  					$("#mem_name_label").css("color", "red");
+ 					alert("이름을 적어주세요");
  					return;
  				}else {
  					$("#mem_name_label").text("");
  				}
  				
  				
- 				if( $("#mem_cert1").prop("checked") == false ){
- 					$("#mem_cert1_label").text("필수 선택 사항 입니다.");
- 					return;
- 				}else { $("#mem_cert1_label").text(""); }
-
- 				
  				if($.trim($("#mem_id").val()) == null || $.trim($("#mem_id").val()) == ""){
  					$("#dupcheck_label").text("필수 입력사항입니다.");
  					$("#dupcheck_label").css("color", "red");
+ 					alert("아이디를 입력해주세요.");
  					return;
  				} else{ $("#dupcheck_label").text("");}
  				
 
  				if( checkedID == "" || checkedID != $("#mem_id").val() ){
- 					$("#dupcheck_label").text("아이디 중복 체크를 해 주세요.");
+ 					$("#dupcheck_label").text("아이디 중복확인 해주세요.");
  					$("#dupcheck_label").css("color", "red");
+ 					alert("아이디 중복확인 해주세요");
  					return;
  				} else { $("#dupcheck_label").text(""); }
 
@@ -589,18 +596,21 @@
  				if( $.trim($("#mem_pwd").val()) == null || $.trim($("#mem_pwd").val()) == "" ){//허용되지 않은 글자는 null.
  					$("#mem_pwd_label").text("필수 입력 사항입니다.");
  					$("#mem_pwd_label").css("color", "red");
+ 					alert("비밀번호를 입력해주세요");
  					return;
  				} else { $("#mem_pwd_label").text(""); }
  				
  				
  				if( $("#mem_pwd").val().match(onlyPwd) == null ){//허용되지 않은 글자는 null.
  					$("#mem_pwd_label").text("영문 소문자, 숫자, 특수 문자만 허용 됩니다.");
+ 					alert("비밀번호 조건에 맞지 않습니다.");
  					return;
  				} else { $("#mem_pwd_label").text(""); }
 
  				if( $("#mem_pwd").val() != $("#pwdcheck").val() ){
  					$("#pwdchk_label").text("비밀번호가 불일치 합니다.");
  					$("#pwdchk_label").css("color", "red");
+ 					alert("비밀번호를 다시 확인해주세요.");
  					return;
  				} else { $("#pwdchk_label").text(""); }
  				
@@ -608,6 +618,7 @@
  				if($.trim( $("#mem_addr1").val() ) == "" || $.trim( $("#mem_addr1").val() ) == null){
  					$("#mem_addr1_label").text("필수 입력 사항입니다.");
  					$("#mem_addr1_label").css("color", "red");
+ 					alert("우편번호 찾기를 이용하여 주소를 입력해주세요.");
  					return;
  				}else {
  					$("#mem_addr1_label").text("");
@@ -616,6 +627,7 @@
  				if($.trim( $("#mem_addr2").val() ) == "" || $.trim( $("#mem_addr2").val() ) == null){
  					$("#mem_addr2_label").text("필수 입력 사항입니다.");
  					$("#mem_addr2_label").css("color", "red");
+ 					alert("상세주소를 입력해주세요.");
  					return;
  				}else {
  					$("#mem_addr2_label").text("");
@@ -630,6 +642,7 @@
  					|| ( tmpTel2 != "" && tmpTel2.match(onlyNum) == null )
  					|| ( tmpTel3 != "" && tmpTel3.match(onlyNum) == null ) ){
  					$("#tel1_label").text("숫자만 허용 됩니다.");
+ 					alert("전화번호는 숫자만 허용됩니다.");
  					return;
  				} else { $("#tel1_label").text(""); }
  				
@@ -637,6 +650,7 @@
  				if($.trim( $("#tel1").val() ) == "" || $.trim( $("#tel1").val() ) == null){
  					$("#tel1_label").text("필수 입력 사항입니다.");
  					$("#tel1_label").css("color", "red");
+ 					alert("전화번호를 입력해주세요.");
  					return;
  				}else{
  					$("#tel1_label").text("");
@@ -644,6 +658,7 @@
  				if($.trim( $("#tel2").val() ) == "" || $.trim( $("#tel2").val() ) == null){
  					$("#tel1_label").text("필수 입력 사항입니다.");
  					$("#tel1_label").css("color", "red");
+ 					alert("전화번호를 입력해주세요.");
  					return;
  				}else{
  					$("#tel1_label").text("");
@@ -651,6 +666,7 @@
  				if($.trim( $("#tel3").val() ) == "" || $.trim( $("#tel3").val() ) == null){
  					$("#tel1_label").text("필수 입력 사항입니다.");
  					$("#tel1_label").css("color", "red");
+ 					alert("전화번호를 입력해주세요.");
  					return;
  				}else{
  					$("#tel1_label").text("");
@@ -663,19 +679,22 @@
  				if( ( tmpEmail1 != "" && tmpEmail1.match(onlyEmail) == null )
  					|| ( tmpEmail2 != "" && tmpEmail2.match(onlyEmail) == null ) ){
  					$("#email1_label").text("영문 대소문자와 숫자만 허용 됩니다.");
+ 					alert("이메일 확인해주세요.");
  					return;
  				} else { $("#email1_label").text(""); }
  				
  				if($.trim( $("#email1").val() ) == "" || $.trim( $("#email1").val() ) == null){
  					$("#email1_label").text("필수 입력 사항입니다.");
  					$("#email1_label").css("color", "red");
+ 					alert("이메일 입력해주세요.");
  					return;
  				}else{
  					$("#email1_label").text("");
  				}
  				if($.trim( $("#email2").val() ) == "" || $.trim( $("#email2").val() ) == null){
- 					$("#email2_label").text("필수 입력 사항입니다.");
+ 					$("#email2_label").text("필수 사항입니다.");
  					$("#email2_label").css("color", "red");
+ 					alert("이메일 선택해주세요.");
  					return;
  				}else{
  					$("#email2_label").text("");
@@ -688,6 +707,7 @@
  				if($.trim( $("#card_name").val() ) == "" || $.trim( $("card_name").val() ) == null){
  					$("#card_name_label").text("필수 입력 사항입니다.");
  					$("#card_name_label").css("color", "red");
+ 					alert("카드 사용자명을 입력해주세요.");
  					return;
  				}else {
  					$("#card_name_label").text("");
@@ -698,6 +718,7 @@
  				if($.trim( $("#card_no").val() ) == "" || $.trim( $("card_no").val() ) == null){
  					$("#card_no_label").text("필수 입력 사항입니다.");
  					$("#card_no_label").css("color", "red");
+ 					alert("카드번호를 입력해주세요.");
  					return;
  				}else {
  					$("#card_no_label").text("");
@@ -707,6 +728,7 @@
  				if( tmpCardNo.match(onlyNum) == null){
  					$("#card_no_label").text("숫자만 입력하세요");
  					$("#card_no_label").css("color", "red");
+ 					alert("카드번호는 숫자만 허용됩니다..");
  					return;
  				}else {
  					$("#card_no_label").text("");
@@ -716,10 +738,12 @@
  				if($.trim($("#card_no").val().length) < 15){
  					$("#card_no_label").text("카드번호는 15,16자리입니다.");
  					$("#card_no_label").css("color", "red");
+ 					alert("카드번호는 15,16자리입니다.");
  					return;
  				}else if($.trim($("#card_no").val().length) > 16){
  					$("#card_no_label").text("카드번호는 15,16자리입니다.");
  					$("#card_no_label").css("color", "red");
+ 					alert("카드번호는 15,16자리입니다.");
  					return;
  				}else if($.trim($("#card_no").val().length) == 15 || $.trim($("#card_no").val().length) == 16){
  					$("#card_no_label").text("");
@@ -731,14 +755,16 @@
  				
  				if(tmpCard_Exp1 == null || tmpCard_Exp1 == ""
  					|| tmpCard_Exp2 == null || tmpCard_Exp2 == ""){
- 					$("#card_exp1_label").text("필수 선택 사항입니다.");
+ 					$("#card_exp1_label").text("필수 사항입니다.");
  					$("#card_exp1_label").css("color", "red");
+ 					alert("카드 유효기간을 선택해주세요.");
  					return;
  				} else {$("#card_exp1_label").text("");}
  				
  				if($.trim( $("#card_cvc").val()) == null || $.trim( $("#card_cvc").val()) == ""){
  					$("#card_cvc_label").text("필수 입력 사항입니다.");
  					$("#card_cvc_label").css("color", "red");
+ 					alert("CVC 번호를 입력해주세요.");
  					return;
  				}else {
  					$("#card_cvc_label").text("");
@@ -747,6 +773,7 @@
  				if($.trim($("#card_cvc").val().length) != 3){
  					$("#card_cvc_label").text("CVC는 3자리입니다.");
  					$("#card_cvc_label").css("color", "red");
+ 					alert("CVC는 3자리입니다.");
  					return;
  				}else {
  					$("#card_cvc_label").text("");
@@ -755,6 +782,7 @@
  				if($("#card_cvc").val().match(onlyNum) == null){
  					$("#card_cvc_label").text("숫자만 입력하세요");
  					$("#card_cvc_label").css("color", "red");
+ 					alert("CVC 숫자만 입력해주세요.");
  					return;
  				}else {
  					$("#card_cvc_label").text("");
@@ -765,6 +793,7 @@
  				if($.trim($("#card_pwd").val().length) > 2 || $.trim($("#card_pwd").val().length) < 2){
  					$("#card_pwd_label").text("비밀번호 앞 2자리 입력해주세요");
  					$("#card_pwd_label").css("color", "red");
+ 					alert("카드 결제비밀번호 앞 2자리를 입력해주세요");
  					return;
  				}else if($.trim($("#card_pwd").val().length) == 2) {
  					$("#card_pwd_label").text("");
@@ -774,6 +803,7 @@
  				if($("#card_pwd").val().match(onlyNum) == null){
  					$("#card_pwd_label").text("숫자만 입력하세요");
  					$("#card_pwd_label").css("color", "red");
+ 					alert("카드 결제비밀번호 앞 2자리 숫자를 입력해주세요.");
  					return;
  				}else {
  					$("#card_pwd_label").text("");
@@ -781,11 +811,12 @@
  				if($.trim( $("#card_pwd").val()) == null || $.trim( $("#card_pwd").val()) == ""){
  					$("#card_pwd_label").text("필수 입력 사항입니다.");
  					$("#card_pwd_label").css("color", "red");
+ 					alert("카드 결제비밀번호는 필수입력 사항입니다.");
  					return;
  				}else {
  					$("#card_pwd_label").text("");
  				}
- 				
+
  				//정보 전송
  				$.post(
  						"${pageContext.request.contextPath}/join"
@@ -814,8 +845,8 @@
  							if(data == 1){
  								alert("회원 가입에 성공하셨습니다. 로그인 해주세요");
  								location.href="${pageContext.request.contextPath}/login/login_form";
- 							}else{
- 								alert("잠시 후 다시 시도해 주세요.");
+ 							}else if(data == 0){
+ 								alert("잠시 후 다시 시도해주세요.");
  							}
  						}//call back function
  				);//post
@@ -855,6 +886,8 @@
 
  			});//click
  		});//ready
+
+	 
  //=================================================
  var scrollElement = document.querySelector('#scroll');
 

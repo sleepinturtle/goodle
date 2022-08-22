@@ -22,7 +22,7 @@ public class MainController {
 	
 	@RequestMapping(value = "/join", method = RequestMethod.POST)
 	public void join(MemberDTO dto, PrintWriter out) {
-		System.out.println("컨트롤러 돌아라1");
+		System.out.println("컨트롤러 돌아라1 : ");
 		int successCount = 0;
 		successCount = service.join(dto);
 		System.out.println("컨트롤러 돌아라2");
