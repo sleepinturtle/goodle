@@ -2,21 +2,25 @@ package kr.co.goodle.manager.recipe;
 
 public class RecipeDTO {
 	
-	private int rcp_no;                       
+	private String rcp_no;                       
 	private String rcp_name;                
 	private String rcp_time;                             
 	private String rcp_ingr;                  
-	private String rcp_desc;              
-	private String rcp_tag1;                      
-	private String rcp_tag2;               
+	private String rcp_desc;                            
 	private String rcp_detail;               
-	private String rcp_addp;
+	private String rcp_imgpath;
 	
 	
-	public int getRcp_no() {
+	public String getRcp_no() {
 		return rcp_no;
 	}
-	public void setRcp_no(int rcp_no) {
+	public String getRcp_imgpath() {
+		return rcp_imgpath;
+	}
+	public void setRcp_imgpath(String rcp_imgpath) {
+		this.rcp_imgpath = rcp_imgpath;
+	}
+	public void setRcp_no(String rcp_no) {
 		this.rcp_no = rcp_no;
 	}
 	public String getRcp_name() {
@@ -44,31 +48,14 @@ public class RecipeDTO {
 	public void setRcp_desc(String rcp_desc) {
 		this.rcp_desc = rcp_desc;
 	}
-	public String getRcp_tag1() {
-		return rcp_tag1;
-	}
-	public void setRcp_tag1(String rcp_tag1) {
-		this.rcp_tag1 = rcp_tag1;
-	}
-	public String getRcp_tag2() {
-		return rcp_tag2;
-	}
-	public void setRcp_tag2(String rcp_tag2) {
-		this.rcp_tag2 = rcp_tag2;
-	}
+	
 	public String getRcp_detail() {
 		return rcp_detail;
 	}
 	public void setRcp_detail(String rcp_detail) {
 		this.rcp_detail = rcp_detail;
 	}
-	public String getRcp_addp() {
-		return rcp_addp;
-	}
-	public void setRcp_addp(String rcp_addp) {
-		this.rcp_addp = rcp_addp;
-	}    
-	
+
 	
 	
 
