@@ -28,11 +28,11 @@
 		<button id="btn">버튼</button>
 		
 		<label id="check_btn" class="btn btn-danger btn-outline-dark ml-auto">
-	        <input type="checkbox" > 선택
+	        <input type="checkbox" id="test1"> 선택
 	    </label>
 		
 		<label id="check_btn1" class="btn btn-danger btn-outline-dark ml-auto">
-	        <input type="checkbox" > 선택
+	        <input type="checkbox" id="test11" > 선택
 	    </label>
 	</div>
 	
@@ -70,10 +70,18 @@
 	    }
 	  });//click
 	$("#check_btn").click(function() {
-		if($("#check_btn").prop("checked") == true){
-			
-			$( "#check_btn1" ).change($("#check_btn1").prop("checked")=true);
+		if( $("#test1").prop("checked") ){
+			//$( "#check_btn1" ).change($("#check_btn1").prop("checked", true));
+			$( "#test11" ).prop("checked", true);
+		} else {
+			$( "#test11" ).prop("checked", false);
 		}
+	});
+	$("#check_btn1").click(function() {
+		if( $("#test11").prop("checked")){
+			//$( "#check_btn1" ).change($("#check_btn1").prop("checked", true));
+			$( "#test1" ).prop("checked", false);
+		} 
 	});
 	  
 	});//ready

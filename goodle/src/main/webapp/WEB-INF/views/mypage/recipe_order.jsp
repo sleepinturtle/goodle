@@ -7,7 +7,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>구독 관리</title>
+    <title>레시피 예약</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,900">
@@ -27,6 +27,13 @@
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/testing/assets/css/Toggle-Switches.css">
     <%@ include file="/WEB-INF/views/links_head.jsp" %>
 </head>
+<script type="text/javascript">
+//Data Picker Initialization
+$('.datepicker').datepicker({
+  inline: true
+});
+
+</script>
 
 <body>
     <%@ include file="/WEB-INF/views/navbar2.jsp" %>
@@ -52,6 +59,15 @@
 				<br>
                 <div class="toggle"><input type="radio" id="week_order" name="bike_cond" checked="checked"><label for="week_order">레시피 주문</label><input type="radio" id="skip_order" name="bike_cond"><label for="skip_order">이번주 스킵</label></div>
             </fieldset>
+            
+            <!-- datepicker -->
+            
+           <div id="date-picker-example" class="md-form md-outline input-with-post-icon datepicker" inline="true">
+			  <input placeholder="Select date" type="text" id="example" class="form-control">
+			  <label for="example">Try me...</label>
+			  <i class="fas fa-calendar input-prefix"></i>
+			</div>
+			 <!-- /datepicker -->
 
 			<section id="order" class="py-5">
                 <div class="container">
@@ -168,7 +184,8 @@
                 </div>
             <button id="next_btn" class="btn btn-primary" style="float:right" type="button">다음</button>
             </section>
-
+            
+	            
 
 
 
@@ -302,6 +319,8 @@
     <script src="${pageContext.request.contextPath}/resources/testing/assets/js/Advanced-Pricing-Cards.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 	<script type="text/javascript">
+	
+	
 	$(document).ready(function(){
 	    $("#confirm").hide();
 	    $("#skipped").hide();

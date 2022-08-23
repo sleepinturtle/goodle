@@ -5,11 +5,19 @@ public class QnaBoardDTO {
 	private String board_no;
 	private String mem_no;
 	private String mem_id;
-	private String title;
+	private String title1;
 	private String write_date;
 	private String contents;
 	private String answer;
 	
+	
+	
+	public String getTitle1() {
+		return title1;
+	}
+	public void setTitle1(String title1) {
+		this.title1 = title1;
+	}
 	public String getMem_id() {
 		return mem_id;
 	}
@@ -27,12 +35,6 @@ public class QnaBoardDTO {
 	}
 	public void setMem_no(String mem_no) {
 		this.mem_no = mem_no;
-	}
-	public String getTitle() {
-		return title;
-	}
-	public void setTitle(String title) {
-		this.title = title;
 	}
 	public String getWrite_date() {
 		return write_date;

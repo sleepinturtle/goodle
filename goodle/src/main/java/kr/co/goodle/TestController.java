@@ -18,4 +18,8 @@ public class TestController {
 	public String divtest() {
 		return "/divtest";
 	}
+	@RequestMapping(value="/datepicker")
+	public String datepicker() {
+		return "/datepickertest";
+	}
 }
