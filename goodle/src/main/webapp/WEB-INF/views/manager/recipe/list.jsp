@@ -15,7 +15,7 @@
 		<hr>
 		<h3> 레시피 목록 </h3>
 		<hr>
-		<form action="${pageContext.request.contextPath}/manager/recipe/list" method="post">
+		<form action="${pageContext.request.contextPath}/manager/recipe/list" method="get">
 			<div class="input-group">
 				<div class="input-group-prepend">
 					<select class="form-control" id="searchOption" name="searchOption">

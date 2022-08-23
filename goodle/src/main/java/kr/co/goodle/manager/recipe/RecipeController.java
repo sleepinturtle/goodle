@@ -213,7 +213,7 @@ public class RecipeController {
 		return "manager/recipe/write_form";//jsp file name
 	}//writeForm
 
-	@RequestMapping( value = "/list", method = RequestMethod.POST)
+	@RequestMapping( value = "/list", method = RequestMethod.GET)
 	public String list( Model model, String userWantPage, SearchDTO dto ) {
 		if( userWantPage == null || userWantPage.equals("") ) userWantPage = "1";
 		int totalCount = 0, startPageNum = 1, endPageNum = 10, lastPageNum = 1;

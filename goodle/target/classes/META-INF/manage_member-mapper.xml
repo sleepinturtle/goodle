@@ -11,7 +11,7 @@
 	
 	
 	<select id="detail" parameterType="java.lang.String" resultType="kr.co.goodle.manager.member.MemberDTO">
-	select m.mem_no, m.mem_name, m.mem_tel, m.mem_email, m.mem_date, m.mem_post, m.mem_comp
+	select m.mem_no, m.mem_name, m.mem_tel, m.mem_email, m.mem_date, m.mem_post, m.mem_comp, m.mem_addr1, m.mem_addr2
 	from member m
 	where m.mem_no = #{mem_no}
 	</select>
@@ -25,10 +25,10 @@
 					and searchWord != null and searchWord != ''">
 			<choose>
 				<when test="searchOption == 'mem_no'">
-					and mb.title like concat('%', #{searchWord}, '%')
+					and mem_no like concat('%', #{searchWord}, '%')
 				</when>
 				<when test="searchOption == 'mem_name'">
-					and m.mid like concat('%', #{searchWord}, '%')
+					and mem_name like concat('%', #{searchWord}, '%')
 				</when>
 			</choose>
 		</if>
@@ -44,10 +44,10 @@
 					and searchWord != null and searchWord !=''">
 			<choose>
 				<when test="searchOption == 'mem_no'">
-					and mb.title like concat('%', #{searchWord}, '%')
+					and mem_no like concat('%', #{searchWord}, '%')
 				</when>
 				<when test="searchOption == 'mem_name'">
-					and m.mid like concat('%', #{searchWord}, '%')
+					and mem_name like concat('%', #{searchWord}, '%')
 				</when>
 			</choose>
 		</if>

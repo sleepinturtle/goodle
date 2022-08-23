@@ -11,6 +11,8 @@ public class RecipeDTO {
 	private String rcp_imgpath;
 	
 	
+
+	
 	public String getRcp_no() {
 		return rcp_no;
 	}

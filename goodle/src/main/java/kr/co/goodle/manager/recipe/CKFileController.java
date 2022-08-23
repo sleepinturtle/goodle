@@ -21,7 +21,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.multipart.MultipartRequest;
 
-import kr.co.goodle.util.dto.MemberDTO;
 
 @Controller
 public class CKFileController {
