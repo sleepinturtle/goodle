@@ -8,10 +8,10 @@
 	<insert id="join" parameterType="kr.co.goodle.util.dto.MemberDTO">
 	insert into member ( mem_name, mem_id, mem_pwd, mem_tel, mem_email, mem_date
 		, mem_cert1, mem_cert2
-		, mem_post, mem_addr1, mem_addr2 )
+		, mem_post, mem_addr1, mem_addr2, plan_no)
 		values ( #{mem_name}, #{mem_id}, #{mem_pwd}, #{mem_tel}, #{mem_email}, now()
 		,#{mem_cert1}, #{mem_cert2}
-		,#{mem_post}, #{mem_addr1}, #{mem_addr2} )
+		,#{mem_post}, #{mem_addr1}, #{mem_addr2}, #{plan_no})
 		<selectKey resultType="String" keyProperty="mem_no" order="AFTER">
 			select last_insert_id()
 		</selectKey>
@@ -20,6 +20,7 @@
 		insert into payment_info (mem_no, card_name, card_exp, card_cvc, card_pwd, card_no)
 		values (#{mem_no},#{card_name},#{card_exp},#{card_cvc},#{card_pwd},#{card_no})
 	</insert>
+	
 	
 	
 	<select id="dupcheck" parameterType="java.lang.String" resultType="int">

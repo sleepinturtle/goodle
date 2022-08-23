@@ -12,7 +12,6 @@ public class MainService {
 	
 	
 	public int join(MemberDTO dto) {
-		System.out.println("서비스 돌아라1");
 		int successCount = 0;
 		if(dto.getTel1() != null && !dto.getTel1().equals("")
 				&& dto.getTel2() != null && !dto.getTel2().equals("")
@@ -41,7 +40,8 @@ public class MainService {
 			return successCount;
 		}
 		
-		System.out.println("서비스 돌아라2");
+		
+		
 		return successCount;
 	}
 
@@ -51,6 +51,9 @@ public class MainService {
 			isYN = dao.dupCheck(mem_id);
 			return isYN;
 		}//idCheck
+
+
+	
 	}
 
 
