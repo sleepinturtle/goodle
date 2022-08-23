@@ -2,163 +2,164 @@
     pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
-<!-- saved from url=(0053)file:///C:/Users/kyleb/Desktop/testing/untitled.html# -->
 <html>
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>즐겨찾기</title>
+    <title>레시피 예약</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,900">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/testing/assets/fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/testing/assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/testing/assets/fonts/simple-line-icons.min.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/testing/assets/fonts/fontawesome5-overrides.min.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/testing/assets/css/-Filterable-Cards--Filterable-Cards.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/testing/assets/css/Advanced-Pricing-Cards.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/testing/assets/css/Article-Clean.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/testing/assets/css/Articles-Cards-images.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/testing/assets/css/Bootstrap-Calendar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/css/swiper.min.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/testing/assets/css/Navbar-Right-Links-icons.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/testing/assets/css/sidebar.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/testing/assets/css/style.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/testing/assets/css/Toggle-Switches.css">
     <%@ include file="/WEB-INF/views/links_head.jsp" %>
 </head>
-<!-- favrecipe carousel test -->
-
-<style>
-.cards-wrapper {
-  display: flex;
-  justify-content: center;
-}
-.card img {
-  max-width: 100%;
-  max-height: 100%;
-}
-.card {
-  margin: 0 0.5em;
-  box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
-  border: none;
-  border-radius: 0;
-  width: 18rem;
-}
-.carousel-inner {
-  padding: 1em;
-}
-.carousel-control-prev,
-.carousel-control-next {
-  background-color: #e1e1e1;
-  width: 5vh;
-  height: 5vh;
-  border-radius: 50%;
-  top: 50%;
-  transform: translateY(-50%);
-}
-@media (min-width: 768px) {
-  .card img {
-    height: 11em;
-  }
-}
-</style>
 
 <body>
-<%@ include file="/WEB-INF/views/navbar2.jsp" %>
-	
+    <%@ include file="/WEB-INF/views/navbar2.jsp" %>
     
-    <!-- card -->
-    <div class="container py-4 py-xl-5">
-        <div class="row mb-5">
-            <div class="col-md-8 col-xl-6 text-center mx-auto">
-                <h2 class="font-weight-bold">즐겨찾기</h2>
-            </div>
-        </div>
-        
-        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <div class="cards-wrapper">
-      <div class="card">
-        <img src="${pageContext.request.contextPath}/resources/dashboard/assets/img/밀푀유나베.jpg" class="card-img-top" alt="...">
+	<div class="card">
         <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
-      </div>
-      <div class="card d-none d-md-block">
-        <img src="..." class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
-      </div>
-      <div class="card d-none d-md-block">
-        <img src="..." class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
-      </div>
-    </div>
-    </div>
-    <div class="carousel-item">
-      <div class="cards-wrapper">
-        <div class="card">
-          <img src="..." class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-          </div>
-        </div>
-        <div class="card d-none d-md-block">
-          <img src="..." class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-          </div>
-        </div>
-        <div class="card d-none d-md-block">
-          <img src="..." class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="carousel-item">
-      <div class="cards-wrapper">
-        <div class="card">
-          <img src="..." class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-          </div>
-        </div>
-        <div class="card d-none d-md-block">
-          <img src="..." class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-          </div>
-        </div>
-        <div class="card d-none d-md-block">
-          <img src="..." class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
+
+
+			<section id="order" class="py-5">
+                <div class="container">
+                    <div class="row filtr-container">
+                        <div class="col-md-6 col-lg-4 filtr-item" data-category="2,3">
+                            <div class="card border-dark">
+                                <div class="card-header bg-white text-dark">
+                                    <h5 class="m-0">Lorem Ipsum</h5>
+                                </div><img class="img-fluid card-img w-100 d-block rounded-0" src="assets/img/th-01.jpg">
+                                <div class="card-body">
+                                    <p class="card-text">Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                                </div>
+                                <div class="d-flex card-footer">
+<!--                                 	<button class="btn btn-dark btn-sm" type="button"><i class="fa fa-eye"></i>&nbsp;Button 1</button> -->
+									<div class="btn-group-toggle" data-toggle="buttons">
+	                                	<label class="btn btn-danger btn-outline-dark ml-auto">
+	                                		<input type="checkbox" > 선택
+	                                	</label>
+	                                	<button class="btn btn-outline-dark btn-sm ml-auto" type="button"><i class="fa fa-plus"></i>&nbsp;Button 2</button>
+									</div>
+                                	
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 filtr-item" data-category="1,3">
+                            <div class="card border-dark">
+                                <div class="card-header bg-dark text-light">
+                                    <h5 class="m-0">Lorem Ipsum</h5>
+                                </div><img class="img-fluid card-img w-100 d-block rounded-0" src="assets/img/th-02.jpg">
+                                <div class="card-body">
+                                    <p class="card-text">Nullam id dolor id nibh ultricies vehicula ut id elit.&nbsp;Peiores principem Constantium cautela sed cetera et nimia graves cetera modi in titulo causarum infudisset plagas apud sed ut siquid. Invadere tabescebat egressus ullo flagitii per parans per egressus edictus.<br></p>
+                                </div>
+                                <div class="d-flex card-footer"><button class="btn btn-dark btn-sm" type="button"><i class="fa fa-eye"></i>&nbsp;Button 1</button><button class="btn btn-outline-dark btn-sm ml-auto" type="button"><i class="fa fa-plus"></i>&nbsp;Button 2</button></div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 filtr-item" data-category="2,3">
+                            <div class="card border-dark">
+                                <div class="card-header bg-dark text-light">
+                                    <h5 class="m-0">Lorem Ipsum</h5>
+                                </div><img class="img-fluid card-img w-100 d-block rounded-0" src="assets/img/th-03.jpg">
+                                <div class="card-body">
+                                    <p class="card-text">Nullam id dolor id nibh ultricies vehicula ut id elit. Observantes habitu ignoti conspiratione poterant homines formido cognita malorum conpluribus peragranter divites fingerent poterant peragranter.<br></p>
+                                </div>
+                                <div class="d-flex card-footer"><button class="btn btn-dark btn-sm" type="button"><i class="fa fa-eye"></i>&nbsp;Button 1</button><button class="btn btn-outline-dark btn-sm ml-auto" type="button"><i class="fa fa-plus"></i>&nbsp;Button 2</button></div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 filtr-item" data-category="3">
+                            <div class="card border-dark">
+                                <div class="card-header bg-dark text-light">
+                                    <h5 class="m-0">Lorem Ipsum</h5>
+                                </div><img class="img-fluid card-img w-100 d-block rounded-0" src="assets/img/th-06.jpg">
+                                <div class="card-body">
+                                    <p class="card-text">Nullam id dolor id nibh ultricies vehicula ut id elit.&nbsp;Populique et auctoritate cum sint partes regina canities et circumspectum certamina suffragiorum reverenda et set circumspectum temporis auctoritate certamina verecundum quotquot domina per et sint auctoritate sunt omnes ubique redierit.<br></p>
+                                </div>
+                                <div class="d-flex card-footer"><button class="btn btn-dark btn-sm" type="button"><i class="fa fa-eye"></i>&nbsp;Button 1</button><button class="btn btn-outline-dark btn-sm ml-auto" type="button"><i class="fa fa-plus"></i>&nbsp;Button 2</button></div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 filtr-item" data-category="1,2">
+                            <div class="card border-dark">
+                                <div class="card-header bg-dark text-light">
+                                    <h5 class="m-0">Lorem Ipsum</h5>
+                                </div><img class="img-fluid card-img w-100 d-block rounded-0" src="assets/img/th-07.jpg">
+                                <div class="card-body">
+                                    <p class="card-text">Nullam id dolor id nibh ultricies vehicula ut id elit. Vocis indigna adlocutus prodesse custodiam ut adlocutus commune vita commune.<br></p>
+                                </div>
+                                <div class="d-flex card-footer"><button class="btn btn-dark btn-sm" type="button"><i class="fa fa-eye"></i>&nbsp;Button 1</button><button class="btn btn-outline-dark btn-sm ml-auto" type="button"><i class="fa fa-plus"></i>&nbsp;Button 2</button></div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 filtr-item" data-category="1,3">
+                            <div class="card border-dark">
+                                <div class="card-header bg-dark text-light">
+                                    <h5 class="m-0">Lorem Ipsum</h5>
+                                </div><img class="img-fluid card-img w-100 d-block rounded-0" src="assets/img/th-08.jpg">
+                                <div class="card-body">
+                                    <p class="card-text">Nullam id dolor id nibh ultricies vehicula ut id elit.&nbsp;Et admiratio incidere magis eo incidere et forte pauci una admiratio eum Pompeio Q tum dissideret querella et forte una hemicyclio ore illum admiratio hominum is saepe tum magis tum. Et admiratio incidere magis eo incidere et forte pauci una admiratio eum Pompeio Q tum dissideret querella et forte una hemicyclio ore illum admiratio hominum is saepe tum magis tum.<br></p>
+                                </div>
+                                <div class="d-flex card-footer"><button class="btn btn-dark btn-sm" type="button"><i class="fa fa-eye"></i>&nbsp;Button 1</button><button class="btn btn-outline-dark btn-sm ml-auto" type="button"><i class="fa fa-plus"></i>&nbsp;Button 2</button></div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 filtr-item" data-category="1,3">
+                            <div class="card border-dark">
+                                <div class="card-header bg-dark text-light">
+                                    <h5 class="m-0">Lorem Ipsum</h5>
+                                </div><img class="img-fluid card-img w-100 d-block rounded-0" src="assets/img/th-09.jpg">
+                                <div class="card-body">
+                                    <p class="card-text">Nullam id dolor id nibh ultricies vehicula ut id elit.&nbsp;Peiores principem Constantium cautela sed cetera et nimia graves cetera modi in titulo causarum infudisset plagas apud sed ut siquid. Invadere tabescebat egressus ullo flagitii per parans per egressus edictus.<br></p>
+                                </div>
+                                <div class="d-flex card-footer"><button class="btn btn-dark btn-sm" type="button"><i class="fa fa-eye"></i>&nbsp;Button 1</button><button class="btn btn-outline-dark btn-sm ml-auto" type="button"><i class="fa fa-plus"></i>&nbsp;Button 2</button></div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 filtr-item" data-category="3">
+                            <div class="card border-dark">
+                                <div class="card-header bg-dark text-light">
+                                    <h5 class="m-0">Lorem Ipsum</h5>
+                                </div><img class="img-fluid card-img w-100 d-block rounded-0" src="assets/img/th-11.jpg">
+                                <div class="card-body">
+                                    <p class="card-text">Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                                </div>
+                                <div class="d-flex card-footer"><button class="btn btn-dark btn-sm" type="button"><i class="fa fa-eye"></i>&nbsp;Button 1</button><button class="btn btn-outline-dark btn-sm ml-auto" type="button"><i class="fa fa-plus"></i>&nbsp;Button 2</button></div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 filtr-item" data-category="1">
+                            <div class="card border-dark">
+                                <div class="card-header bg-dark text-light">
+                                    <h5 class="m-0">Lorem Ipsum</h5>
+                                </div><img class="img-fluid card-img w-100 d-block rounded-0" src="assets/img/th-12.jpg">
+                                <div class="card-body">
+                                    <p class="card-text">Nullam id dolor id nibh ultricies vehicula ut id elit. Vocabulis pollicitos statuuntur nominum appellatos statuuntur adminicula omnium ob pollicitos tribunos Eusebius pollicitos sub statuuntur.<br></p>
+                                </div>
+                                <div class="d-flex card-footer"><button class="btn btn-dark btn-sm" type="button"><i class="fa fa-eye"></i>&nbsp;Button 1</button><button class="btn btn-outline-dark btn-sm ml-auto" type="button"><i class="fa fa-plus"></i>&nbsp;Button 2</button></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
 </div>
- 
-	</div>
-  <!-- /card -->
-    <%@ include file="/WEB-INF/views/links_foot.jsp" %>
+</div>
+   
+    <script src="${pageContext.request.contextPath}/resources/testing/assets/js/jquery.min.js"></script>
+    <script src="${pageContext.request.contextPath}/resources/testing/assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="${pageContext.request.contextPath}/resources/testing/assets/js/bs-init.js"></script>
+<%--     <script src="${pageContext.request.contextPath}/resources/testing/assets/js/-Filterable-Cards-.js"></script> --%>
+    <script src="${pageContext.request.contextPath}/resources/testing/assets/js/Advanced-Pricing-Cards.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
+</body>
 
-</body></html>
+</html>

@@ -18,9 +18,9 @@ public class QnaBoardDAO {
 	
 	public int write( QnaBoardDTO dto) {
 		int successCount = 0;
-		System.out.println(dto);
 		successCount = sqlSession.insert("QnaBoardMapper.write", dto);
 		System.out.println(successCount);
+		
 		return successCount;
 	}//write
 

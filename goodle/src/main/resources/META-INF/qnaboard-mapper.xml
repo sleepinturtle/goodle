@@ -8,19 +8,19 @@
 
 
 	<insert id="write" parameterType="kr.co.goodle.util.dto.QnaBoardDTO">
-	insert into qnaboard ( mem_no, title, write_date, contents )
-	values ( #{mem_no}, #{title}, now(), #{contents} )
+	insert into qnaboard ( mem_no, title1, write_date, contents )
+	values ( #{mem_no}, #{title1}, now(), #{contents} )
 	</insert>
 
 	<select id="selectList" parameterType="kr.co.goodle.util.dto.SearchDTO"
 			resultType="kr.co.goodle.util.dto.QnaBoardDTO">
-	select qb.board_no, qb.title, qb.mem_no, m.mem_id, qb.write_date
+	select qb.board_no, qb.title1, qb.mem_no, m.mem_id, qb.write_date
 	from qnaboard qb, member m
 	where qb.mem_no = m.mem_no
 		<if test="searchOption != null and searchOption != ''
 					and searchWord != null and searchWord != ''">
 			<choose>
-				<when test="searchOption == 'title'">
+				<when test="searchOption == 'title1'">
 					and mb.title like concat('%', #{searchWord}, '%')
 				</when>
 				<when test="searchOption == 'writer'">
@@ -39,7 +39,7 @@
 		<if test="searchOption != null and searchOption != ''
 					and searchWord != null and searchWord !=''">
 			<choose>
-				<when test="searchOption == 'title'">
+				<when test="searchOption == 'title1'">
 					and mb.title like concat('%', #{searchWord}, '%')
 				</when>
 				<when test="searchOption == 'writer'">
@@ -50,7 +50,7 @@
 	</select>
 	
 	<select id="detail" parameterType="java.lang.String" resultType="kr.co.goodle.util.dto.QnaBoardDTO">
-	select qb.board_no, qb.title, qb.mem_no, m.mem_id, qb.contents, qb.write_date, qb.answer
+	select qb.board_no, qb.title1, qb.mem_no, m.mem_id, qb.contents, qb.write_date, qb.answer
 	from qnaboard qb, member m
 	where qb.board_no = #{board_no}
 	and qb.mem_no = m.mem_no

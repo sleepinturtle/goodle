@@ -269,7 +269,7 @@
             </section>
             <hr class="m-0" />
             
-            <!-- custom-->
+            <!-- start-->
             <section class="resume-section" id="start">
                 <div class="resume-section-content">
                     <h2 style="margin-top: 30px;">시작하기</h2>
@@ -298,7 +298,7 @@
 							    <div class="col-lg-3 col-md-6">
 							        <div class="card text-center card-shadow on-hover border-0 mb-4">
 							          <div class="card-body font-14">
-							            <span class="badge badge-inverse bg-danger p-2 position-absolute price-badge font-weight-normal visually-hidden ">이용중</span>
+							            <span id="plan1" class="badge badge-inverse bg-danger p-2 position-absolute price-badge font-weight-normal">이용중</span>
 							            <h5 class="mt-3 mb-1 font-weight-medium">SELF</h5>
 							            <h6 class="subtitle font-weight-normal">1인 가구를 위한 플랜</h6>
 							            <div class="pricing my-3">
@@ -319,7 +319,7 @@
 							            </ul>
 							            <div class="bottom-btn">
 							              <a class="btn btn-danger-gradiant btn-md text-white btn-block">
-							              <button type="submit" id="plan_no1" value="1" class="plan_btn btn btn-danger-gradient" style="color: white;">Choose Plan</button></a>
+							              <button type="button" id="plan_no1" class="plan_btn btn btn-danger-gradient" value="1" style="color: white;">Choose Plan</button></a>
 							            </div>
 							          </div>
 							        </div>
@@ -329,7 +329,7 @@
 							        <div class="card text-center card-shadow on-hover border-0 mb-4">
 							          <div class="card-body font-14">
 							<!--           <span class="badge badge-inverse p-2 position-absolute price-badge font-weight-normal">인기 플랜</span> -->
-							          <span class="badge badge-inverse bg-danger p-2 position-absolute price-badge font-weight-normal ">이용중</span>
+							          <span id="plan2" class="badge badge-inverse bg-danger p-2 position-absolute price-badge font-weight-normal ">이용중</span>
 							            <h5 class="mt-3 mb-1 font-weight-medium">BASIC</h5>
 							            <h6 class="subtitle font-weight-normal">2인 가구를 위한 플랜</h6>
 							            <div class="pricing my-3">
@@ -350,7 +350,7 @@
 							            </ul>
 							            <div class="bottom-btn">
 							              <a class="btn btn-danger-gradiant btn-md text-white btn-block">
-							              <button type="submit" id="plan_no2" value="2" class="plan_btn btn btn-danger-gradient" style="color: white;">Choose Plan</button></a>
+							              <button type="button" id="plan_no2" class="plan_btn btn btn-danger-gradient" value="2" style="color: white;">Choose Plan</button></a>
 							            </div>
 							          </div>
 							        </div>
@@ -359,7 +359,7 @@
 							      <div class="col-lg-3 col-md-6">
 							        <div class="card text-center card-shadow on-hover border-0 mb-4">
 							          <div class="card-body font-14">
-							            <span class="badge badge-inverse bg-danger p-2 position-absolute price-badge font-weight-normal visually-hidden">이용중</span>
+							            <span id="plan3" class="badge badge-inverse bg-danger p-2 position-absolute price-badge font-weight-normal">이용중</span>
 							            <h5 class="mt-3 mb-1 font-weight-medium">FAMILY</h5>
 							            <h6 class="subtitle font-weight-normal">4인 가족을 위한 플랜</h6>
 							            <div class="pricing my-3">
@@ -380,7 +380,7 @@
 							            </ul>
 							            <div class="bottom-btn">
 							              <a class="btn btn-danger-gradiant btn-md text-white btn-block">
-							              <button type="submit" id="plan_no3" value="3" class="plan_btn btn btn-danger-gradient" style="color: white;">Choose Plan</button></a>
+							              <button type="button" id="plan_no3" class="plan_btn btn btn-danger-gradient" value="3" style="color: white;">Choose Plan</button></a>
 							            </div>
 							          </div>
 							        </div>
@@ -389,7 +389,7 @@
 							      <div class="col-lg-3 col-md-6">
 							        <div class="card text-center card-shadow on-hover border-0 mb-4">
 							          <div class="card-body font-14">
-							          <span class="badge badge-inverse bg-danger p-2 position-absolute price-badge font-weight-normal visually-hidden">이용중</span>
+							          <span id="plan4" class="badge badge-inverse bg-danger p-2 position-absolute price-badge font-weight-normal">이용중</span>
 							            <h5 class="mt-3 mb-1 font-weight-medium">VEGAN</h5>
 							            <h6 class="subtitle font-weight-normal">비건 식단과 다이어트를 위한 2인 플랜</h6>
 							            <div class="pricing my-3">
@@ -410,7 +410,7 @@
 							            </ul>
 							            <div class="bottom-btn">
 							              <a class="btn btn-danger-gradiant btn-md text-white btn-block">
-							              <button type="submit" id="plan_no4" value="4" class="plan_btn btn btn-danger-gradient" style="color: white;">Choose Plan</button></a>
+							              <button type="button" id="plan_no4" class="plan_btn btn btn-danger-gradient" value="4" style="color: white;">Choose Plan</button></a>
 							            </div>
 							          </div>
 							        </div>
@@ -736,44 +736,48 @@
  			});//click
  		});//ready
  		$(document).ready(function() {
- 			if($("#plan_no1").click()){
- 				$("#plan_result").val() = 1;
-				alert($("#plan_result").val());
- 			}
-// 			$("#plan_no1").click(function() {
-// 				$("#plan_result").val() = "1";
-// 				alert($("#plan_result").val());
-// 			});//click
-			$("#plan_no2").click(function() {
-				$("#plan_result").val() = "2";
-			});//click
-			$("#plan_no3").click(function() {
-				$("#plan_result").val() = "3";
-			});//click
-			$("#plan_no4").click(function() {
-				$("#plan_result").val() = "4";
+ 			$(".plan_btn").click(function() {
+				//alert( $(this).val() );
+				$("#plan_result").val( $(this).val() );
+			});
+		});//ready
+		
+		$(document).ready(function() {
+			  $("#plan1").hide();
+			  $("#plan2").hide();
+			  $("#plan3").hide();
+			  $("#plan4").hide();
+			$(".plan_btn").click(function() {
+				if($(this).val() == $("#plan_no1").val()){
+			          $("#plan1").show();
+					  $("#plan2").hide();
+					  $("#plan3").hide();
+					  $("#plan4").hide();
+				}
+				if($(this).val() == $("#plan_no2").val()){
+					  $("#plan1").hide();
+			          $("#plan2").show();
+					  $("#plan3").hide();
+					  $("#plan4").hide();
+				}
+				if($(this).val() == $("#plan_no3").val()){
+					  $("#plan1").hide();
+					  $("#plan2").hide();
+			          $("#plan3").show();
+					  $("#plan4").hide();
+				}
+				if($(this).val() == $("#plan_no4").val()){
+					  $("#plan1").hide();
+					  $("#plan2").hide();
+					  $("#plan3").hide();
+			          $("#plan4").show();
+				}
 			});//click
 		});//ready
  	
  		$(document).ready(function() {
  			$("#join").click(function() {
- 				//구독 정보
- 				$("#plan_no1").click(function() {
-					var plan_no = $("#plan_no1").val();
-					alert(plan_no);
-						});
-					$("#plan_no2").click(function() {
-						var plan_no = $("#plan_no2").val();
-						alert(plan_no);
-						});
-					$("#plan_no3").click(function() {
-						var plan_no = $("#plan_no3").val();
-						alert(plan_no);
-						});
-					$("#plan_no4").click(function() {
-						var plan_no = $("#plan_no4").val();
-						alert(plan_no);
-						});
+ 				
  				//기본 정보 validation check
  			
  				

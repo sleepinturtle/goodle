@@ -7,7 +7,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>구독 관리</title>
+    <title>레시피 예약</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,900">
@@ -27,40 +27,8 @@
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/testing/assets/css/Toggle-Switches.css">
     <%@ include file="/WEB-INF/views/links_head.jsp" %>
 </head>
-<style>
-.cards-wrapper {
-  display: flex;
-  justify-content: center;
-}
-.card img {
-  max-width: 100%;
-  max-height: 100%;
-}
-.card1 {
-  margin: 0 0.5em;
-  box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
-  border: none;
-  border-radius: 0;
-  width: 18rem;
-}
-.carousel-inner {
-  padding: 1em;
-}
-.carousel-control-prev,
-.carousel-control-next {
-  background-color: #e1e1e1;
-  width: 5vh;
-  height: 5vh;
-  border-radius: 50%;
-  top: 50%;
-  transform: translateY(-50%);
-}
-@media (min-width: 768px) {
-  .card img {
-    height: 11em;
-  }
-}
-</style>
+
+
 <body>
     <%@ include file="/WEB-INF/views/navbar2.jsp" %>
     
@@ -83,8 +51,17 @@
             <fieldset>
 <!--                 <legend>Bike Condition</legend> -->
 				<br>
-                <div class="toggle"><input type="radio" id="cond_new" name="bike_cond" checked="checked"><label for="cond_new">레시피 주문</label><input type="radio" id="cond_used" name="bike_cond"><label for="cond_used">이번주 스킵</label></div>
+                <div class="toggle"><input type="radio" id="week_order" name="bike_cond" checked="checked"><label for="week_order">레시피 주문</label><input type="radio" id="skip_order" name="bike_cond"><label for="skip_order">이번주 스킵</label></div>
             </fieldset>
+            
+            <!-- datepicker -->
+            
+           <div id="date-picker-example" class="md-form md-outline input-with-post-icon datepicker" inline="true">
+			  <input placeholder="Select date" type="text" id="example" class="form-control">
+			  <label for="example">Try me...</label>
+			  <i class="fas fa-calendar input-prefix"></i>
+			</div>
+			 <!-- /datepicker -->
 
 			<section id="order" class="py-5">
                 <div class="container">
@@ -199,9 +176,10 @@
                         </div>
                     </div>
                 </div>
-            <button id="order_btn" class="btn btn-primary" type="button">Button</button>
+            <button id="next_btn" class="btn btn-primary" style="float:right" type="button">다음</button>
             </section>
-
+            
+	            
 
 
 
@@ -223,7 +201,7 @@
                     <div class="p-2 px-3 text-uppercase">Product</div>
                   </th>
                   <th scope="col" class="border-0 bg-light">
-                    <div class="py-2 text-uppercase">추가 금액/div>
+                    <div class="py-2 text-uppercase">추가 금액</div>
                   </th>
                   <th scope="col" class="border-0 bg-light">
                     <div class="py-2 text-uppercase">수량</div>
@@ -318,115 +296,13 @@
     </div>
   </div>
 </div>
+	<button id="prev_btn" class="btn btn-primary" type="button">뒤로가기</button>
 </div>
 
-<!-- card carousel -->
-<div class="container py-4 py-xl-5">
-        <div class="row mb-5">
-            <div class="col-md-8 col-xl-6 text-center mx-auto">
-                <h2 class="font-weight-bold">즐겨찾기</h2>
-            </div>
-        </div>
-        
-        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <div class="cards-wrapper">
-      <div class="card1">
-        <img src="${pageContext.request.contextPath}/resources/dashboard/assets/img/밀푀유나베.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
-      </div>
-      <div class="card1 d-none d-md-block">
-        <img src="..." class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
-      </div>
-      <div class="card1 d-none d-md-block">
-        <img src="..." class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
-      </div>
-    </div>
-    </div>
-    <div class="carousel-item">
-      <div class="cards-wrapper">
-        <div class="card1">
-          <img src="..." class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-          </div>
-        </div>
-        <div class="card1 d-none d-md-block">
-          <img src="..." class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-          </div>
-        </div>
-        <div class="card1 d-none d-md-block">
-          <img src="..." class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="carousel-item">
-      <div class="cards-wrapper">
-        <div class="card1">
-          <img src="..." class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-          </div>
-        </div>
-        <div class="card1 d-none d-md-block">
-          <img src="..." class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-          </div>
-        </div>
-        <div class="card1 d-none d-md-block">
-          <img src="..." class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
+<div id="skipped">
+	<h2>이번 주는 스킵 하셨습니다.</h2>
 </div>
- 
-	</div>
-	<!-- card carousel -->
+
 </div>
 </div>
    
@@ -437,19 +313,38 @@
     <script src="${pageContext.request.contextPath}/resources/testing/assets/js/Advanced-Pricing-Cards.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 	<script type="text/javascript">
+	
+	
 	$(document).ready(function(){
 	    $("#confirm").hide();
+	    $("#skipped").hide();
 	    let times = 1;
 
-	  $("#order_btn").click(function(){
-	  		times++;
-	      if(times%4 == 2){
+	  $("#next_btn").click(function(){
+// 	  		times++;
+// 	      if(times%4 == 2){
 	          $("#confirm").show();
 	          $("#order").hide();
-	   	 }
+	  });//click
+	  
+	  $("#prev_btn").click(function(){
+// 	  		times++;
+// 	      if(times%4 == 2){
+	          $("#confirm").hide();
+	          $("#order").show();
+	  });//click
+		
+	  $("#skip_order").click(function() {
+		$("#confirm").hide();
+		$("#order").hide();
+		$("#skipped").show();
 	  });
-
-	});
+	  
+	  $("#week_order").click(function() {
+		$("#order").show();
+		$("#skipped").hide();
+	  });
+	});//ready
 	</script>
 </body>
 
