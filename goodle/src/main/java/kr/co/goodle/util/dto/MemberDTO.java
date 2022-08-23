@@ -1,8 +1,7 @@
 package kr.co.goodle.util.dto;
 
 public class MemberDTO {
-//util.dto를 공통 dto 패키지로 만듬// freeboardDTO는 자유게시판 안에서만 쓰기 때문에 세부폴더에 넣었지만 // loginDTO는 모든 페이지에서 쓰이기 때문에
-	//공통dto 패키지에 넣어줌
+
 	
 	private String mem_no;
 	private String mem_name;
@@ -13,6 +12,7 @@ public class MemberDTO {
 	private String mem_date;
 	private int mem_delyn;
 	private int mgr_yn;
+	private int plan_no;
 	
 	private String mem_cert1;
 	private String mem_cert2;
@@ -306,6 +306,14 @@ public class MemberDTO {
 
 	public void setMem_delyn(int mem_delyn) {
 		this.mem_delyn = mem_delyn;
+	}
+
+	public int getPlan_no() {
+		return plan_no;
+	}
+
+	public void setPlan_no(int plan_no) {
+		this.plan_no = plan_no;
 	}
 	
 	

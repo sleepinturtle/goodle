@@ -51,7 +51,7 @@
 						<td>${dto.board_no}</td>
 						<td>
 							<a href="${pageContext.request.contextPath}/qna/detail?board_no=${dto.board_no}">
-								${dto.title}
+								${dto.title1}
 							</a>
 						</td>
 						<td>${dto.mem_id}</td>

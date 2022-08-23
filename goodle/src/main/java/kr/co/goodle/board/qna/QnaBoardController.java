@@ -87,8 +87,9 @@ public class QnaBoardController {
 	}//list
 	
 	@RequestMapping( value = "/detail", method = RequestMethod.GET )
-	public String detail( String board_no, Model model ) {
+	public String detail( String board_no, Model model, HttpSession session ) {
 		QnaBoardDTO dto = null;
+		MemberDTO mDto = (MemberDTO) session.getAttribute("login_info");
 		dto = service.detail( board_no );
 		model.addAttribute("detail_dto", dto);
 		return "/board/qnaboard/qnadetail";//jsp file name
