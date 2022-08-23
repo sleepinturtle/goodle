@@ -54,9 +54,37 @@
     </div>
     <!-- Row  -->
     <div class="row mt-5">
-    
+    <!-- Column -->
+    <div class="col-lg-3 col-md-6">
+        <div class="card text-center card-shadow on-hover border-0 mb-4">
+          <div class="card-body font-14">
+            <span class="badge badge-inverse bg-danger p-2 position-absolute price-badge font-weight-normal visually-hidden ">이용중</span>
+            <h5 class="mt-3 mb-1 font-weight-medium">SELF</h5>
+            <h6 class="subtitle font-weight-normal">1인 가구를 위한 플랜</h6>
+            <div class="pricing my-3">
+              <sup>원</sup>
+              <span class="monthly display-5">59,000</span>
+<!--               <span class="yearly display-5">1000</span> -->
+              <small class="monthly">/week</small>
+<!--               <small class="yearly">/yr</small> -->
+<!--               <span class="d-block">Save <span class="font-weight-medium">$80</span> a Year</span> -->
+            </div>
+            <ul class="list-inline">
+               <li class="d-block py-2">1인을 위한 3개 레시피 선택</li>
+              <li class="d-block py-2">매주 새로운 레시피 추천</li>
+              <li class="d-block py-2">다양하고 신선한 재료들 엄선</li>
+              <li class="d-block py-2">원하는 날짜에 배송</li>
+              <li class="d-block py-2">추가 레시피 선택 가능</li>
+              <li class="d-block py-2">(추가 레시피 선택시 +5,000원)</li>
+            </ul>
+            <div class="bottom-btn">
+              <a class="btn btn-danger-gradiant btn-md text-white btn-block" href="#f1"><span>Choose Plan</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
       <!-- Column -->
-      <div class="col-lg-4 col-md-6">
+      <div class="col-lg-3 col-md-6">
         <div class="card text-center card-shadow on-hover border-0 mb-4">
           <div class="card-body font-14">
 <!--           <span class="badge badge-inverse p-2 position-absolute price-badge font-weight-normal">인기 플랜</span> -->
@@ -80,13 +108,13 @@
               <li class="d-block py-2">(추가 레시피 선택시 +10,000원)</li>
             </ul>
             <div class="bottom-btn">
-              <a class="btn btn-success-gradiant btn-md text-white btn-block" href="#f1"><span>Choose Plan</span></a>
+              <a class="btn btn-danger-gradiant btn-md text-white btn-block" href="#f1"><span>Choose Plan</span></a>
             </div>
           </div>
         </div>
       </div>
       <!-- Column -->
-      <div class="col-lg-4 col-md-6">
+      <div class="col-lg-3 col-md-6">
         <div class="card text-center card-shadow on-hover border-0 mb-4">
           <div class="card-body font-14">
             <span class="badge badge-inverse bg-danger p-2 position-absolute price-badge font-weight-normal visually-hidden">이용중</span>
@@ -109,13 +137,13 @@
               <li class="d-block py-2">(추가 레시피 선택시 +20,000원)</li>
             </ul>
             <div class="bottom-btn">
-              <a class="btn btn-success-gradiant btn-md text-white btn-block" href="#f1"><span>Choose Plan</span></a>
+              <a class="btn btn-danger-gradiant btn-md text-white btn-block" href="#f1"><span>Choose Plan</span></a>
             </div>
           </div>
         </div>
       </div>
       <!-- Column -->
-      <div class="col-lg-4 col-md-6">
+      <div class="col-lg-3 col-md-6">
         <div class="card text-center card-shadow on-hover border-0 mb-4">
           <div class="card-body font-14">
           <span class="badge badge-inverse bg-danger p-2 position-absolute price-badge font-weight-normal visually-hidden">이용중</span>
@@ -138,38 +166,12 @@
               <li class="d-block py-2">(추가 레시피 선택시 +10,000원)</li>
             </ul>
             <div class="bottom-btn">
-              <a class="btn btn-success-gradiant btn-md text-white btn-block" href="#f1"><span>Choose Plan</span></a>
+              <a class="btn btn-danger-gradiant btn-md text-white btn-block" href="#f1"><span>Choose Plan</span></a>
             </div>
           </div>
         </div>
       </div>
-      <!-- Column -->
-<!--       <div class="col-lg-3 col-md-6"> -->
-<!--         <div class="card text-center card-shadow on-hover border-0 mb-4"> -->
-<!--           <div class="card-body font-14"> -->
-<!--             <h5 class="mt-3 mb-1 font-weight-medium">SUPREME</h5> -->
-<!--             <h6 class="subtitle font-weight-normal">For Team of 25-100 Members</h6> -->
-<!--             <div class="pricing my-3"> -->
-<!--               <sup>$</sup> -->
-<!--               <span class="monthly display-5">99</span> -->
-<!--               <span class="yearly display-5">1000</span> -->
-<!--               <small class="monthly">/mo</small> -->
-<!--               <small class="yearly">/yr</small> -->
-<!--               <span class="d-block">Save <span class="font-weight-medium">$80</span> a Year</span> -->
-<!--             </div> -->
-<!--             <ul class="list-inline"> -->
-<!--               <li class="d-block py-2">Perfect of Small Team</li> -->
-<!--               <li class="d-block py-2">Unlimited Invoices</li> -->
-<!--               <li class="d-block py-2">Project Management</li> -->
-<!--               <li class="d-block py-2">Team Management</li> -->
-<!--               <li class="d-block py-2">Time Tracking</li> -->
-<!--             </ul> -->
-<!--             <div class="bottom-btn"> -->
-<!--               <a class="btn btn-success-gradiant btn-md text-white btn-block" href="#f1"><span>Choose Plan</span></a> -->
-<!--             </div> -->
-<!--           </div> -->
-<!--         </div> -->
-<!--       </div> -->
+      
     </div>
   </div>
 </div>

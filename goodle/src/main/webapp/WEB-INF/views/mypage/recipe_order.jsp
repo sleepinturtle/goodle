@@ -50,7 +50,7 @@
             <fieldset>
 <!--                 <legend>Bike Condition</legend> -->
 				<br>
-                <div class="toggle"><input type="radio" id="cond_new" name="bike_cond" checked="checked"><label for="cond_new">레시피 주문</label><input type="radio" id="cond_used" name="bike_cond"><label for="cond_used">이번주 스킵</label></div>
+                <div class="toggle"><input type="radio" id="week_order" name="bike_cond" checked="checked"><label for="week_order">레시피 주문</label><input type="radio" id="skip_order" name="bike_cond"><label for="skip_order">이번주 스킵</label></div>
             </fieldset>
 
 			<section id="order" class="py-5">
@@ -166,7 +166,7 @@
                         </div>
                     </div>
                 </div>
-            <button id="order_btn" class="btn btn-primary" type="button">Button</button>
+            <button id="next_btn" class="btn btn-primary" style="float:right" type="button">다음</button>
             </section>
 
 
@@ -190,7 +190,7 @@
                     <div class="p-2 px-3 text-uppercase">Product</div>
                   </th>
                   <th scope="col" class="border-0 bg-light">
-                    <div class="py-2 text-uppercase">추가 금액/div>
+                    <div class="py-2 text-uppercase">추가 금액</div>
                   </th>
                   <th scope="col" class="border-0 bg-light">
                     <div class="py-2 text-uppercase">수량</div>
@@ -285,6 +285,11 @@
     </div>
   </div>
 </div>
+	<button id="prev_btn" class="btn btn-primary" type="button">뒤로가기</button>
+</div>
+
+<div id="skipped">
+	<h2>이번 주는 스킵 하셨습니다.</h2>
 </div>
 
 </div>
@@ -299,17 +304,34 @@
 	<script type="text/javascript">
 	$(document).ready(function(){
 	    $("#confirm").hide();
+	    $("#skipped").hide();
 	    let times = 1;
 
-	  $("#order_btn").click(function(){
-	  		times++;
-	      if(times%4 == 2){
+	  $("#next_btn").click(function(){
+// 	  		times++;
+// 	      if(times%4 == 2){
 	          $("#confirm").show();
 	          $("#order").hide();
-	   	 }
+	  });//click
+	  
+	  $("#prev_btn").click(function(){
+// 	  		times++;
+// 	      if(times%4 == 2){
+	          $("#confirm").hide();
+	          $("#order").show();
+	  });//click
+		
+	  $("#skip_order").click(function() {
+		$("#confirm").hide();
+		$("#order").hide();
+		$("#skipped").show();
 	  });
-
-	});
+	  
+	  $("#week_order").click(function() {
+		$("#order").show();
+		$("#skipped").hide();
+	  });
+	});//ready
 	</script>
 </body>
 

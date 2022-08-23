@@ -1,3 +1,7 @@
+:root{
+	--bs-success : #198754;
+}
+
 .article-clean {
   color: #56585b;
   background-color: #fff;
@@ -83,6 +87,6 @@
 }
 
 .navbar {
-  background-color: #455dc7;
+  background-color: #DC3534;
 }
 

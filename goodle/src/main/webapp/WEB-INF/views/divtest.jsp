@@ -26,6 +26,14 @@
 		</div>
 		
 		<button id="btn">버튼</button>
+		
+		<label id="check_btn" class="btn btn-danger btn-outline-dark ml-auto">
+	        <input type="checkbox" > 선택
+	    </label>
+		
+		<label id="check_btn1" class="btn btn-danger btn-outline-dark ml-auto">
+	        <input type="checkbox" > 선택
+	    </label>
 	</div>
 	
 	
@@ -60,9 +68,15 @@
 	          $("#ccc").hide();
 	          $("#ddd").show();
 	    }
-	  });
-
+	  });//click
+	$("#check_btn").click(function() {
+		if($("#check_btn").prop("checked") == true){
+			
+			$( "#check_btn1" ).change($("#check_btn1").prop("checked")=true);
+		}
 	});
+	  
+	});//ready
 	</script>
 </body>
 </html>
