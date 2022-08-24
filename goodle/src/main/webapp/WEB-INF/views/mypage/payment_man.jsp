@@ -28,9 +28,9 @@
                     <h2 class="mb-5">결제 정보</h2>
                      <table class="table table-hover">
                    		<tr>
-                   			<th style="font-weight: bold;">${login_info.card_name }</th>
+                   			<th style="font-weight: bold;">사용자 이름</th>
                    			<td style="font-weight: bold;">
-                   				  <input type="text" id="card_name" name="card_name" placeholder="이름 입력">
+                   				  <input type="text" id="card_name" name="card_name" value="${login_ }">
                    						<label for="card_name" id="card_name_label"></label>
                    			</td>
                    		</tr>
