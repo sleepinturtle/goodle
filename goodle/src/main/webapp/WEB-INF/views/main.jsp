@@ -780,7 +780,10 @@
  			$("#join").click(function() {
  				
  				//기본 정보 validation check
- 			
+ 				if($.trim($("#plan_result").val()) == null || $.trim($("#plan_result").val()) == ""){
+ 					alert("플랜을 선택해주세요");
+ 					return;
+ 					}
  				
  				if($.trim( $("#mem_name").val() )== "" || $.trim( $("#mem_name").val() ) == null){
  					$("#mem_name_label").text("필수 입력 사항입니다.");
