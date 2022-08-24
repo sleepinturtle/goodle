@@ -43,7 +43,7 @@
                         <p class="text-primary mb-0">Order Recipe</p>
                         <h4 class="font-weight-bold card-title">레시피 예약</h4>
 <!--                         <p class="card-text">맞춤 설정된 레시피들이 추천 됩니다. </p> -->
-                        <a class="small text-black stretched-link" href="${pageContext.request.contextPath}/mypage/order"></a>
+                        <a class="small text-black stretched-link" href="${pageContext.request.contextPath}/mypage/select"></a>
 
                     </div>
                 </div>
@@ -54,7 +54,7 @@
                 <div class="card"><img class="card-img-top w-100 d-block fit-cover" src="${img_src}/receipt.png">
                     <div class="card-body p-4">
                         <p class="text-primary mb-0">Favorite Recipe</p>
-                        <h4 class="font-weight-bold card-title">레시피 관리</h4>
+                        <h4 class="font-weight-bold card-title">즐겨찾기</h4>
 <!--                         <p class="card-text">Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.</p> -->
                         <a class="small text-black stretched-link" href="${pageContext.request.contextPath}/mypage/favrecipe"></a>
                     </div>

@@ -11,4 +11,11 @@
 	where mem_no = #{mem_no}
 	</update>
 
+	
+	<select id="recipe_select" parameterType="java.lang.String" resultType="kr.co.goodle.manager.recipe.RecipeDTO">
+	select r.rcp_no, r.rcp_name, r.rcp_time, r.rcp_ingr, r.rcp_desc
+			, r.rcp_detail, r.thumbnail_path
+	from recipe r
+	order by r.rcp_no desc
+	</select>
 </mapper>

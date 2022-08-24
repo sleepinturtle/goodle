@@ -92,8 +92,8 @@
           
             </section>
             <hr class="m-0" />
+
             <!-- motive-->
-            
             <section class="resume-section" id="motive">
                 <div class="resume-section-content">
                 	<br><br>
@@ -125,6 +125,7 @@
                 </div>
             </section>
             <hr class="m-0" />
+            
             <!-- service-->
             <section class="resume-section" id="service">
                 <div class="resume-section-content">
@@ -897,7 +898,8 @@
  				//alert( $("#service_agree").prop("checked") );//jquery
  				
 // 				//================================================================
- 				// 결제정보 validation check
+ 				
+	// 결제정보 validation check
  				if($.trim( $("#card_name").val() ) == "" || $.trim( $("card_name").val() ) == null){
  					$("#card_name_label").text("필수 입력 사항입니다.");
  					$("#card_name_label").css("color", "red");

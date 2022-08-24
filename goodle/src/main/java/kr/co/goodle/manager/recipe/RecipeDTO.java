@@ -2,6 +2,7 @@ package kr.co.goodle.manager.recipe;
 
 public class RecipeDTO {
 	
+	private String mem_no;
 	private String rcp_no;                       
 	private String rcp_name;                
 	private String rcp_time;                             
@@ -13,6 +14,12 @@ public class RecipeDTO {
 	
 
 	
+	public String getMem_no() {
+		return mem_no;
+	}
+	public void setMem_no(String mem_no) {
+		this.mem_no = mem_no;
+	}
 	public String getRcp_no() {
 		return rcp_no;
 	}

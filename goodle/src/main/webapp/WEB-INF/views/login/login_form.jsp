@@ -37,10 +37,10 @@
                                                 <input class="form-control" id="mem_pwd" type="password" placeholder="Password" />
                                                 <label for="mem_pwd">Password</label>
                                             </div>
-                                            <div class="form-check mb-3">
-                                                <input class="form-check-input" id="inputRememberPassword" type="checkbox" value="" />
-                                                <label class="form-check-label" for="inputRememberPassword">비밀번호 저장</label>
-                                            </div>
+<!--                                             <div class="form-check mb-3"> -->
+<!--                                                 <input class="form-check-input" id="inputRememberPassword" type="checkbox" value="" /> -->
+<!--                                                 <label class="form-check-label" for="inputRememberPassword">비밀번호 저장</label> -->
+<!--                                             </div> -->
                                             <div class="d-flex align-items-center justify-content-between mt-4 mb-0">
                                                 <a class="small" href="${pageContext.request.contextPath}/main#start">회원가입</a>
                                                 <button id="login_btn" type="button" class="btn btn-primary float-right">로그인</button>
