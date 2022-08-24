@@ -415,35 +415,12 @@
 							          </div>
 							        </div>
 							      </div>
-							      <!-- Column -->
-							<!--       <div class="col-lg-3 col-md-6"> -->
-							<!--         <div class="card text-center card-shadow on-hover border-0 mb-4"> -->
-							<!--           <div class="card-body font-14"> -->
-							<!--             <h5 class="mt-3 mb-1 font-weight-medium">SUPREME</h5> -->
-							<!--             <h6 class="subtitle font-weight-normal">For Team of 25-100 Members</h6> -->
-							<!--             <div class="pricing my-3"> -->
-							<!--               <sup>$</sup> -->
-							<!--               <span class="monthly display-5">99</span> -->
-							<!--               <span class="yearly display-5">1000</span> -->
-							<!--               <small class="monthly">/mo</small> -->
-							<!--               <small class="yearly">/yr</small> -->
-							<!--               <span class="d-block">Save <span class="font-weight-medium">$80</span> a Year</span> -->
-							<!--             </div> -->
-							<!--             <ul class="list-inline"> -->
-							<!--               <li class="d-block py-2">Perfect of Small Team</li> -->
-							<!--               <li class="d-block py-2">Unlimited Invoices</li> -->
-							<!--               <li class="d-block py-2">Project Management</li> -->
-							<!--               <li class="d-block py-2">Team Management</li> -->
-							<!--               <li class="d-block py-2">Time Tracking</li> -->
-							<!--             </ul> -->
-							<!--             <div class="bottom-btn"> -->
-							<!--               <a class="btn btn-success-gradiant btn-md text-white btn-block" href="#f1"><span>Choose Plan</span></a> -->
-							<!--             </div> -->
-							<!--           </div> -->
-							<!--         </div> -->
-							<!--       </div> -->
+							   
 							    </div>
 							  </div>
+							  <a href="#info" style="float: right">
+								  <button class="btn btn-success">다음</button>
+							  </a>
 							</div>
 					  </div>
 			   
@@ -590,7 +567,7 @@
                 		</tr>
                 		
                 	</table>
-                	<a href="#custom">
+                	<a href="#start">
 	                				<button type="button" class="btn btn-success" id="back" name="back">뒤로 가기</button>
                 	</a>
                 	<a href="#payinfo" style="float: right;">
