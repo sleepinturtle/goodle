@@ -44,7 +44,7 @@
 							      <div class="col-md-8 text-center">
 							        <h3 class="mt-3 font-weight-medium mb-1">원하는 플랜을 선택해 주세요.</h3>
 							        <h6 class="subtitle">매주 레시피 예약하시기 전까진 자유롭게 플랜을 선택해 주세요.</h6>
-							        <input type="hidden" id="plan_result" name="plan_result" value="">
+							        <input type="hidden" id="plan_result" name="plan_result" value="${login_info.plan_no}">
 							<!--         <div class="switcher-box mt-4 d-flex align-items-center justify-content-center"> -->
 							<!--           <span class="font-14 font-weight-medium">MONTHLY</span> -->
 							<!--           <div class="onoffswitch position-relative mx-2"> -->
@@ -211,7 +211,12 @@
 							  </div>
 							</div>
 					  </div>
-			   
+			   <a href="${pageContext.request.contextPath}/mypage/mypage">
+	                				<button type="button" class="btn btn-success" id="back" name="back">뒤로 가기</button>
+               </a>
+               <a href="${pageContext.request.contextPath}" style="float: right;">
+ 		               				<button type="button" class="btn btn-success" id="update_btn" name="update_btn">수정 완료</button>
+               </a>
             </section>
     <script src="${pageContext.request.contextPath}/resources/testing/assets/js/jquery.min.js"></script>
     <script src="${pageContext.request.contextPath}/resources/testing/assets/bootstrap/js/bootstrap.min.js"></script>
@@ -220,12 +225,41 @@
     <script src="${pageContext.request.contextPath}/resources/testing/assets/js/Advanced-Pricing-Cards.js"></script>
     
     <script type="text/javascript">
+    
+    
     $(document).ready(function() {
 			$(".plan_btn").click(function() {
 			//alert( $(this).val() );
 			$("#plan_result").val( $(this).val() );
-		});
+			});
+			
+			if($("#plan_result").val() == $("plan_no1").val()){
+				  $("#plan1").show();
+				  $("#plan2").hide();
+				  $("#plan3").hide();
+				  $("#plan4").hide();
+			}else if($("#plan_result").val() == $("plan_no2").val()){
+				  $("#plan1").hide();
+				  $("#plan2").show();
+				  $("#plan3").hide();
+				  $("#plan4").hide();
+			}else if($("#plan_result").val() == $("plan_no3").val()){
+				  $("#plan1").hide();
+				  $("#plan2").hide();
+				  $("#plan3").show();
+				  $("#plan4").hide();
+			}else if($("#plan_result").val() == $("plan_no4").val()){
+				  $("#plan1").hide();
+				  $("#plan2").hide();
+				  $("#plan3").hide();
+				  $("#plan4").show();
+			}
+		
+			
 	});//ready
+	
+	
+	
 	
 	$(document).ready(function() {
 		  $("#plan1").hide();

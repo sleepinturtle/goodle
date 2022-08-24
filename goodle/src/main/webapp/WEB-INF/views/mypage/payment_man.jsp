@@ -94,9 +94,9 @@
                    		</tr>
                    		
                    </table>
-                   <a href="#info">
-                					<button type="button" class="btn btn-success" id="back" name="back">뒤로 가기</button>
-                   </a>
+                   <a href="${pageContext.request.contextPath}/mypage/mypage">
+	                				<button type="button" class="btn btn-success" id="back" name="back">뒤로 가기</button>
+                	</a>
                    <button type="button" class="btn btn-success" id="update" style="float: right;">수정 완료</button>
                 </div>
             </section>

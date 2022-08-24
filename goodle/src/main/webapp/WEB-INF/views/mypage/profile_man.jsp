@@ -18,7 +18,7 @@
     
     <!-- card -->
     <div class="container py-4 py-xl-5">
-        <h2 class="mb-5" style="margin-top: 30px;">기본 정보 입력</h2>
+        <h2 class="mb-5" style="margin-top: 30px;">기본 정보 수정</h2>
                 	<div>
                 	<table class="table table-hover">
 	                	
@@ -112,10 +112,10 @@
                 		</tr>
                 		
                 	</table>
-                	<a href="#custom">
+                	<a href="${pageContext.request.contextPath}/mypage/mypage">
 	                				<button type="button" class="btn btn-success" id="back" name="back">뒤로 가기</button>
                 	</a>
-                	<a href="#payinfo" style="float: right;">
+                	<a href="${pageContext.request.contextPath}" style="float: right;">
  		               				<button type="button" class="btn btn-success" id="update_btn" name="update_btn">수정 완료</button>
                 	</a>
                 	</div>

@@ -27,6 +27,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker3.standalone.min.css">
     <%@ include file="/WEB-INF/views/links_head.jsp" %>
+    	
 </head>
 <body>
 	<%@ include file="/WEB-INF/views/navbar2.jsp" %>
@@ -51,16 +52,12 @@
                 <option value="4">넷째 주</option>
                 <option value="5">다섯째 주</option>
             </select>
-            <!-- /week select -->
-            
-            
-            <fieldset>
+           
+			<fieldset>
 				<br>
-                <div class="toggle">
-                	<input type="radio" id="week_order" name="week_order" checked="checked"><label for="week_order">레시피 주문</label>
-                	<input type="radio" id="skip_order" name="skip_order"><label for="skip_order">이번주 스킵</label>
-                </div>
-            </fieldset>
+				<button class="btn btn-primary" id="week_order">주문하기</button>
+				<button class="btn btn-primary" id="skip_order">이번 주 넘기기</button>
+			</fieldset>
             
             
             <!-- section card -->
@@ -72,8 +69,11 @@
 	            <div class="input-group-append ">
 				<input class="form-control" type="text" id="datePicker">
 				</div>
+				
+				
 				</span> 
 			</div>
+			
 			<!-- /datepicker -->
 
 			
@@ -227,8 +227,26 @@
 	<!-- /datepicker -->
 	
 	<script type="text/javascript">
-
-	$().ready(function() {
+	$(document).ready(function() {
+	      $("#skip_order").click(function() {
+	         $("#order").hide();
+	         $("#confirm").hide();
+	         $("#skipped").show();
+	      });//click
+	   });   //ready
+	   
+	   $(document).ready(function() {
+	      $("#week_order").click(function() {
+	         $("#order").show();
+	         $("#confirm").hide();
+	         $("#skipped").hide();
+	      });//click
+	   });   //ready
+	
+	
+	
+	
+	$(document).ready(function() {   
 		
 	$('#datePicker').datepicker({
 		format : "yyyy-mm-dd",
@@ -262,25 +280,11 @@
 			$("#confirm").hide();
 	          $("#order").show();
 		});//click
+		
+		
 	});	//ready
 	
-	$(document).ready(function() {
-		$("#skip_order").click(function() {
-			$("#order").hide();
-			$("#confirm").hide();
-			$("#skipped").show();
-			alert(111);
-		});//click
-	});	//ready
 	
-	$(document).ready(function() {
-		$("#week_order").click(function() {
-			$("#order").show();
-			$("#confirm").hide();
-			$("#skipped").hide();
-			alert(222);
-		});//click
-	});	//ready
 		
 		
 		
