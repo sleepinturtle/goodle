@@ -14,7 +14,7 @@
         </div>
     </nav>
     
-      <ul class="nav flex-column shadow d-flex sidebar">
+    <ul class="nav flex-column shadow d-flex sidebar">
         <li class="nav-item logo-holder">
             <div class="text-center text-white logo py-4 mx-4">
             	<a class="text-white text-decoration-none" id="title" href="${pageContext.request.contextPath}/mypage/mypage"><strong>구들구들</strong></a>
@@ -28,7 +28,7 @@
             <a class="dropdown-item text-white" href="${pageContext.request.contextPath}/mypage/preference_man"><span>구독 관리</span></a>
             <a class="dropdown-item text-white" href="${pageContext.request.contextPath}/mypage/payment_man"><span>결제정보 관리</span></a></div>
         </li>
-        <li class="nav-item"><a class="nav-link text-left text-white py-1 px-0" href="${pageContext.request.contextPath}/mypage/order"><i class="far fa-life-ring mx-3"></i><span class="text-nowrap mx-2">레시피 예약</span></a></li>
+        <li class="nav-item"><a class="nav-link text-left text-white py-1 px-0" href="${pageContext.request.contextPath}/mypage/select"><i class="far fa-life-ring mx-3"></i><span class="text-nowrap mx-2">레시피 예약</span></a></li>
         <li class="nav-item"><a class="nav-link text-left text-white py-1 px-0" href="${pageContext.request.contextPath}/mypage/favrecipe"><i class="fas fa-archive mx-3"></i><span class="text-nowrap mx-2">레시피 즐겨찾기</span></a></li>
         <li class="nav-item"><a class="nav-link text-left text-white py-1 px-0" href="${pageContext.request.contextPath}/mypage/payhistory"><i class="fas fa-chart-bar mx-3"></i><span class="text-nowrap mx-2">결제내역</span></a></li>
         <li class="nav-item"><a class="nav-link text-left text-white py-1 px-0" href="${pageContext.request.contextPath}/qna/list"><i class="fas fa-chart-bar mx-3"></i><span class="text-nowrap mx-2">문의사항</span></a></li>

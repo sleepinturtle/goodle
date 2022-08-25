@@ -24,6 +24,7 @@ public class MainController {
 	public void join(MemberDTO dto, PrintWriter out) {
 		int successCount = 0;
 		successCount = service.join(dto);
+		
 		out.print(successCount);
 		out.close();
 		

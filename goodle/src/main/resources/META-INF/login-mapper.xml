@@ -6,8 +6,8 @@
 <mapper namespace="LoginMapper">
 	
 	<select id="login" parameterType="kr.co.goodle.util.dto.MemberDTO" resultType="kr.co.goodle.util.dto.MemberDTO">
-		select mem_no, mem_id, mem_tel, mem_email, mgr_yn, mem_delyn
-		from member
+		select m.mem_no, m.mem_name, m.mem_id, m.mem_tel, mem_email, mgr_yn, mem_delyn, mem_post, mem_addr1, mem_addr2, plan_no
+		from member m
 		where mem_id = #{mem_id} and mem_pwd = #{mem_pwd} 
 	</select>
 </mapper>

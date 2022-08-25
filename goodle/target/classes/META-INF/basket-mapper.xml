@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="BasketMapper">
+
+	<delete id="delete" parameterType="kr.co.goodle.manager.recipe.RecipeDTO">
+	delete from basket
+	where basket_no = #{basket_no}
+	</delete>
+
+	<select id="list" parameterType="java.lang.String" resultType="kr.co.goodle.manager.recipe.RecipeDTO">
+	select b.basket_no, b.mem_no, m.mid, b.prdt_no, b.buy_qty, b.reg_date
+			, p.prdt_no, p.prdt_name, p.mem_no, m2.mid, p.qty, p.price, p.discount
+			, p.description, p.view_cnt, p.reg_date
+			, p.thumbnail_name, p.thumbnail_path, p.prdt_img_name, p.prdt_img_path
+			, p.desc_img_name, p.desc_img_path, p.add_file_name, p.add_file_path
+	from basket b, member m, recipe r, member m2
+	where b.mem_no = #{mem_no}
+	and b.mem_no = m.mem_no
+	and b.prdt_no = p.prdt_no
+	order by b.reg_date desc
+	</select>
+
+	<insert id="insert" parameterType="kr.co.goodle.manager.recipe.RecipeDTO">
+	insert into basket (mem_no , rcp_no, reg_date)
+	values(#{mem_no}, #{rcp_no}, now())
+	</insert>
+
+</mapper>
