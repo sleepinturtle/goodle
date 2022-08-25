@@ -14,6 +14,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import kr.co.goodle.util.dto.SearchDTO;
+import kr.co.goodle.util.dto.MemberDTO;
+
 
 
 
@@ -25,6 +27,15 @@ public class MemberController {
 
 	@Autowired
 	private MemberService service;
+	
+	@RequestMapping( value = "/reply_insert", method = RequestMethod.POST )
+	public void replyInsert( MemberDTO dto, HttpSession session, PrintWriter out ) {
+		
+		int successCount = 0;
+		successCount = service.replyInsert( dto );
+		out.print(successCount);
+		out.close();
+	}
 	
 	@RequestMapping( value = "/detail", method = RequestMethod.GET )
 	public String detail( String mem_no, Model model ) {

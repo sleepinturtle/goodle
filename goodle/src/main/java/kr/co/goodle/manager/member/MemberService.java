@@ -6,6 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import kr.co.goodle.util.dto.SearchDTO;
+import kr.co.goodle.util.dto.MemberDTO;
+
 
 
 
@@ -13,6 +15,14 @@ import kr.co.goodle.util.dto.SearchDTO;
 public class MemberService {
 	@Autowired MemberDAO dao;
 	
+	public int replyInsert(MemberDTO dto) {
+		System.out.println(333333);
+		int successCount = 0;
+		successCount = dao.replyInsert( dto );
+		System.out.println(244444);
+		return successCount;
+	}
+
 	public MemberDTO detail( String mem_no ) {
 		MemberDTO dto = null;
 		dto = dao.detail( mem_no );

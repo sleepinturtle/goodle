@@ -5,6 +5,7 @@ public class RecipeDTO {
 	private String basket_no;
 	private String reg_date;     
 	private String mem_no;
+
 	private String rcp_no;                       
 	private String rcp_name;                
 	private String rcp_time;                             
@@ -13,11 +14,12 @@ public class RecipeDTO {
 	private String rcp_detail;               
 	private String thumbnail_path;
 	
-	
-	
-
-	
-	
+	public String getThumbnail_path() {
+		return thumbnail_path;
+	}
+	public void setThumbnail_path(String thumbnail_path) {
+		this.thumbnail_path = thumbnail_path;
+	}
 	public String getBasket_no() {
 		return basket_no;
 	}
@@ -40,16 +42,11 @@ public class RecipeDTO {
 	public String getRcp_no() {
 		return rcp_no;
 	}
-	
-	public String getThumbnail_path() {
-		return thumbnail_path;
-	}
-	public void setThumbnail_path(String thumbnail_path) {
-		this.thumbnail_path = thumbnail_path;
-	}
+
 	public void setRcp_no(String rcp_no) {
-		this.rcp_no = rcp_no;
+	this.rcp_no = rcp_no;
 	}
+	
 	public String getRcp_name() {
 		return rcp_name;
 	}

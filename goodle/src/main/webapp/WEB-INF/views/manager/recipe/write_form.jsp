@@ -5,6 +5,9 @@
 	<head>
 		<meta charset="UTF-8">
 		<title> 레시피 추가하기 </title>
+		
+		<%@ include file="/WEB-INF/views/links_head.jsp" %>
+		
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
 		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
@@ -17,13 +20,24 @@
 		}
 		</style>
 	</head>
+	<%@ include file="/WEB-INF/views/navbar3.jsp" %>
 	<body>
-		<%@ include file="/WEB-INF/views/header.jsp" %>
+		
 		<hr>
 		<h3> 레시피 추가하기 </h3>
 		<hr>
 		<table class="table table-hover">
 			<tbody>
+				 
+				 <tr>
+					<th> 레시피 번호 </th>
+					<td>
+						<input type="text" id="num" name="num" maxlength="20"
+								class="form-control">
+						<label for="num" id="num_label" class="write_label"></label>
+					</td>
+				</tr>
+			
 				<tr>
 					<th> 레시피 제목 </th>
 					<td>
@@ -35,25 +49,25 @@
 				<tr>
 				     <th> 조리 시간 </th>	
 				     <td>
-				     <input type="text" id="time" name="rcp_time" maxlength="20"
+				     <input type="text" id="time" name="time" maxlength="20"
 								class="form-control">
-						<label for="time" id="time_label" class="rcp_time_label"></label>
+						<label for="time" id="time_label" class="write_label"></label>
 				     </td>
 				</tr>
 				<tr>
 				     <th> 재료 </th>	
 				     <td>
-				     <input type="text" id="ingr" name="rcp_ingr" maxlength="100"
+				     <input type="text" id="ingr" name="ingr" maxlength="100"
 								class="form-control">
-						<label for="ingr" id="ingr_label" class="rcp_ingr_label"></label>
+						<label for="ingr" id="ingr_label" class="write_label"></label>
 				     </td>
 				</tr>
 				<tr>
 				     <th> 간단설명 </th>	
 				     <td>
-				     <input type="text" id="rcp_desc" name="rcp_desc" maxlength="30"
+				     <input type="text" id="desc" name="desc" maxlength="30"
 								class="form-control">
-						<label for="desc" id="desc_label" class="rcp_desc_label"></label>
+						<label for="desc" id="desc_label" class="write_label"></label>
 				     </td>
 				</tr>
 				
@@ -91,10 +105,14 @@
 			}
 
 			$.post(
-					"${pageContext.request.contextPath}/manager/recipe/list"
+					"${pageContext.request.contextPath}/manager/recipe/write"
 					, {
-						title : $("#title").val()
-						, contents : CKEDITOR.instances.contents.getData()
+						rcp_no  : $("#no").val()
+						, rcp_name : $("#title").val()
+						, rcp_time : $("#time").val()
+						, rcp_ingr : $("#ingr").val()
+						, rcp_desc : $("#desc").val()
+						, rcp_detail : CKEDITOR.instances.contents.getData()
 					}
 					, function(data, status) {
 						if(data >= 1){
@@ -110,5 +128,6 @@
 		});//click
 	});//ready
 	</script>
+	<%@ include file="/WEB-INF/views/footer.jsp" %>
 	</body>
 </html>

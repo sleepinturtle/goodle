@@ -12,5 +12,6 @@
       where m.mem_id = #{mem_id} and m.mem_pwd = #{mem_pwd}
       and m.mem_no = p.mem_no
       and m.plan_no = k.plan_no
+
 	</select>
 </mapper>
