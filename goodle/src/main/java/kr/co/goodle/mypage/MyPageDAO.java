@@ -28,4 +28,28 @@ public class MyPageDAO {
 		list = sqlSession.selectList("MyPageMapper.recipe_select");
 		return list;
 	}
+
+	public int update( MemberDTO dto ) {
+		int successCount = 0;
+		successCount = sqlSession.update("MyPageMapper.update", dto);
+		return successCount;
+	}//update
+	
+	public int paymentInfo(MemberDTO dto) {
+		int successCount = 0;
+		successCount = sqlSession.update("MyPageMapper.paymentinfo", dto);
+		return successCount;
+	}
+
+	public int updatePlan(MemberDTO dto) {
+		int successCount = 0;
+		successCount = sqlSession.update("MyPageMapper.updateplan", dto);
+		return successCount;
+	}
+
+	public int selectPlan(MemberDTO dto) {
+		int successCount = 0;
+		successCount = sqlSession.selectOne("MyPageMapper.selectplan", dto);
+		return successCount;
+	}
 }

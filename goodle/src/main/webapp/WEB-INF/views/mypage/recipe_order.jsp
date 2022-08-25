@@ -53,7 +53,7 @@
             </select>
             <!-- /week select -->
             
-            
+            <!--order skip -->
             <fieldset>
 				<br>
                 <div class="toggle">
@@ -61,23 +61,11 @@
                 	<input type="radio" id="skip_order" name="skip_order"><label for="skip_order">이번주 스킵</label>
                 </div>
             </fieldset>
+            <!--order skip -->
             
-            
-            <!-- section card -->
-			<section id="order" class="py-5">
-			
-            <!-- datepicker -->
-            <div class="input-group">
-				<span class="text-center"  ><h4>배송희망 날짜 </h4> 
-	            <div class="input-group-append ">
-				<input class="form-control" type="text" id="datePicker">
-				</div>
-				</span> 
-			</div>
-			<!-- /datepicker -->
-
-			
-			<!-- 레시피 선택 -->
+            <!-- section card 1 -->
+			<section id="order" class="order1 py-5">
+			<!-- 레시피 선택 week1 -->
                 <div class="container" id="select">
                     <div class="row filtr-container">
                     
@@ -86,13 +74,13 @@
                             <div class="card border-dark">
                                 <div class="card-header bg-white text-dark">
                                     <h5 class="m-0">${dto.rcp_name}</h5>
-                                </div><img class="img-fluid card-img w-100 h-50 d-block rounded-0" src="${pageContext.request.contextPath}/resources/testing/assets/img/나가사키 짬뽕.png">
+                                </div><img class="img-fluid card-img w-100 h-50 d-block rounded-0" src="${dto.thumbnail_path}">
                                 <div class="card-body overflow-auto" style="height: 8rem;">
                                     <p class="card-text">${dto.rcp_desc}</p>
                                 </div>
                                 <div class="d-flex card-footer">
 	                                	<label class="btn_select btn btn-dark btn-outline-white ml-auto">
-	                                		<input class="checkbox "type="checkbox" > 선택
+	                                		<input  id="check_select "class="checkbox "type="checkbox" value="${dto.rcp_no}" > 선택
 	                                	</label>
                                 	
                                 </div>
@@ -102,110 +90,46 @@
  
 
                     </div>
-            		<button id="next_btn" class="btn btn-primary" style="float:right" type="button">다음</button>
+                    <a href="${pageContext.request.contextPath}/basket/list">
+            		<button id="next_btn" class="btn btn-primary" style="float:right" type="button" >다음</button>
+                    </a>
                 </div>
             </section>
             
-            <!-- 장바구니 -->
-			<div id="confirm" class="shopping-cart">
-				<div  class="px-4 px-lg-0">
-			
-				  <div class="pb-5">
-				    <div class="container">
-				      <div class="row">
-				        <div class="col-lg-12 p-5 bg-white rounded shadow-sm mb-5">
-				
-				          <!-- 장바구니 -->
-				          <div class="table-responsive">
-				            <table class="table">
-				              <thead>
-				                <tr>
-				                  <th scope="col" class="border-0 bg-light">
-				                    <div class="p-2 px-3 text-uppercase">Product</div>
-				                  </th>
-				                  <th scope="col" class="border-0 bg-light">
-				                    <div class="py-2 text-uppercase">추가 금액</div>
-				                  </th>
-				                  <th scope="col" class="border-0 bg-light">
-				                    <div class="py-2 text-uppercase">수량</div>
-				                  </th>
-				                  <th scope="col" class="border-0 bg-light">
-				                    <div class="py-2 text-uppercase">Remove</div>
-				                  </th>
-				                </tr>
-				              </thead>
-				              <tbody>
-				                <tr>
-				                  <th scope="row" class="border-0">
-				                    <div class="p-2">
-				                      <img src="https://res.cloudinary.com/mhmd/image/upload/v1556670479/product-1_zrifhn.jpg" alt="" width="70" class="img-fluid rounded shadow-sm">
-				                      <div class="ml-3 d-inline-block align-middle">
-				                        <h5 class="mb-0"> <a href="#" class="text-dark d-inline-block align-middle">Timex Unisex Originals</a></h5><span class="text-muted font-weight-normal font-italic d-block">Category: Watches</span>
-				                      </div>
-				                    </div>
-				                  </th>
-				                  <td class="border-0 align-middle"><strong>$79.00</strong></td>
-				                  <td class="border-0 align-middle"><strong>3</strong></td>
-				                  <td class="border-0 align-middle"><a href="#" class="text-dark"><i class="fa fa-trash"></i></a></td>
-				                </tr>
-				                <tr>
-				                  <th scope="row">
-				                    <div class="p-2">
-				                      <img src="https://res.cloudinary.com/mhmd/image/upload/v1556670479/product-3_cexmhn.jpg" alt="" width="70" class="img-fluid rounded shadow-sm">
-				                      <div class="ml-3 d-inline-block align-middle">
-				                        <h5 class="mb-0"><a href="#" class="text-dark d-inline-block">Lumix camera lense</a></h5><span class="text-muted font-weight-normal font-italic">Category: Electronics</span>
-				                      </div>
-				                    </div>
-				                  </th>
-				                  <td class="align-middle"><strong>$79.00</strong></td>
-				                  <td class="align-middle"><strong>3</strong></td>
-				                  <td class="align-middle"><a href="#" class="text-dark"><i class="fa fa-trash"></i></a>
-				                  </td>
-				                </tr>
-				                <tr>
-				                  <th scope="row">
-				                    <div class="p-2">
-				                      <img src="https://res.cloudinary.com/mhmd/image/upload/v1556670479/product-2_qxjis2.jpg" alt="" width="70" class="img-fluid rounded shadow-sm">
-				                      <div class="ml-3 d-inline-block align-middle">
-				                        <h5 class="mb-0"> <a href="#" class="text-dark d-inline-block">Gray Nike running shoe</a></h5><span class="text-muted font-weight-normal font-italic">Category: Fashion</span>
-				                      </div>
-				                    </div>
-				                    <td class="align-middle"><strong>$79.00</strong></td>
-				                    <td class="align-middle"><strong>3</strong></td>
-				                    <td class="align-middle"><a href="#" class="text-dark"><i class="fa fa-trash"></i></a>
-				                    </td>
-				                </tr>
-				              </tbody>
-				            </table>
-				          </div>
-				          <!-- End -->
-				        </div>
-				      </div>
-				
-				      <div class="row py-5 p-4 bg-white rounded shadow-sm">
-				
-				        <div class="col-lg-12">
-				          <div class="bg-light rounded-pill px-4 py-3 text-uppercase font-weight-bold">Order summary </div>
-				          <div class="p-4">
-				            <p class="font-italic mb-4">Shipping and additional costs are calculated based on values you have entered.</p>
-				            <ul class="list-unstyled mb-4">
-				              <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-muted">구독 플랜</strong><strong>$390.00</strong></li>
-				              <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-muted">추가 금액</strong><strong>$0.00</strong></li>
-				              <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-muted">결제 상태</strong><strong>pending</strong></li>
-				              <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-muted">Total</strong>
-				                <h5 class="font-weight-bold">$400.00</h5>
-				              </li>
-				            </ul><a href="#" class="btn btn-dark rounded-pill py-2 btn-block">예약 확정</a>
-				          </div>
-				        </div>
-				      </div>
-				
-				    </div>
-				  </div>
-				</div>
-				<button id="prev_btn" class="btn btn-primary" type="button">뒤로가기</button>
-			</div>
-			<!-- /장바구니 -->
+            <!-- section card 2 -->
+			<section id="order" class="order1 py-5">
+			<!-- 레시피 선택 week2 -->
+                <div class="container" id="select">
+                    <div class="row filtr-container">
+                    
+                    <c:forEach var="dto" items="${week1}" varStatus="status">
+						<div class="col-md-6 col-lg-4 filtr-item" data-category="2,3">
+                            <div class="card border-dark">
+                                <div class="card-header bg-white text-dark">
+                                    <h5 class="m-0">${dto.rcp_name}</h5>
+                                </div><img class="img-fluid card-img w-100 h-50 d-block rounded-0" src="${dto.thumbnail_path}">
+                                <div class="card-body overflow-auto" style="height: 8rem;">
+                                    <p class="card-text">${dto.rcp_desc}</p>
+                                </div>
+                                <div class="d-flex card-footer">
+	                                	<label class="btn_select btn btn-dark btn-outline-white ml-auto">
+	                                		<input  id="check_select "class="checkbox "type="checkbox" value="${dto.rcp_no}" > 선택
+	                                	</label>
+                                	
+                                </div>
+                            </div>
+                        </div>
+					</c:forEach>
+ 
+
+                    </div>
+                    <a href="${pageContext.request.contextPath}/basket/list">
+            		<button id="next_btn" class="btn btn-primary" style="float:right" type="button" >다음</button>
+                    </a>
+                </div>
+            </section>
+            
+            
 			
 			<!-- 스킵 문구 -->
 			<div id="skipped">
@@ -244,48 +168,82 @@
 	
 	//div show hide
 	$(document).ready(function() {
-		$("#confirm").hide();
-	    $("#skipped").hide();
-	    
-	    $("#next_btn").click(function() {
-// 	    if($("#datePicker").val() == null || $("#datePicker").val() == ""){
-// 			alert("배송일자를 선택하세요");
-// 			return;
-// 		}
-	    $("#order").hide();
-	    $("#confirm").show();
-       
-		});//click
-		
-	$(document).ready(function() {
-		$("#prev_btn").click(function() {
-			$("#confirm").hide();
-	          $("#order").show();
-		});//click
-	});	//ready
+// 			$("#confirm").hide();
+		    $("#skipped").hide();
+		    
+		    $("#next_btn").click(function() {
 	
+// 		    $("#order").hide();
+// 		    $("#confirm").show();
+	       
+			});//click
+			
+		$(document).ready(function() {
+			$("#prev_btn").click(function() {
+				$("#confirm").hide();
+		          $("#order").show();
+			});//click
+		});	//ready
+		
+		$(document).ready(function() {
+			$("#skip_order").click(function() {
+				$("#order").hide();
+				$("#confirm").hide();
+				$("#skipped").show();
+				alert(111);
+			});//click
+		});	//ready
+		
+		$(document).ready(function() {
+			$("#week_order").click(function() {
+				$("#order").show();
+				$("#confirm").hide();
+				$("#skipped").hide();
+				alert(222);
+			});//click
+		});	//ready
+	});//ready
 	$(document).ready(function() {
-		$("#skip_order").click(function() {
-			$("#order").hide();
-			$("#confirm").hide();
-			$("#skipped").show();
-			alert(111);
+		$(".checkbox").click(function() {
+			
+			if($(this).prop("checked") == true){
+				//alert(${login_info.mem_no});alert($(this).val());return;
+			$.post(
+					"${pageContext.request.contextPath}/basket/insert"
+					, {
+						mem_no : ${login_info.mem_no} 
+						,rcp_no : $(this).val()
+					}
+					, function(data, status) {
+						if(data >= 1){
+							alert("레시피 선택됨.");
+// 							window.location.reload();
+						} else {
+							alert("잠시 후 다시 시도해 주세요.");
+						}
+					}//call back functiion
+			);//post
+			}
+			
+			if($(this).prop("checked") == false){
+// 				alert(${login_info.mem_no});alert($(this).val());return;
+			$.get(
+					"${pageContext.request.contextPath}/basket/delete"
+					, {
+						mem_no : ${login_info.mem_no} 
+						,rcp_no : $(this).val()
+					}
+					, function(data, status) {
+						if(data >= 1){
+							alert("레시피 선택해제.");
+// 							window.location.reload();
+						} else {
+							alert("잠시 후 다시 시도해 주세요.");
+						}
+					}//call back functiion
+			);//post
+			}
 		});//click
-	});	//ready
-	
-	$(document).ready(function() {
-		$("#week_order").click(function() {
-			$("#order").show();
-			$("#confirm").hide();
-			$("#skipped").hide();
-			alert(222);
-		});//click
-	});	//ready
-		
-		
-		
-		
-		
 	});//ready
 	
 	</script>

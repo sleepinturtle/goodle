@@ -29,7 +29,7 @@
             <a class="dropdown-item text-white" href="${pageContext.request.contextPath}/mypage/payment_man"><span>결제정보 관리</span></a></div>
         </li>
         <li class="nav-item"><a class="nav-link text-left text-white py-1 px-0" href="${pageContext.request.contextPath}/mypage/select"><i class="far fa-life-ring mx-3"></i><span class="text-nowrap mx-2">레시피 예약</span></a></li>
-        <li class="nav-item"><a class="nav-link text-left text-white py-1 px-0" href="${pageContext.request.contextPath}/mypage/favrecipe"><i class="fas fa-archive mx-3"></i><span class="text-nowrap mx-2">레시피 즐겨찾기</span></a></li>
+<%--         <li class="nav-item"><a class="nav-link text-left text-white py-1 px-0" href="${pageContext.request.contextPath}/mypage/favrecipe"><i class="fas fa-archive mx-3"></i><span class="text-nowrap mx-2">레시피 즐겨찾기</span></a></li> --%>
         <li class="nav-item"><a class="nav-link text-left text-white py-1 px-0" href="${pageContext.request.contextPath}/mypage/payhistory"><i class="fas fa-chart-bar mx-3"></i><span class="text-nowrap mx-2">결제내역</span></a></li>
         <li class="nav-item"><a class="nav-link text-left text-white py-1 px-0" href="${pageContext.request.contextPath}/qna/list"><i class="fas fa-chart-bar mx-3"></i><span class="text-nowrap mx-2">문의사항</span></a></li>
         <li class="nav-item"><a class="nav-link text-left text-white py-1 px-0" href="${pageContext.request.contextPath}/login/logout"><i class="fas fa-sign-out-alt mx-3"></i><i class="fa fa-caret-right d-none position-absolute"></i><span class="text-nowrap mx-2">Log out</span></a></li>

@@ -7,6 +7,7 @@ public class SearchDTO {
  * 이 값들을 dto라는 하나의 객체 담아서 mapper에 주소와 여러값이 담긴 dto를 보낸다.
  *  
  */
+	private String mem_no;
 	private String searchOption;
 	private String searchWord;
 	private int limitNum;
@@ -16,6 +17,20 @@ public class SearchDTO {
 		return searchOption + " : " + searchWord;
 	}
 	
+	
+	
+	public String getMem_no() {
+		return mem_no;
+	}
+
+
+
+	public void setMem_no(String mem_no) {
+		this.mem_no = mem_no;
+	}
+
+
+
 	public String getSearchOption() {
 		return searchOption;
 	}

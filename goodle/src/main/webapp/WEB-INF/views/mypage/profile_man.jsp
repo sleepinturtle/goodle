@@ -124,6 +124,13 @@
     <%@ include file="/WEB-INF/views/links_foot.jsp" %>
 
 		<script type="text/javascript">
+		
+		let checkedID = "";
+ 		let onlyNum = /^[0-9]+$/;
+ 		let engLowerAndNum = /^[a-z0-9]+$/;
+ 		let onlyPwd = /^[a-z0-9~!@#$%^&*().]+$/;
+ 		let onlyEmail = /^[a-zA-Z@.0-9]+$/;
+		
 		$(document).ready(function() {
  			$("#codefinder").click(function() {
 

@@ -30,14 +30,14 @@
                    		<tr>
                    			<th style="font-weight: bold;">사용자 이름</th>
                    			<td style="font-weight: bold;">
-                   				  <input type="text" id="card_name" name="card_name" value="${login_ }">
+                   				  <input type="text" id="card_name" name="card_name" value="${login_info.card_name}">
                    						<label for="card_name" id="card_name_label"></label>
                    			</td>
                    		</tr>
                    		<tr>
                    			<th style="font-weight: bold;">카드 번호</th>
                    			<td style="font-weight: bold;">
-                   				 <input type="text" id="card_no" name="card_no" placeholder="'-'없이 카드 번호 입력">
+                   				 <input type="text" id="card_no" name="card_no" value="${login_info.card_no}">
                    						<label for="card_no" id="card_no_label"></label>
                    			</td>
                    		</tr>
@@ -107,6 +107,12 @@
 	
 	<script type="text/javascript">
 	// 결제정보 validation check
+	
+	let checkedID = "";
+ 		let onlyNum = /^[0-9]+$/;
+ 		let engLowerAndNum = /^[a-z0-9]+$/;
+ 		let onlyPwd = /^[a-z0-9~!@#$%^&*().]+$/;
+ 		let onlyEmail = /^[a-zA-Z@.0-9]+$/;
 	
 	$(document).ready(function() {
 		$("#update").click(function() {
@@ -224,6 +230,31 @@
 			}
 		});
 	});//
+	
+		$(document).ready(function() {
+			$("#update").click(function() {
+				$.post(
+ 						"${pageContext.request.contextPath}/mypage/updatecard"
+ 						, {
+ 							card_name : $("#card_name").val()
+ 							, card_no : $("#card_no").val()
+ 							, card_exp1 : $("#card_exp1").val()
+ 							, card_exp2 : $("#card_exp2").val()
+ 							, card_cvc : $("#card_cvc").val()
+ 							, card_pwd : $("#card_pwd").val() 
+ 							
+ 						}
+ 						, function(data, status) {
+ 							if(data == 1){
+ 								alert("카드 정보 수정 완료. ");
+ 								location.href="${pageContext.request.contextPath}/mypage/payment_man";
+ 							}else if(data == 0){
+ 								alert("잠시 후 다시 시도해주세요.");
+ 							}
+ 						}//call back function
+ 				);//post
+			});
+		});
 	
 		
 

@@ -22,7 +22,7 @@
                 <h2 class="font-weight-bold">Mypage</h2>
             </div>
         </div>
-        <div class="row row-cols-1 row-cols-md-2 row-cols-xl-5">
+        <div class="row row-cols-1 row-cols-md-2 row-cols-xl-4">
         
         	<!-- 프로필 관리 -->
             <div class="col mb-4">
@@ -50,16 +50,16 @@
             </div>
             
             <!-- 레시피 관리 -->
-            <div class="col mb-4">
-                <div class="card"><img class="card-img-top w-100 d-block fit-cover" src="${img_src}/receipt.png">
-                    <div class="card-body p-4">
-                        <p class="text-primary mb-0">Favorite Recipe</p>
-                        <h4 class="font-weight-bold card-title">즐겨찾기</h4>
-<!--                         <p class="card-text">Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.</p> -->
-                        <a class="small text-black stretched-link" href="${pageContext.request.contextPath}/mypage/favrecipe"></a>
-                    </div>
-                </div>
-            </div>
+<!--             <div class="col mb-4"> -->
+<%--                 <div class="card"><img class="card-img-top w-100 d-block fit-cover" src="${img_src}/receipt.png"> --%>
+<!--                     <div class="card-body p-4"> -->
+<!--                         <p class="text-primary mb-0">Favorite Recipe</p> -->
+<!--                         <h4 class="font-weight-bold card-title">즐겨찾기</h4> -->
+<!-- <!--                         <p class="card-text">Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.</p> -->
+<%--                         <a class="small text-black stretched-link" href="${pageContext.request.contextPath}/mypage/favrecipe"></a> --%>
+<!--                     </div> -->
+<!--                 </div> -->
+<!--             </div> -->
             
             <!-- 결제내역 -->
             <div class="col mb-4">

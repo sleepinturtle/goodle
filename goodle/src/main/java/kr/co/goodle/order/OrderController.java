@@ -33,17 +33,9 @@ public class OrderController {
 	@RequestMapping( value = "/insert", method = RequestMethod.POST )
 	public void insert( OrderMainDTO dto, HttpSession session, PrintWriter out ) {
 		dto.setMem_no( ( (MemberDTO) session.getAttribute("login_info") ).getMem_no() );
-
-		String [] tmpArr = dto.getStr_basket_no().split(",");
-		dto.setArr_basket_no(tmpArr);
-
 		int successCount = 0;
-		if(dto.getArr_basket_no().length == 1 && dto.getArr_basket_no()[0].equals("0")) {
-			//arr_basket_no의 길이가 1이고, arr_basket_no의 [0]번지의 값이 "0"이면, 장바구니 테이블에 데이터가 없는 바로 주문이다.
-			successCount = service.insert(dto, 1);
-		} else {
-			successCount = service.insert(dto, 0);
-		}
+		
+		successCount = service.insert(dto);
 		out.print(successCount);
 		out.close();
 	}//insert

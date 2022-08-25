@@ -18,4 +18,27 @@
 	from recipe r
 	order by r.rcp_no desc
 	</select>
+	
+	<update id="update" parameterType="kr.co.goodle.util.dto.MemberDTO">
+	update member
+	set mem_pwd = #{mem_pwd}, mem_post = #{mem_post}, mem_addr1 = #{mem_addr1}, mem_addr2 = #{mem_addr2}, mem_tel = #{mem_tel}, mem_email=#{mem_email}
+	where mem_no = #{mem_no}
+	</update>
+	
+	<update id="paymentinfo" parameterType="kr.co.goodle.util.dto.MemberDTO">
+		update payment_info set mem_no =#{mem_no}, card_name=#{card_name}, card_exp=#{card_exp}, card_cvc =#{card_cvc}, card_pwd= #{card_pwd}, card_no=#{card_no}
+		where mem_no = #{mem_no}
+	</update>
+	
+	<update id="updateplan" parameterType="kr.co.goodle.util.dto.MemberDTO">
+		update member set plan_no = #{plan_no}
+		where mem_no = #{mem_no}
+	</update>
+	
+	<select id="selectplan" parameterType="java.lang.String" resultType="kr.co.goodle.util.dto.MemberDTO">
+	select m.mem_no, m.plan_no, p.plan_no, p.plan_name, p.rcp_qty, p.price
+	from plan p, member m
+	where m.mem_no = #{mem_no}
+	and m.plan_no = p.plan_no 
+	</select>
 </mapper>

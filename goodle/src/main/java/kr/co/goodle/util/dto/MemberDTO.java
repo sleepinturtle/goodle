@@ -32,6 +32,36 @@ public class MemberDTO {
 	private String mem_post;
 	private String mem_addr1;
 	private String mem_addr2;
+	
+	private String plan_name;
+	private String rcp_qty;
+	private String price;
+	
+	
+	public String getPlan_name() {
+		return plan_name;
+	}
+
+	public void setPlan_name(String plan_name) {
+		this.plan_name = plan_name;
+	}
+
+	public String getRcp_qty() {
+		return rcp_qty;
+	}
+
+	public void setRcp_qty(String rcp_qty) {
+		this.rcp_qty = rcp_qty;
+	}
+
+	public String getPrice() {
+		return price;
+	}
+
+	public void setPrice(String price) {
+		this.price = price;
+	}
+
 	public String getMem_addr1() {
 		return mem_addr1;
 	}

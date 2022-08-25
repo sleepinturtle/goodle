@@ -44,7 +44,7 @@ public class BasketController {
 		List<RecipeDTO> list = null;
 		list = service.list( mem_no );
 		model.addAttribute("list", list);
-		return "/basket/list";//jsp file name
+		return "/mypage/recipe_order1";//jsp file name
 	}//list
 
 	@RequestMapping( value = "/insert", method = RequestMethod.POST )

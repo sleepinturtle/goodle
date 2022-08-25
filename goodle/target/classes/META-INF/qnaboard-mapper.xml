@@ -17,6 +17,7 @@
 	select qb.board_no, qb.title1, qb.mem_no, m.mem_id, qb.write_date
 	from qnaboard qb, member m
 	where qb.mem_no = m.mem_no
+	and m.mem_no = #{mem_no}
 		<if test="searchOption != null and searchOption != ''
 					and searchWord != null and searchWord != ''">
 			<choose>

@@ -2,18 +2,35 @@ package kr.co.goodle.manager.recipe;
 
 public class RecipeDTO {
 	
+	private String basket_no;
+	private String reg_date;     
 	private String mem_no;
 	private String rcp_no;                       
 	private String rcp_name;                
 	private String rcp_time;                             
-	private String rcp_ingr;                  
+	private String rcp_ingr;     
 	private String rcp_desc;                            
 	private String rcp_detail;               
-	private String rcp_imgpath;
+	private String thumbnail_path;
+	
 	
 	
 
 	
+	
+	public String getBasket_no() {
+		return basket_no;
+	}
+	public void setBasket_no(String basket_no) {
+		this.basket_no = basket_no;
+	}
+	public String getReg_date() {
+		return reg_date;
+	}
+	public void setReg_date(String reg_date) {
+		this.reg_date = reg_date;
+	}
+
 	public String getMem_no() {
 		return mem_no;
 	}
@@ -23,11 +40,12 @@ public class RecipeDTO {
 	public String getRcp_no() {
 		return rcp_no;
 	}
-	public String getRcp_imgpath() {
-		return rcp_imgpath;
+	
+	public String getThumbnail_path() {
+		return thumbnail_path;
 	}
-	public void setRcp_imgpath(String rcp_imgpath) {
-		this.rcp_imgpath = rcp_imgpath;
+	public void setThumbnail_path(String thumbnail_path) {
+		this.thumbnail_path = thumbnail_path;
 	}
 	public void setRcp_no(String rcp_no) {
 		this.rcp_no = rcp_no;

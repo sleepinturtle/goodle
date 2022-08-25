@@ -96,18 +96,26 @@ public class MyPageController {
 		list = service.recipe_select();
 
 		List<RecipeDTO> week1 = new ArrayList<RecipeDTO>();
-//		List<RecipeDTO> week2 = new ArrayList<RecipeDTO>();
-//		List<RecipeDTO> week3 = new ArrayList<RecipeDTO>();
-//		List<RecipeDTO> week4 = new ArrayList<RecipeDTO>();
-//		List<RecipeDTO> week5 = new ArrayList<RecipeDTO>();
+		List<RecipeDTO> week2 = new ArrayList<RecipeDTO>();
+		List<RecipeDTO> week3 = new ArrayList<RecipeDTO>();
+		List<RecipeDTO> week4 = new ArrayList<RecipeDTO>();
+		List<RecipeDTO> week5 = new ArrayList<RecipeDTO>();
 
 		int [] tmpArr = lotto();
 		for(int i = 0; i < tmpArr.length; i++) {
 			RecipeDTO tmpDTO =  list.get(tmpArr[i]); 
 			week1.add(tmpDTO);
+			week2.add(tmpDTO);
+			week3.add(tmpDTO);
+			week4.add(tmpDTO);
+			week5.add(tmpDTO);
 		}
 
 		model.addAttribute("week1", week1 );
+		model.addAttribute("week2", week2 );
+		model.addAttribute("week3", week3 );
+		model.addAttribute("week4", week4 );
+		model.addAttribute("week5", week5 );
 		model.addAttribute("week1Json", new Gson().toJson( week1 ) );
 
 		//html에서 미리 5주치의 설정된 model 값을 다 가져와서 일단 페이지에 불러놓고 week을 바꿀때마다 이미 설정된 week attr를 뿌려주는 것.
@@ -131,6 +139,39 @@ public class MyPageController {
 	public String qna() {
 		return"/board/qnaboard/qnalist";
 	}
+	
+	@RequestMapping( value = "/update", method = RequestMethod.POST )
+	public void update( MemberDTO dto, HttpSession session, PrintWriter out ) {
+		MemberDTO mDto = (MemberDTO) session.getAttribute("login_info");
+		dto.setMem_no( mDto.getMem_no() );
+
+		int successCount = 0;
+		successCount = service.update( dto );
+		out.print(successCount);
+		out.close();
+	}//update
+	
+	@RequestMapping( value = "/updatecard", method = RequestMethod.POST )
+	public void updateCard( MemberDTO dto, HttpSession session, PrintWriter out ) {
+		MemberDTO mDto = (MemberDTO) session.getAttribute("login_info");
+		dto.setMem_no( mDto.getMem_no() );
+		
+		int successCount = 0;
+		successCount = service.paymentInfo( dto );
+		out.print(successCount);
+		out.close();
+	}//update
+	
+	@RequestMapping( value = "/updateplan", method = RequestMethod.POST )
+	public void updatePlan( MemberDTO dto, HttpSession session, PrintWriter out ) {
+		MemberDTO mDto = (MemberDTO) session.getAttribute("login_info");
+		dto.setMem_no( mDto.getMem_no() );
+		
+		int successCount = 0;
+		successCount = service.updatePlan( dto );
+		out.print(successCount);
+		out.close();
+	}//update
 	
 //	@RequestMapping( value = "/update", method = RequestMethod.POST )
 //	public void update(MemberDTO dto, HttpSession session, PrintWriter out ) {

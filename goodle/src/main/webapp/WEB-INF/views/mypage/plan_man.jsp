@@ -63,7 +63,7 @@
 							    <div class="col-lg-3 col-md-6">
 							        <div class="card text-center card-shadow on-hover border-0 mb-4">
 							          <div class="card-body font-14">
-							            <span id="plan1" class="badge badge-inverse bg-danger p-2 position-absolute price-badge font-weight-normal">이용중</span>
+							            <span id="plan1" class="badge badge-inverse bg-danger p-2 position-absolute price-badge font-weight-normal" >이용중</span>
 							            <h5 class="mt-3 mb-1 font-weight-medium">SELF</h5>
 							            <h6 class="subtitle font-weight-normal">1인 가구를 위한 플랜</h6>
 							            <div class="pricing my-3">
@@ -79,8 +79,6 @@
 							              <li class="d-block py-2">매주 새로운 레시피 추천</li>
 							              <li class="d-block py-2">다양하고 신선한 재료들 엄선</li>
 							              <li class="d-block py-2">원하는 날짜에 배송</li>
-							              <li class="d-block py-2">추가 레시피 선택 가능</li>
-							              <li class="d-block py-2">(추가 레시피 선택시 +5,000원)</li>
 							            </ul>
 							            <div class="bottom-btn">
 							              <a class="btn btn-danger-gradiant btn-md text-white btn-block">
@@ -94,7 +92,7 @@
 							        <div class="card text-center card-shadow on-hover border-0 mb-4">
 							          <div class="card-body font-14">
 							<!--           <span class="badge badge-inverse p-2 position-absolute price-badge font-weight-normal">인기 플랜</span> -->
-							          <span id="plan2" class="badge badge-inverse bg-danger p-2 position-absolute price-badge font-weight-normal ">이용중</span>
+							          <span id="plan2" class="badge badge-inverse bg-danger p-2 position-absolute price-badge font-weight-normal " value="2">이용중</span>
 							            <h5 class="mt-3 mb-1 font-weight-medium">BASIC</h5>
 							            <h6 class="subtitle font-weight-normal">2인 가구를 위한 플랜</h6>
 							            <div class="pricing my-3">
@@ -110,8 +108,6 @@
 							              <li class="d-block py-2">매주 새로운 레시피 추천</li>
 							              <li class="d-block py-2">다양하고 신선한 재료들 엄선</li>
 							              <li class="d-block py-2">원하는 날짜에 배송</li>
-							              <li class="d-block py-2">추가 레시피 선택 가능</li>
-							              <li class="d-block py-2">(추가 레시피 선택시 +10,000원)</li>
 							            </ul>
 							            <div class="bottom-btn">
 							              <a class="btn btn-danger-gradiant btn-md text-white btn-block">
@@ -124,7 +120,7 @@
 							      <div class="col-lg-3 col-md-6">
 							        <div class="card text-center card-shadow on-hover border-0 mb-4">
 							          <div class="card-body font-14">
-							            <span id="plan3" class="badge badge-inverse bg-danger p-2 position-absolute price-badge font-weight-normal">이용중</span>
+							            <span id="plan3" class="badge badge-inverse bg-danger p-2 position-absolute price-badge font-weight-normal" value="3">이용중</span>
 							            <h5 class="mt-3 mb-1 font-weight-medium">FAMILY</h5>
 							            <h6 class="subtitle font-weight-normal">4인 가족을 위한 플랜</h6>
 							            <div class="pricing my-3">
@@ -140,8 +136,6 @@
 							              <li class="d-block py-2">매주 새로운 레시피 추천</li>
 							              <li class="d-block py-2">다양하고 신선한 재료들 엄선</li>
 							              <li class="d-block py-2">원하는 날짜에 배송</li>
-							              <li class="d-block py-2">추가 레시피 선택 가능</li>
-							              <li class="d-block py-2">(추가 레시피 선택시 +20,000원)</li>
 							            </ul>
 							            <div class="bottom-btn">
 							              <a class="btn btn-danger-gradiant btn-md text-white btn-block">
@@ -154,7 +148,7 @@
 							      <div class="col-lg-3 col-md-6">
 							        <div class="card text-center card-shadow on-hover border-0 mb-4">
 							          <div class="card-body font-14">
-							          <span id="plan4" class="badge badge-inverse bg-danger p-2 position-absolute price-badge font-weight-normal">이용중</span>
+							          <span id="plan4" class="badge badge-inverse bg-danger p-2 position-absolute price-badge font-weight-normal" value="4">이용중</span>
 							            <h5 class="mt-3 mb-1 font-weight-medium">VEGAN</h5>
 							            <h6 class="subtitle font-weight-normal">비건 식단과 다이어트를 위한 2인 플랜</h6>
 							            <div class="pricing my-3">
@@ -170,8 +164,6 @@
 							              <li class="d-block py-2">매주 새로운 레시피 추천</li>
 							              <li class="d-block py-2">다양하고 신선한 재료들 엄선</li>
 							              <li class="d-block py-2">원하는 날짜에 배송</li>
-							              <li class="d-block py-2">추가 레시피 선택 가능</li>
-							              <li class="d-block py-2">(추가 레시피 선택시 +10,000원)</li>
 							            </ul>
 							            <div class="bottom-btn">
 							              <a class="btn btn-danger-gradiant btn-md text-white btn-block">
@@ -216,22 +208,59 @@
     <script src="${pageContext.request.contextPath}/resources/testing/assets/js/jquery.min.js"></script>
     <script src="${pageContext.request.contextPath}/resources/testing/assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="${pageContext.request.contextPath}/resources/testing/assets/js/bs-init.js"></script>
-    <script src="${pageContext.request.contextPath}/resources/testing/assets/js/-Filterable-Cards-.js"></script>
     <script src="${pageContext.request.contextPath}/resources/testing/assets/js/Advanced-Pricing-Cards.js"></script>
-    
+      
     <script type="text/javascript">
+    
+    $(document).ready(function() {
+    	if($("#plan_no1").val()== "${login_info.plan_no}"){
+    	  $("#plan1").show();
+  		  $("#plan2").hide();
+  		  $("#plan3").hide();
+  		  $("#plan4").hide();
+    	}else if($("#plan_no2").val()== "${login_info.plan_no}"){
+    	$("#plan1").hide();
+   		  $("#plan2").show();
+   		  $("#plan3").hide();
+   		  $("#plan4").hide();
+    	}else if($("#plan_no3").val()== "${login_info.plan_no}"){
+    	  $("#plan1").hide();
+   		  $("#plan2").hide();
+   		  $("#plan3").show();
+   		  $("#plan4").hide();
+    	}else if($("#plan_no4").val()== "${login_info.plan_no}"){
+    	  $("#plan1").hide();
+   		  $("#plan2").hide();
+   		  $("#plan3").hide();
+   		  $("#plan4").show();
+    	}
+	});//ready
+    
     $(document).ready(function() {
 			$(".plan_btn").click(function() {
 			//alert( $(this).val() );
 			$("#plan_result").val( $(this).val() );
+			$.post(
+						"${pageContext.request.contextPath}/mypage/updateplan"
+						
+						, {
+							mem_no : ${login_info.mem_no}
+							,plan_no : $("#plan_result").val()
+							
+						}
+						, function(data, status) {
+							if(data == 1){
+								alert("플랜을 업데이트 했습니다.");
+							}else if(data == 0){
+								alert("잠시 후 다시 시도해주세요.");
+							}
+						}//call back function
+				);//post
 		});
 	});//ready
 	
 	$(document).ready(function() {
-		  $("#plan1").hide();
-		  $("#plan2").hide();
-		  $("#plan3").hide();
-		  $("#plan4").hide();
+		  
 		$(".plan_btn").click(function() {
 			if($(this).val() == $("#plan_no1").val()){
 		          $("#plan1").show();

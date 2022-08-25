@@ -15,22 +15,11 @@ public class OrderService {
 	private OrderDAO dao;
 
 	@Transactional
-	public int insert( OrderMainDTO dto, int buyNowYN ) {
+	public int insert( OrderMainDTO dto) {
 		int successCount = 0;
 		successCount = dao.insertOrderMain(dto);//insertOrderMain을 호출하는 시점에서는 dto에 order_no 값이 없다.
 		//insertOrderMain을 수행하면서 selectKey가 dto에 order_no 값을 입력한다.
-		if(successCount < 1) return successCount;
-
-		if(buyNowYN == 0) {
-			successCount = dao.insertOrderDetail(dto);//insertOrderDetail을 호출하는 시점에서는 dto에 order_no 값이 있다.
-			if(successCount < 1) return successCount;
-
-			successCount = dao.deleteBasketByArray(dto.getArr_basket_no());
-		} 
-		if(successCount < 1) return successCount;
-
-		
-		
+		System.out.println(successCount);
 		return successCount;
 	}//insert
 

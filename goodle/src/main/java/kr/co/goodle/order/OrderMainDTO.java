@@ -15,7 +15,7 @@ public class OrderMainDTO {
 
 	private String str_basket_no;
 	private String [] arr_basket_no;
-
+	private String deli_date;
 //	private String buy_now_prdt_no;
 //	private String buy_now_qty;
 
@@ -30,6 +30,20 @@ public class OrderMainDTO {
 				+ " : " +order_date
 				+ " : " +order_status;
 	}
+	
+	
+
+	public String getDeli_date() {
+		return deli_date;
+	}
+
+
+
+	public void setDeli_date(String deli_date) {
+		this.deli_date = deli_date;
+	}
+
+
 
 	public String getOrder_no() {
 		return order_no;

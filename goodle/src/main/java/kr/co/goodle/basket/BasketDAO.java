@@ -28,7 +28,9 @@ public class BasketDAO {
 
 	public int insert(RecipeDTO dto) {
 		int successCount = 0;
+		System.out.println(dto);
 		successCount = sqlSession.insert("BasketMapper.insert", dto);
+		System.out.println(successCount);
 		return successCount;
 	}//insert
 
