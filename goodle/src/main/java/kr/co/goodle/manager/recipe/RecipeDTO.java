@@ -16,14 +16,14 @@ public class RecipeDTO {
 	public String getRcp_no() {
 		return rcp_no;
 	}
+	public void setRcp_no(String rcp_no) {
+		this.rcp_no = rcp_no;
+	}
 	public String getRcp_imgpath() {
 		return rcp_imgpath;
 	}
 	public void setRcp_imgpath(String rcp_imgpath) {
 		this.rcp_imgpath = rcp_imgpath;
-	}
-	public void setRcp_no(String rcp_no) {
-		this.rcp_no = rcp_no;
 	}
 	public String getRcp_name() {
 		return rcp_name;

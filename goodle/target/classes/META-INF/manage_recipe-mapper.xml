@@ -15,7 +15,7 @@
 			resultType="kr.co.goodle.manager.recipe.RecipeDTO">
 		select r.rcp_no, r.rcp_name, r.rcp_ingr, r.rcp_time, r.rcp_desc, r.rcp_detail
 	    from recipe r
-		where r.rcp_no = #{rcp_no}
+		where 1 = 1
 		<if test="searchOption != null and searchOption != ''
 					and searchWord != null and searchWord != ''">
 			<choose>
@@ -30,23 +30,11 @@
 		order by r.rcp_no asc
 		limit #{limitNum}, 10
 	</select>
-	
-	<update id="update" parameterType="kr.co.goodle.manager.recipe.RecipeDTO">
-	update recipe 
-	set rcp_no = #{rcp_no}, rcp_name= #{rcp_name}, rcp_time = #{rcp_time}, rcp_ingr = #{rcp_ingr}, rcp_desc = #{rcp_desc}, rcp_detail = #{rcp_detail}
-	where rcp_no = #{rcp_no}
-	</update>
-	
-
-	<insert id="write" parameterType="kr.co.goodle.manager.recipe.RecipeDTO">
-	insert into recipe (rcp_no, rcp_name, rcp_time, rcp_ingr, rcp_desc, rcp_detail)
-	values( #{rcp_no}, #{rcp_name}, #{rcp_time}, #{rcp_ingr}, #{rcp_desc}, #{rcp_detail});
-	</insert>
 
 	<select id="searchListCount" parameterType="kr.co.goodle.util.dto.SearchDTO" resultType="int">
 		select count(r.rcp_no) cnt
 		from recipe r
-		where rcp_no = #{rcp_no}
+		where 1 = 1
 		<if test="searchOption != null and searchOption != ''
 					and searchWord != null and searchWord !=''">
 			<choose>
@@ -59,5 +47,22 @@
 			</choose>
 		</if>
 	</select>
+
+	<update id="update" parameterType="kr.co.goodle.manager.recipe.RecipeDTO">
+	update recipe 
+	set rcp_no = #{rcp_no}, rcp_name= #{rcp_name}, rcp_time = #{rcp_time}, rcp_ingr = #{rcp_ingr}, rcp_desc = #{rcp_desc}, rcp_detail = #{rcp_detail}
+	where rcp_no = #{rcp_no}
+	</update>
+	
+	<delete id="delete" parameterType="kr.co.goodle.manager.recipe.RecipeDTO">
+	delete from recipe
+	where rcp_no = #{rcp_no}
+	</delete>
+	
+
+	<insert id="write" parameterType="kr.co.goodle.manager.recipe.RecipeDTO">
+	insert into recipe (rcp_no, rcp_name, rcp_time, rcp_ingr, rcp_desc, rcp_detail)
+	values( #{rcp_no}, #{rcp_name}, #{rcp_time}, #{rcp_ingr}, #{rcp_desc}, #{rcp_detail});
+	</insert>
 
 </mapper>

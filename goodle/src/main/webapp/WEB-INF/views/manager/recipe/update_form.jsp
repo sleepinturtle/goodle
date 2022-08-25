@@ -4,7 +4,10 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title> CKEDITOR 게시판 글 수정하기 </title>
+		<title>  레시피 수정하기 </title>
+		
+		 <%@ include file="/WEB-INF/views/links_head.jsp" %>
+		
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
 		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
@@ -16,42 +19,53 @@
 		}
 		</style>
 	</head>
+	<%@ include file="/WEB-INF/views/navbar3.jsp" %>
 	<body>
-	<%@ include file="/WEB-INF/views/header.jsp" %>
+	
 		<hr>
-		<h3> CKEDITOR 게시판 글 수정하기 </h3>
+		<h3> 레시피 수정하기 </h3>
 		<hr>
 		<table class="table table-hover">
 			<tbody>
+			
+					<tr>
+				     <th> 레시피 번호</th>	
+				     <td>
+				     <input type="text" id="no" name="no" maxlength="20"
+								class="form-control" value="${detail_dto.rcp_no}">
+						<label for="time" id="time_label" class="rcp_time_label"></label>
+				     </td>
+				</tr>
+			 
 				<tr>
-					<th> 레시피 제목 </th>
+					<th> 레시피 제목</th>
 					<td>
-						<input type="text" id="title" name="title" maxlength="20"
-								class="form-control">
-						<label for="title" id="title_label" class="write_label"></label>
+						<input type="text" id="title1" name="title1" maxlength="20"
+								class="form-control" value="${detail_dto.rcp_name}">
+						<label for="title1" id="title_label" class="write_label"></label>
 					</td>
 				</tr>
 				<tr>
-				     <th> 조리 시간 </th>	
+				     <th> 조리 시간</th>	
 				     <td>
-				     <input type="text" id="time" name="rcp_time" maxlength="20"
-								class="form-control">
+				     <input type="text" id="time" name="time" maxlength="20"
+								class="form-control" value="${detail_dto.rcp_time}">
 						<label for="time" id="time_label" class="rcp_time_label"></label>
 				     </td>
 				</tr>
 				<tr>
-				     <th> 재료 </th>	
+				     <th> 재료</th>	
 				     <td>
-				     <input type="text" id="ingr" name="rcp_ingr" maxlength="100"
-								class="form-control">
+				     <input type="text" id="ingr" name="ingr" maxlength="100"
+								class="form-control" value="${detail_dto.rcp_ingr}">
 						<label for="ingr" id="ingr_label" class="rcp_ingr_label"></label>
 				     </td>
 				</tr>
 				<tr>
 				     <th> 간단설명 </th>	
 				     <td>
-				     <input type="text" id="rcp_desc" name="rcp_desc" maxlength="30"
-								class="form-control">
+				     <input type="text" id="desc" name="desc" maxlength="30"
+								class="form-control" value="${detail_dto.rcp_desc}">
 						<label for="desc" id="desc_label" class="rcp_desc_label"></label>
 				     </td>
 				</tr>
@@ -59,7 +73,7 @@
 				<tr>
 					<th> 상세설명 </th>
 					<td>
-						<textarea class="form-contol" id="contents" name="contents"></textarea>
+						<textarea class="form-contol" id="contents" name="contents">${detail_dto.rcp_detail}</textarea>
 						<script type="text/javascript">
 						CKEDITOR.replace("contents",{filebrowserUploadUrl:'${pageContext.request.contextPath}/ckfileup?pkgnm=board'});
 						</script>
@@ -68,9 +82,9 @@
 				</tr>
 			</tbody>
 		</table>
-		<button id="write_btn" class="btn btn-primary float-right"> 글 작성 완료 </button>
-		<a href="${pageContext.request.contextPath}/manager/recipe/list">
-			<button class="btn btn-warning"> 글 작성 취소 </button>
+		<button id="write_btn" class="btn btn-primary float-right"> 글 수정 완료 </button>
+		<a href="${pageContext.request.contextPath}/manager/recipe/list?rcp_no=${detail_dto.rcp_no}">
+			<button class="btn btn-warning"> 글 수정 취소 </button>
 		</a>
 		<hr>
 		<%@ include file="/WEB-INF/views/footer.jsp" %>
@@ -78,7 +92,7 @@
 	$(document).ready(function() {
 		$("#write_btn").click(function() {
 
-			if( $.trim( $("#title").val() ) == "" ){
+			if( $.trim( $("#title1").val() ) == "" ){
 				$("#title_label").text("제목을 입력 하세요.");
 				return;
 			}
@@ -91,9 +105,11 @@
 			$.post(
 					"${pageContext.request.contextPath}/manager/recipe/update"
 					, {
-						rcp_no : ${detail_dto.rcp_no}
-						, rcp_name : $("#title").val()
-						, rcp_time : ${detail_dto.rcp_time}
+						rcp_no : $("#no").val()
+						, rcp_name : $("#title1").val()
+						, rcp_time : $("#time").val()
+						, rcp_ingr : $("#ingr").val()
+						, rcp_desc : $("#desc").val()
 						, rcp_detail : CKEDITOR.instances.contents.getData()
 					}
 					, function(data, status) {
@@ -109,6 +125,9 @@
 			);//post
 		});//click
 	});//ready
+	
+	
 	</script>
+	<%@ include file="/WEB-INF/views/footer.jsp" %>
 	</body>
 </html>

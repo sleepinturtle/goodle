@@ -30,10 +30,21 @@ public class RecipeController {
 	@Autowired
 	private RecipeService service;
 
+	
 	@RequestMapping( value = "/update", method = RequestMethod.POST)
-	public void update( RecipeDTO dto, HttpSession session, PrintWriter out ) throws IOException {
+	public void update( RecipeDTO dto, PrintWriter out ) throws IOException {
+		
 		
 		//ck file start =====
+		
+//		File folderForDel = new File("C:/upload/board/"  + "/");
+//		File [] fileArr = folderForDel.listFiles();
+//		if(fileArr != null) {
+//			for(int i=0; i<fileArr.length; i++) {
+//				fileArr[i].delete();
+//			}//for
+//		}//if
+
 		if( dto.getRcp_detail().indexOf("src=\"") > 0) {
 
 			String [] filePathArr = dto.getRcp_detail().split("src=\"");
@@ -59,9 +70,7 @@ public class RecipeController {
 
 			}//for
 
-			
 			File folderForDel = new File("C:/upload/tmp/board/" + "/");
-
 			File [] fileArr = folderForDel.listFiles();
 			if(fileArr != null) {
 				for(int i=0; i<fileArr.length; i++) {
@@ -75,6 +84,7 @@ public class RecipeController {
 
 		}//if
 		//ck file end =====
+
 
 		int successCount = 0;
 		successCount = service.update( dto );
@@ -108,9 +118,6 @@ public class RecipeController {
 					fis.close();
 					fos.close();
 
-					File tmpFile = new File("C:/" + oldPath);
-					tmpFile.delete();
-
 				}//if
 
 			}//for
@@ -126,7 +133,9 @@ public class RecipeController {
 	}//updateForm
 
 	@RequestMapping( value = "/delete", method = RequestMethod.GET )
-	public void delete( RecipeDTO dto, HttpSession session, PrintWriter out ) {
+	public void delete( RecipeDTO dto, PrintWriter out ) {
+		
+
 		
 		//ck file start =====
 		RecipeDTO ckDTO = service.detail( dto.getRcp_no() );
@@ -169,6 +178,7 @@ public class RecipeController {
 	@RequestMapping( value = "/write", method = {RequestMethod.POST})
 	public void write( RecipeDTO dto, HttpSession session, PrintWriter out ) throws IOException {
 		
+		
 		//ck file start =====
 		if( dto.getRcp_detail().indexOf("src=\"") > 0) {
 
@@ -187,14 +197,14 @@ public class RecipeController {
 					FileCopyUtils.copy(fis, fos);
 					fis.close();
 					fos.close();
-
+					
 					File tmpFile = new File("C:/" + oldPath);
 					tmpFile.delete();
 
 				}//if
 
 			}//for
-
+			
 			dto.setRcp_detail(
 					dto.getRcp_detail().replaceAll("/upload/tmp/board/", "/upload/board/")
 			);
@@ -223,11 +233,11 @@ public class RecipeController {
 			lastPageNum = (totalCount / 10) + (totalCount % 10 > 0 ? 1 : 0);
 		}//if
 
-		if(userWantPage.length() >= 2) { //userWantPage가 12인 경우 startPageNum는 11, endPageNum는 20.
+		if(userWantPage.length() >= 2) { //userWantPage媛� 12�씤 寃쎌슦 startPageNum�뒗 11, endPageNum�뒗 20.
 			String frontNum = userWantPage.substring(0, userWantPage.length() - 1);//12 -> 1
 			startPageNum = Integer.parseInt(frontNum) * 10 + 1;// 1 * 10 + 1 -> 11
 			endPageNum = ( Integer.parseInt(frontNum) + 1 ) * 10;// (1 + 1) * 10 -> 20
-			//userWantPage가 10인 경우, startPageNum는 11, endPageNum는 20.
+			//userWantPage媛� 10�씤 寃쎌슦, startPageNum�뒗 11, endPageNum�뒗 20.
 			String backNum = userWantPage.substring(userWantPage.length() - 1, userWantPage.length());
 			if(backNum.equals("0")) {
 				startPageNum = startPageNum - 10;// 11 - 10 -> 1
@@ -235,7 +245,7 @@ public class RecipeController {
 			}//if
 		}//if
 
-		//endPageNum이 20이고, lastPageNum이 17이라면, endPageNum을 17로 수정해라
+		
 		if(endPageNum > lastPageNum) endPageNum = lastPageNum;
 
 		model.addAttribute("startPageNum", startPageNum);

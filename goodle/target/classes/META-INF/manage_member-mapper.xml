@@ -6,18 +6,27 @@
 <mapper namespace="ManageMemberMapper">
 
 
+	<update id="replyInsert" parameterType="kr.co.goodle.util.dto.QnaBoardDTO">
+	update member
+	set mem_comp = #{mem_comp}
+	where mem_name = #{mem_name}
+	</update>
 	
 	
+	<update id="updateReply" parameterType="kr.co.goodle.util.dto.MemberDTO">
+		UPDATE MP_REPLY SET CONTENT = #{content}
+		WHERE RNO = #{rno}
+	</update>
 	
 	
-	<select id="detail" parameterType="java.lang.String" resultType="kr.co.goodle.manager.member.MemberDTO">
-	select m.mem_no, m.mem_name, m.mem_tel, m.mem_email, m.mem_date, m.mem_post, m.mem_comp, m.mem_addr1, m.mem_addr2
+	<select id="detail" parameterType="java.lang.String" resultType="kr.co.goodle.util.dto.MemberDTO">
+	select m.mem_name, m.mem_id, m.mem_pwd, m.mem_tel, m.mem_email, m.mem_date, m.mem_post, m.mem_comp, m.mem_addr1, m.mem_addr2
 	from member m
 	where m.mem_no = #{mem_no}
 	</select>
 
 	<select id="selectList" parameterType="kr.co.goodle.util.dto.SearchDTO"
-			resultType="kr.co.goodle.manager.member.MemberDTO">
+			resultType="kr.co.goodle.util.dto.MemberDTO">
 		select m.mem_no, m.mem_name, m.mem_tel, m.mem_email, m.mem_date, m.mem_post, m.mem_comp
 		from member m
 		where 1 = 1

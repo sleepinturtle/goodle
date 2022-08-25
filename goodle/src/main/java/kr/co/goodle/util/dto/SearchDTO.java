@@ -10,6 +10,7 @@ public class SearchDTO {
 	private String searchOption;
 	private String searchWord;
 	private int limitNum;
+	private int rcp_no;
 	
 	@Override
 	public String toString() {
@@ -36,5 +37,11 @@ public class SearchDTO {
 	}
 	
 	
+	public int getRcp_no() {
+		return rcp_no;
+	}
+	public void setRcp_no(int rcp_no) {
+		this.rcp_no = rcp_no;
+	}
 	
 }//class

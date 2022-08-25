@@ -10,8 +10,17 @@ public class MemberDTO {
 	private String mem_tel;
 	private String mem_email;
 	private String mem_date;
+	private String mem_comp;
 	private int mem_delyn;
 	private int mgr_yn;
+	public String getMem_comp() {
+		return mem_comp;
+	}
+
+	public void setMem_comp(String mem_comp) {
+		this.mem_comp = mem_comp;
+	}
+
 	private int plan_no;
 	
 	private String mem_cert1;

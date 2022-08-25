@@ -23,16 +23,18 @@
 	
 	<context:component-scan base-package="kr.co.goodle" />
 	
-	<interceptors>
-		<interceptor>
-			<mapping path="/mypage/*"/>
-			<beans:bean class="kr.co.goodle.login.LoginCheckInterceptor" />
-		</interceptor>
- 		<interceptor> 
-			<mapping path="/mgrpage/*"/> 
-			<beans:bean class="kr.co.goodle.login.LoginCheckInterceptor2" /> 
-		</interceptor> 
-	</interceptors>
+ <!-- 	<interceptors> --> 
+ <!-- 		<interceptor> --> 
+ <!-- 			<mapping path="/mypage/*"/> --> 
+<!-- <mapping path="/manager/recipe/*"/> -->
+<!-- <exclude-mapping path="/manager/recipe/list"/> --> 
+ <!-- 			<beans:bean class="kr.co.goodle.login.LoginCheckInterceptor" /> --> 
+ <!-- 		</interceptor> --> 
+ <!--  		<interceptor>  --> 
+ <!-- 			<mapping path="/mgrpage/*"/>  --> 
+ <!-- 			<beans:bean class="kr.co.goodle.login.LoginCheckInterceptor2" />  --> 
+ <!-- 		</interceptor>  -->
+ <!-- 	</interceptors> --> 
 	
 	
 	<beans:bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">

@@ -21,6 +21,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.multipart.MultipartRequest;
 
+import kr.co.goodle.util.dto.MemberDTO;
 
 @Controller
 public class CKFileController {
@@ -37,7 +38,7 @@ public class CKFileController {
 		String todayNalja = nalja.format(today);
 		String todaySigan = sigan.format(today);
 
-		
+		//String mem_id = ( (MemberDTO) session.getAttribute("login_info") ).getMem_id();
 		File newFolder = new File("C:/upload/tmp/" + pkgnm + "/");
 		if( newFolder.exists() == false ) newFolder.mkdirs();
 		File newFolder2 = new File("C:/upload/" + pkgnm + "/");
